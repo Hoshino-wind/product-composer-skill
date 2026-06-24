@@ -1,6 +1,6 @@
 ---
 name: product-composer
-description: "Use when designing, redesigning, generating, critiquing, or implementing high-quality UI surfaces: websites, apps, dashboards, admin panels, SaaS workflows, AI products, command canvases, forms, data views, landing pages, product content pages, cultural/editorial pages, multi-screen flows, prototypes, or design systems that need product clarity, distinctive art direction, non-generic aesthetics, interaction grammar, desire-led minimalism, and responsive verification. If Ant Design APIs/components are explicit, also use antd."
+description: "Use when designing, redesigning, generating, critiquing, or implementing high-quality UI surfaces: websites, apps, dashboards, SaaS workflows, AI products, command canvases, forms, data views, landing pages, product content pages, cultural/editorial pages, multi-screen flows, prototypes, design systems, editable layer documents, HTML previews, or PPTX exports that need product clarity, distinctive art direction, interaction grammar, desire-led minimalism, and responsive verification. If Ant Design APIs/components are explicit, also use antd."
 ---
 
 # Product Composer
@@ -25,6 +25,7 @@ Read only the references needed for the task:
 - `references/image-generation-aesthetic-calibration.md`: read when the user asks to directly generate, draw, or preview UI as an image without code, when image-generated UI looks better than hand-built/vector attempts, when generated UI is rejected as ugly or lacking taste, or when the agent needs reusable prompt templates for elegant UI images.
 - `references/visual-direction.md`: read for any net-new UI, homepage, concept, visual redesign, product identity, or when the output risks becoming diagrammatic, generic, cluttered, or ugly.
 - `references/signature-aesthetic-systems.md`: read for cultural, editorial, museum, hospitality, fashion, premium brand, emotionally rich homepages, multi-screen visual consistency, or when the user asks for the quality of the stronger Dunhuang-style result without copying that style.
+- `references/design-layer-document.md`: read when the user asks for layer decomposition, editable UI output, HTML editing, PPT/PPTX export, design-to-deck workflows, chart/table layers, or any pipeline that should turn a visual design into structured elements instead of a flat image.
 - `references/anti-patterns.md`: read before visual implementation or design review.
 - `references/verification.md`: read before final validation of rendered UI.
 
@@ -50,7 +51,7 @@ Before designing any substantial surface, define:
 - Evidence source: product screenshot, workflow state, cultural material, venue/object imagery, dataset, brand asset, or existing design system.
 - Signature system: the dominant form, material language, palette source, motion/continuity idea, and one ownable detail.
 - Density contract: sparse, medium, dense, or dense-with-air; decide what is absent as deliberately as what is present.
-- Output path: image mockup, coded implementation, design critique, design prompt, or design-system guidance.
+- Output path: image mockup, coded implementation, design critique, design prompt, design-system guidance, layer document, HTML preview, or PPTX export.
 
 Do not start from a generic layout pattern. Start from the surface's evidence, mission, and signature system, then choose layout.
 
@@ -170,6 +171,28 @@ For image UI mockups:
 - Use constraints to prevent known failures: fake drag/slide gestures, photo/quote/widget collages, dashboard templates, and dense feature grids.
 - Inspect the result visually before claiming it worked. If the output only appears in chat and does not save to disk, say so instead of copying an old asset.
 
+## Layer Document Export Gate
+
+When the user asks for layer decomposition, editable output, HTML editing, PPT/PPTX export, chart/table layers, or design-to-deck production, use a Design Layer Document as the source of truth.
+
+Rules:
+
+- Store the design as `.layerdoc.json` before exporting. Do not make HTML the source of truth.
+- Preserve semantic groups: headline, CTA, proof object, chart, table, background, decoration, navigation, and content sections should stay meaningful.
+- Charts and tables must carry data, not only drawn marks.
+- Export HTML for inspection and element-level editing.
+- Export PPTX for delivery. The bundled MVP exports editable text, shapes, image placeholders, and simple chart layers as editable slide objects.
+- Run `scripts/design_layer_tool.py validate` before exporting HTML or PPTX.
+- For image-derived designs, use the image only to infer the layer document; future edits happen in the layer document.
+
+Commands:
+
+```bash
+python3 scripts/design_layer_tool.py validate examples/opc-homepage.layerdoc.json
+python3 scripts/design_layer_tool.py html examples/opc-homepage.layerdoc.json outputs/opc-homepage.html
+python3 scripts/design_layer_tool.py pptx examples/opc-homepage.layerdoc.json outputs/opc-homepage.pptx
+```
+
 ## Composition Workflow
 
 1. Inspect the local project first: framework, component library, styling system, existing tokens, routes, and nearby screens.
@@ -232,7 +255,15 @@ For image UI mockups:
 For frontend projects, run the bundled scanner when useful:
 
 ```bash
-node /Users/gaozengyu/.codex/skills/product-composer/scripts/ui-pattern-scan.mjs <project-or-src-dir>
+node scripts/ui-pattern-scan.mjs <project-or-src-dir>
 ```
 
 Treat scanner output as warnings, not truth. Confirm visually before changing code.
+
+For editable layer documents, use the bundled exporter:
+
+```bash
+python3 scripts/design_layer_tool.py validate <file.layerdoc.json>
+python3 scripts/design_layer_tool.py html <file.layerdoc.json> <out.html>
+python3 scripts/design_layer_tool.py pptx <file.layerdoc.json> <out.pptx>
+```

@@ -12,6 +12,7 @@ It is built for cases where a normal UI prompt tends to produce generic SaaS pag
 - Cultural, editorial, museum, hospitality, portfolio, and premium brand pages
 - Product content pages that need desire, clarity, and visual continuity
 - Image-generated UI mockups that should avoid template-like AI aesthetics
+- Editable layer documents, HTML previews, and PPTX exports
 - Existing UI critique and redesign direction
 
 ## Core Ideas
@@ -42,6 +43,20 @@ Minimalism is treated as focus, not emptiness. The skill asks what desire the pa
 ### Interaction Grammar
 
 For AI, agentic, automation, creative, or complex workflow products, the skill defines the interaction relationship before choosing components. It distinguishes cognitive interaction design from literal drag, slide, and click labels.
+
+### Design Layer Documents
+
+The skill can also turn a UI concept into a structured `.layerdoc.json` file. This gives the design a stable intermediate representation:
+
+```text
+brief / image / data
+-> semantic layers
+-> .layerdoc.json
+-> HTML preview
+-> PPTX export
+```
+
+This is useful when a generated UI should become an editable deck or a future visual editor surface, not just a flat PNG.
 
 ## Installation
 
@@ -85,6 +100,13 @@ Use $product-composer to design a frontier AI workflow surface.
 Define the interaction grammar before layout. Do not use fake drag or node-graph aesthetics.
 ```
 
+For an editable deck pipeline:
+
+```text
+Use $product-composer to convert this homepage concept into a design layer document.
+Export an HTML preview and a PPTX with editable text, shapes, and chart layers.
+```
+
 ## Reference Map
 
 The main skill file routes Codex to focused references only when needed:
@@ -99,6 +121,7 @@ The main skill file routes Codex to focused references only when needed:
 - `references/image-generation-aesthetic-calibration.md` - prompts and repair passes for UI image generation
 - `references/visual-direction.md` - composition, palette, material, and silhouette guidance
 - `references/signature-aesthetic-systems.md` - complete visual worlds and multi-screen continuity
+- `references/design-layer-document.md` - semantic layer documents for HTML/PPTX export
 - `references/anti-patterns.md` - common AI UI and product design failures
 - `references/verification.md` - final verification guidance
 
@@ -109,6 +132,16 @@ node scripts/ui-pattern-scan.mjs <project-or-src-dir>
 ```
 
 The scanner flags common visual anti-patterns in frontend projects. Treat the output as warnings, then confirm visually.
+
+Validate and export a design layer document:
+
+```bash
+python3 scripts/design_layer_tool.py validate examples/opc-homepage.layerdoc.json
+python3 scripts/design_layer_tool.py html examples/opc-homepage.layerdoc.json outputs/opc-homepage.html
+python3 scripts/design_layer_tool.py pptx examples/opc-homepage.layerdoc.json outputs/opc-homepage.pptx
+```
+
+The current MVP exports editable text, shapes, image placeholders, and simple bar charts. Native PowerPoint charts, tables, masks, complex gradients, and typography-perfect line wrapping are planned extension points.
 
 ## Validation
 
