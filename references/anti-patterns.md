@@ -14,11 +14,17 @@ Use this as a checklist before implementation and during critique. These are war
 - Stock-like dark abstract imagery that hides the actual product.
 - Lifestyle photos, famous quotes, metric cards, and small widgets used together as fake product proof.
 - Placeholder copy such as "unlock", "seamless", "powerful", "transform", "all-in-one" without specific proof.
-- Fake interaction labels such as "drag to", "click to", or "slide to" when the product is not actually offering that interaction.
+- Fake interaction labels such as "drag to", "click to", or "swipe to" when the product is not actually offering that interaction.
 - Flowcharts or node graphs used as the main aesthetic when the user asked for a product experience.
 - Formulaic SaaS homepage layout: nav, left headline, two CTAs, right screenshot, three proof cards, with no ownable composition.
 - Hand-built SVG or diagram mockups used for aesthetic exploration when the user asked to directly generate a beautiful UI image.
 - UI image prompts that omit feeling, psychology, interaction relationship, palette, exact text, or an explicit avoid list.
+- Utility-product screens that look like disposable admin shells: pale background, generic left rail, equal cards, table, and no memorable product-specific work object.
+- Technical-product screens that look like black cockpits, command centers, terminal skins, sci-fi dashboards, or militarized operations rooms.
+- Generic hard-technology naming for normal software, especially labels such as `运行舱`, `指挥舱`, `智控舱`, `超脑`, `中枢`, or `驾驶舱` when the product is not actually that domain.
+- SaaS screens that ignore product order: unclear navigation, hidden filters, distant actions, decorative charts, vague records, missing status states, and no obvious next step.
+- Technical-instrument screens that stay flat when the brief calls for a device, machine, robot, sensor, scientific, medical, or industrial product. Use a 3D instrument/digital-twin object when the product should be inspected spatially.
+- Decorative 3D models with UI stickers around them. A 3D instrument view must show useful state, sensors, calibration, diagnostics, or controllable regions.
 
 ## Product UI Mistakes
 

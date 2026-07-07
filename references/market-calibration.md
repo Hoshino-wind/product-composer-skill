@@ -28,6 +28,7 @@ Examples to study:
 - v0: https://v0.app/
 - Godly inspiration library: https://godly.website/
 - SaaS Landing Page library: https://saaslandingpage.com/
+- ThemeForest WordPress marketplace: https://themeforest.net/category/wordpress
 
 ## What Good Sites Do
 
@@ -140,6 +141,43 @@ For weak or template-like homepages, generate or propose multiple visual directi
 5. **Reference Desk**: dense but beautiful knowledge/work surface, closer to a crafted editorial tool than SaaS marketing.
 
 Pick one direction based on fit, not novelty.
+
+## Theme Marketplace Calibration
+
+Use this when the user points to ThemeForest, WordPress themes, Elementor templates, landing page marketplaces, Webflow templates, or commercial website template galleries.
+
+The useful lesson is commercial maturity, not copying template skins. Theme marketplaces optimize for immediate buyer confidence: a page must show category fit, polished section rhythm, visible demos, and conversion evidence quickly.
+
+Observed marketplace signals:
+
+- Vertical specificity: themes are organized by real buyer categories such as corporate, creative, retail, eCommerce, blog/magazine, technology, nonprofit, education, real estate, wedding, and mobile.
+- Demo-first proof: theme cards and pages depend on previewability. A visitor should immediately understand what the finished site will look like and where to click next.
+- Market proof: price, ratings, sales counts, bestseller labels, new releases, and category placement create credibility.
+- Multipurpose vs niche routes: bestsellers often sell breadth and builder flexibility, while modern niche templates sell a sharp industry scene.
+- Section completeness: strong templates usually include hero, category/value blocks, featured demos, product/service proof, testimonials/logos, pricing or offer, blog/resource, and footer conversion.
+- Visual packaging: polished thumbnails, device mockups, demo grids, badges, sale labels, and consistent card rhythm make the template feel ready to use.
+
+What to borrow:
+
+- Make the first viewport clearly identify the business category and buyer promise.
+- Stage a realistic finished-site preview, not only an abstract product mockup.
+- Use modular section rhythm so the page feels complete beyond the hero.
+- Include trust proof early: demos, usage examples, customer logos, sales/ratings-style proof, integrations, or case results.
+- Let visual style come from the industry: jewelry, SaaS, agency, architecture, real estate, restaurant, education, healthcare, travel, or retail should not share the same palette and section rhythm.
+- Give the page a strong commercial path: preview, compare, choose, book, buy, contact, or start.
+
+What to avoid:
+
+- Copying exact marketplace templates, names, layouts, thumbnails, or demo compositions.
+- Generic "multipurpose" pages with no actual industry point of view.
+- Overstuffed demo grids that make a custom product feel like a template catalog.
+- Polished hero images that do not show an actual offer, product, venue, service, or workflow.
+
+Prompt fragment:
+
+```text
+Theme marketplace calibration: commercial WordPress-template maturity without copying a template. Strong category fit, polished first viewport, realistic finished-site proof, modular section rhythm, early trust signals, clear preview/booking/purchase path, and industry-specific visual language. Avoid generic multipurpose demo grids, copied marketplace layout, and decorative hero visuals with no offer proof.
+```
 
 ## Redesign Moves
 

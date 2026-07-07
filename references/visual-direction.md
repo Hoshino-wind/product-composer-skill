@@ -10,6 +10,7 @@ Interaction design does not excuse ugly composition. A good product surface need
 
 Before making the UI, define:
 
+- Style family: the selected visual family and why it fits the product.
 - Dominant visual form: the one shape or spatial structure the user remembers.
 - Composition type: centered instrument, diagonal flow, editorial split, radial control, layered stage, map, timeline, canvas, or object portrait.
 - Density strategy: sparse, medium, dense, or dense-with-air.
@@ -29,6 +30,7 @@ Before making the UI, define:
 - Let important objects have room to breathe.
 - Use fewer labels when shape, grouping, and state can communicate.
 - Design the silhouette first; details come second.
+- When producing a set of alternatives, each direction must be visually orthogonal. Changing copy while keeping the same warm background, central object, right panel, rounded cards, and status chips is not a new direction.
 
 ## Taste Checks
 
@@ -64,7 +66,74 @@ Avoid:
 - busy annotation layers
 - generic enterprise dashboard chrome
 - sterile whiteboard diagrams
+- cockpit, command-center, terminal, or sci-fi dashboard styling unless the product is literally in that domain
+- militarized or industrial-fantasy names such as `运行舱`, `指挥舱`, `智控舱`, `超脑`, or `中枢` for normal software products
 - lifestyle photo, quote, metric-card, and widget collages pretending to be product proof
+
+## Utility And Technical Beauty Floor
+
+Utility and technical surfaces need taste as much as brand pages. Do not accept a screen just because it is clear, aligned, and functional.
+
+For utility product screens:
+
+- The screen needs one memorable workflow object, not only a left rail plus cards and a table.
+- For SaaS and enterprise tools, reference Ant Design values: natural task order, certainty, meaningful work objects, and progressive capability.
+- Beauty should come from product order: stable frame, object hierarchy, contextual actions, explicit state, disciplined tables/forms/filters/drawers, and reusable rhythm.
+- Use state, grouping, and proportion to create beauty; avoid pale generic software chrome.
+- Keep real operational density, but make the main work area feel composed and product-specific.
+
+For technical instrument screens:
+
+- Precision is not the same as darkness, glow, or complexity.
+- Start with a specific control object: audit lens, simulation strip, execution timeline, approval surface, risk dial, or evidence ledger.
+- When the product can plausibly be physical or inspectable, start with a 3D instrument/digital-twin viewport instead of flat panels.
+- Anchor overlays, labels, readings, warnings, and controls to parts of the 3D object.
+- Use warm precision when in doubt: graphite, ivory, muted cyan, brass, paper, and technical ink.
+- If the result feels like a control room, rebuild around a smaller, quieter, more desirable object.
+
+## 3D Instrument Composition
+
+Use for technical instrument, device, robotics, IoT, industrial, scientific, medical, monitoring, or simulation products.
+
+Composition requirements:
+
+- Make the 3D object the main proof, not a decorative hero image.
+- Show a useful inspection state: cutaway, exploded layer, sensor hotspots, diagnostic overlay, calibration ring, heat/state field, or live reading path.
+- Attach controls to the relevant object region instead of placing generic action cards around it.
+- Use depth deliberately: object, overlays, and background must read as a product viewport.
+- Keep labels sparse and operational; the object shape should carry most of the meaning.
+
+Avoid:
+
+- flat dashboard cards pretending to be an instrument
+- generic dark cockpit styling
+- glowing terminal panels
+- decorative 3D models with no inspectable state
+- many unrelated floating labels around a 3D object
+
+## Direction Orthogonality
+
+When a user is comparing multiple UI images, visual difference must be structural, not cosmetic.
+
+Different enough:
+
+- different dominant silhouette
+- different spatial grammar
+- different material system
+- different action placement
+- different density rhythm
+- different proof object
+
+Not different enough:
+
+- same centered artifact with renamed labels
+- same right-hand action panel
+- same warm card background with fine borders
+- same timeline/rail metaphor reused across product categories
+- same status chips and rounded card hierarchy
+- same "tasteful enterprise" look with different accent colors
+
+If a repair fixes one failure by returning to a familiar safe pattern, treat it as failed. Regenerate from an opposing composition family.
 
 ## Palette Guidance
 
@@ -95,3 +164,5 @@ When prompting an image model for UI:
 - Require that the image still reads well when viewed as a thumbnail.
 - If the user asks for UI without code, prefer an image-generation aesthetic pass before hand-built vector mockups.
 - For elegant UI image prompts, use a reusable prompt template before improvising; the template should define feeling, psychology, interaction relationship, dominant object, palette, exact text, and avoid list.
+- Do not reuse the same composition family by habit; make the selected style family change density, material, palette, and proof object.
+- If the user says the output looks like prior images, perform an orthogonality pass before generating again.

@@ -41,7 +41,7 @@ Before visual generation or implementation, define:
 
 ### Product / SaaS
 
-- Use a product-state metaphor: control surface, review desk, secure chamber, operational cockpit, decision canvas, or audit trail.
+- Use a product-state metaphor: control surface, review desk, secure chamber, decision canvas, execution preview, evidence ledger, or audit trail.
 - Make the real product proof or primary workflow the most beautiful object.
 - Keep brand expression subordinate to task clarity.
 - Avoid turning dashboards into marketing heroes or adding decorative illustrations that do not prove the product.

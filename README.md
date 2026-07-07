@@ -12,7 +12,7 @@ It is built for cases where a normal UI prompt tends to produce generic SaaS pag
 - Cultural, editorial, museum, hospitality, portfolio, and premium brand pages
 - Product content pages that need desire, clarity, and visual continuity
 - Image-generated UI mockups that should avoid template-like AI aesthetics
-- Editable layer documents, HTML previews, and PPTX exports
+- Editable UI layer documents and HTML previews
 - Existing UI critique and redesign direction
 
 ## Core Ideas
@@ -36,13 +36,33 @@ The skill includes a `signature-aesthetic-systems` reference that turns this int
 
 This was distilled from a successful Dunhuang Museum page direction, but the method is general. It does not copy Dunhuang motifs unless the subject actually calls for them.
 
+### Style Family Routing
+
+Before net-new UI generation, the skill can ask the user to choose a style family, density, and color appetite. This prevents two common failures: random visual direction and every result collapsing into the same premium-minimal homepage.
+
+Example answer:
+
+```text
+B + 稀疏 + 温暖有欲望
+```
+
+The routing also includes quality floors for practical product styles. Utility screens should not collapse into a generic admin shell, and technical surfaces should not become black cockpits, sci-fi dashboards, fake terminals, or `运行舱`-style industrial fantasy. When that happens, the skill treats it as a failed direction and reroutes or repairs before regenerating.
+
+For SaaS, the skill references Ant Design's product values: natural task order, certainty, meaningful work objects, and progressive capability. This means stable navigation, explicit states, contextual actions, disciplined tables/forms/filters/drawers, and dense-but-readable work surfaces.
+
+For technical-instrument UI, the skill can shift from flat panels to 3D instrument displays: digital twins, cutaway devices, sensor overlays, calibration rings, diagnostic callouts, and controls anchored to parts of the object.
+
 ### Desire-Led Minimalism
 
 Minimalism is treated as focus, not emptiness. The skill asks what desire the page should create: curiosity, confidence, relief, mastery, aspiration, participation, or belonging. Color, layout, proof, and interaction are then chosen to support that job.
 
+### Market Calibration
+
+For official sites, landing pages, and commercial content pages, the skill can also use market references such as ThemeForest WordPress themes, Webflow-style template markets, SaaS landing libraries, and high-performing product sites. The goal is commercial maturity: clear category fit, finished-site proof, modular section rhythm, trust signals, and a direct preview/booking/purchase path without copying a specific template.
+
 ### Interaction Grammar
 
-For AI, agentic, automation, creative, or complex workflow products, the skill defines the interaction relationship before choosing components. It distinguishes cognitive interaction design from literal drag, slide, and click labels.
+For AI, agentic, automation, creative, or complex workflow products, the skill defines the interaction relationship before choosing components. It distinguishes cognitive interaction design from literal drag, swipe, and click labels.
 
 ### Design Layer Documents
 
@@ -53,10 +73,9 @@ brief / image / data
 -> semantic layers
 -> .layerdoc.json
 -> HTML preview
--> PPTX export
 ```
 
-This is useful when a generated UI should become an editable deck or a future visual editor surface, not just a flat PNG.
+This is useful when a generated UI should become an editable HTML preview or a future visual editor surface, not just a flat PNG.
 
 ## Installation
 
@@ -100,11 +119,11 @@ Use $product-composer to design a frontier AI workflow surface.
 Define the interaction grammar before layout. Do not use fake drag or node-graph aesthetics.
 ```
 
-For an editable deck pipeline:
+For an editable UI layer pipeline:
 
 ```text
 Use $product-composer to convert this homepage concept into a design layer document.
-Export an HTML preview and a PPTX with editable text, shapes, and chart layers.
+Export an HTML preview with editable text, shapes, and chart layers.
 ```
 
 ## Reference Map
@@ -113,6 +132,7 @@ The main skill file routes Codex to focused references only when needed:
 
 - `references/ant-design-product-values.md` - enterprise product order and Ant Design-inspired values
 - `references/impeccable-execution-model.md` - execution discipline for non-generic UI
+- `references/style-family-router.md` - user style choices and visual family routing
 - `references/interaction-grammar.md` - new interaction models for AI and complex workflows
 - `references/taste-calibration.md` - taste gates and anti-generic critique
 - `references/market-calibration.md` - product homepage calibration against real market expectations
@@ -121,7 +141,7 @@ The main skill file routes Codex to focused references only when needed:
 - `references/image-generation-aesthetic-calibration.md` - prompts and repair passes for UI image generation
 - `references/visual-direction.md` - composition, palette, material, and silhouette guidance
 - `references/signature-aesthetic-systems.md` - complete visual worlds and multi-screen continuity
-- `references/design-layer-document.md` - semantic layer documents for HTML/PPTX export
+- `references/design-layer-document.md` - semantic layer documents for HTML export
 - `references/anti-patterns.md` - common AI UI and product design failures
 - `references/verification.md` - final verification guidance
 
@@ -138,10 +158,9 @@ Validate and export a design layer document:
 ```bash
 python3 scripts/design_layer_tool.py validate examples/opc-homepage.layerdoc.json
 python3 scripts/design_layer_tool.py html examples/opc-homepage.layerdoc.json outputs/opc-homepage.html
-python3 scripts/design_layer_tool.py pptx examples/opc-homepage.layerdoc.json outputs/opc-homepage.pptx
 ```
 
-The current MVP exports editable text, shapes, image placeholders, and simple bar charts. Native PowerPoint charts, tables, masks, complex gradients, and typography-perfect line wrapping are planned extension points.
+The current MVP exports editable text, shapes, image placeholders, and simple bar charts to HTML. Native editor bindings, tables, masks, complex gradients, and typography-perfect line wrapping are planned extension points.
 
 ## Validation
 

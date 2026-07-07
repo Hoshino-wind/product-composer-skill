@@ -3,7 +3,6 @@ import subprocess
 import sys
 import tempfile
 import unittest
-import zipfile
 from pathlib import Path
 
 
@@ -98,12 +97,11 @@ class DesignLayerToolTest(unittest.TestCase):
             check=False,
         )
 
-    def test_validates_and_exports_html_and_pptx(self):
+    def test_validates_and_exports_html(self):
         with tempfile.TemporaryDirectory() as tmp:
             tmp_path = Path(tmp)
             doc_path = tmp_path / "sample.layerdoc.json"
             html_path = tmp_path / "out" / "sample.html"
-            pptx_path = tmp_path / "out" / "sample.pptx"
             doc_path.write_text(json.dumps(sample_document()), encoding="utf-8")
 
             validate = self.run_tool("validate", str(doc_path))
@@ -116,21 +114,6 @@ class DesignLayerToolTest(unittest.TestCase):
             self.assertIn('data-layer-id="hero-title"', html_text)
             self.assertIn("Launch certainty", html_text)
             self.assertIn('data-layer-id="proof-chart"', html_text)
-
-            pptx = self.run_tool("pptx", str(doc_path), str(pptx_path))
-            self.assertEqual(pptx.returncode, 0, pptx.stderr)
-            self.assertTrue(pptx_path.exists())
-            with zipfile.ZipFile(pptx_path) as package:
-                names = set(package.namelist())
-                self.assertIn("ppt/slides/slide1.xml", names)
-                self.assertIn("ppt/slides/_rels/slide1.xml.rels", names)
-                self.assertIn("ppt/slideMasters/slideMaster1.xml", names)
-                self.assertIn("ppt/slideLayouts/slideLayout1.xml", names)
-                self.assertIn("ppt/theme/theme1.xml", names)
-                slide_xml = package.read("ppt/slides/slide1.xml").decode("utf-8")
-            self.assertIn("Launch certainty", slide_xml)
-            self.assertIn("Approved", slide_xml)
-            self.assertIn("<p:sp>", slide_xml)
 
     def test_rejects_unknown_layer_type(self):
         doc = sample_document()

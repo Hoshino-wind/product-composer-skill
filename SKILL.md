@@ -1,6 +1,6 @@
 ---
 name: product-composer
-description: "Use when designing, redesigning, generating, critiquing, or implementing high-quality UI surfaces: websites, apps, dashboards, SaaS workflows, AI products, command canvases, forms, data views, landing pages, React Bits-style motion pages, product content pages, cultural/editorial pages, multi-screen flows, prototypes, design systems, editable layer documents, HTML previews, or PPTX exports that need product clarity, distinctive art direction, expressive React motion, interaction grammar, desire-led minimalism, and responsive verification. If Ant Design APIs/components are explicit, also use antd."
+description: "Use when designing, redesigning, generating, critiquing, or implementing high-quality UI surfaces: websites, apps, dashboards, SaaS workflows, AI products, command canvases, forms, data views, landing pages, React Bits-style motion pages, product content pages, cultural/editorial pages, multi-screen flows, prototypes, design systems, image mockups, editable UI layer documents, or HTML previews that need product clarity, distinctive art direction, expressive React motion, interaction grammar, desire-led minimalism, and responsive verification. If Ant Design APIs/components are explicit, also use antd."
 ---
 
 # Product Composer
@@ -17,16 +17,17 @@ Read only the references needed for the task:
 
 - `references/ant-design-product-values.md`: read for enterprise products, dashboards, admin tools, forms, tables, Ant Design projects, or complex workflows.
 - `references/impeccable-execution-model.md`: read for new UI, redesigns, visual polish, critique, or avoiding generic AI output.
+- `references/style-family-router.md`: read before net-new UI generation when the user has not specified a style, when outputs feel random or same-looking, or when the agent needs to ask the user to choose a direction before composing.
 - `references/interaction-grammar.md`: read for AI products, agent workflows, command surfaces, creative tools, simulations, complex operations, or any request for new interaction design.
 - `references/taste-calibration.md`: read before net-new visual concepts, after user feedback like "ugly", "generic", "no taste", "too traditional", or when the design needs a sharper aesthetic stance.
-- `references/market-calibration.md`: read after user asks to look at excellent market examples, when a homepage feels fake, self-indulgent, too conceptual, or disconnected from real product evidence.
+- `references/market-calibration.md`: read after user asks to look at excellent market examples, ThemeForest/WordPress/Webflow/template-marketplace references, when a homepage feels fake, self-indulgent, too conceptual, or disconnected from real product evidence.
 - `references/content-judgment.md`: read when a surface feels dense, over-explained, crowded, or when the user says the design should make stronger decisions.
 - `references/desire-minimalism-psychology.md`: read when the user asks for minimalism plus psychology, viewing desire, product desire, conversion pull, appetite, emotional attraction, comfortable but not boring color, or a layout that makes people want to keep watching or use the product.
 - `references/image-generation-aesthetic-calibration.md`: read when the user asks to directly generate, draw, or preview UI as an image without code, when image-generated UI looks better than hand-built/vector attempts, when generated UI is rejected as ugly or lacking taste, or when the agent needs reusable prompt templates for elegant UI images.
 - `references/visual-direction.md`: read for any net-new UI, homepage, concept, visual redesign, product identity, or when the output risks becoming diagrammatic, generic, cluttered, or ugly.
 - `references/react-bits-motion-layer.md`: read for React/Next.js surfaces that mention React Bits, reactbits.dev, animated text, kinetic typography, cursor or hover effects, scroll reveals, particles, WebGL, Three.js backgrounds, expressive motion, portfolio polish, or kinetic landing pages.
 - `references/signature-aesthetic-systems.md`: read for cultural, editorial, museum, hospitality, fashion, premium brand, emotionally rich homepages, multi-screen visual consistency, or when the user asks for the quality of the stronger Dunhuang-style result without copying that style.
-- `references/design-layer-document.md`: read when the user asks for layer decomposition, editable UI output, HTML editing, PPT/PPTX export, design-to-deck workflows, chart/table layers, or any pipeline that should turn a visual design into structured elements instead of a flat image.
+- `references/design-layer-document.md`: read when the user asks for UI layer decomposition, editable UI output, HTML editing, chart/table layers, or any pipeline that should turn a visual design into structured UI elements instead of a flat image.
 - `references/anti-patterns.md`: read before visual implementation or design review.
 - `references/verification.md`: read before final validation of rendered UI.
 
@@ -43,17 +44,32 @@ Classify the surface before coding:
 
 Default to `product` when the screen is operational or data-heavy.
 
+## Style Selection Gate
+
+Before net-new UI generation, choose or ask for a style family. This gate prevents two failure modes: random style drift and repeated high-end-minimal sameness.
+
+Ask a compact choice question when the brief could support multiple visual directions. Do not ask for narrow fixes, existing design-system work, or requests with a clear reference image.
+
+Ask at most three choices:
+
+- Style family: Utility Product, Editorial Premium, Cultural Immersive, Technical Instrument, Data Dense, Playful Consumer, Soft Craft, or Bold Campaign.
+- Density: sparse, balanced, or dense-with-air.
+- Color appetite: quiet restrained, warm/desirable, bold contrast, or source-derived.
+
+If the user says to proceed without questions, infer the family from product evidence and state the choice before designing. Do not silently default to Editorial Premium.
+
 ## Universal UI Brief Gate
 
 Before designing any substantial surface, define:
 
 - Surface mode: product, brand, hybrid, frontier, editorial, cultural, or utility.
+- Selected style family: chosen by user or inferred, with one sentence why.
 - User mission: what the viewer or operator needs to understand, choose, complete, or desire.
 - Evidence source: product screenshot, workflow state, cultural material, venue/object imagery, dataset, brand asset, or existing design system.
 - Signature system: the dominant form, material language, palette source, motion/continuity idea, and one ownable detail.
 - Motion role: none, feedback, focus, reveal, continuity, or signature brand moment; define reduced-motion fallback for substantial animation.
 - Density contract: sparse, medium, dense, or dense-with-air; decide what is absent as deliberately as what is present.
-- Output path: image mockup, coded implementation, design critique, design prompt, design-system guidance, layer document, HTML preview, or PPTX export.
+- Output path: image mockup, coded implementation, design critique, design prompt, design-system guidance, UI layer document, or HTML preview.
 
 Do not start from a generic layout pattern. Start from the surface's evidence, mission, and signature system, then choose layout.
 
@@ -67,7 +83,7 @@ Before designing an AI, agentic, automation, creative, or complex workflow surfa
 - Time model: how do past actions, current execution, future plan, and uncertainty appear?
 - Object model: what is the living object the user manipulates: goal, run, plan, scene, dataset, policy, workspace, or workflow?
 - Commitment model: what can be previewed, simulated, committed, reverted, or audited?
-- Interaction level: cognitive model, decision path, system response, feedback loop, or physical gesture? Do not turn interaction design into literal drag/click/slide affordances unless the product truly supports them.
+- Interaction level: cognitive model, decision path, system response, feedback loop, or physical gesture? Do not turn interaction design into literal drag/click/swipe affordances unless the product truly supports them.
 
 Do not default to menus, tables, cards, forms, and dashboards until this grammar is clear. If traditional components remain useful, make them subordinate to the new control model.
 
@@ -83,6 +99,10 @@ Before finalizing any visual surface, pass this gate:
 - Does the palette have taste and tension rather than merely safe enterprise neutrals?
 - Is the density intentional, with enough breathing room for the eye to rest?
 - Would this still look good if the labels were blurred?
+- For utility or technical surfaces, does it avoid generic admin-shell and black cockpit aesthetics? Reject `运行舱`-style industrial fantasy unless the real domain requires it.
+- For SaaS, does it apply Ant Design product values: natural task order, certainty, meaningful work objects, and progressive capability?
+- For technical instrument surfaces, should the proof object be a 3D instrument/digital twin with anchored state and controls instead of flat cards?
+- If this is part of a set, is it structurally different from the other accepted outputs? Reject same-looking variants that reuse warm cards, central rails, right panels, thin borders, status chips, or the same proof-object placement.
 
 If the answer is no, run a `visual direction` pass before adding more UI detail.
 
@@ -170,12 +190,12 @@ For image UI mockups:
 - Prompt for `design-board quality` and a real product website/app surface, not a method diagram.
 - Keep exact visible text minimal.
 - Avoid over-specifying geometry into boxes, arrows, or flowcharts.
-- Use constraints to prevent known failures: fake drag/slide gestures, photo/quote/widget collages, dashboard templates, and dense feature grids.
+- Use constraints to prevent known failures: fake drag/swipe gestures, photo/quote/widget collages, dashboard templates, and dense feature grids.
 - Inspect the result visually before claiming it worked. If the output only appears in chat and does not save to disk, say so instead of copying an old asset.
 
-## Layer Document Export Gate
+## Layer Document UI Gate
 
-When the user asks for layer decomposition, editable output, HTML editing, PPT/PPTX export, chart/table layers, or design-to-deck production, use a Design Layer Document as the source of truth.
+When the user asks for layer decomposition, editable UI output, HTML editing, chart/table layers, or structured UI elements, use a Design Layer Document as the source of truth.
 
 Rules:
 
@@ -183,8 +203,7 @@ Rules:
 - Preserve semantic groups: headline, CTA, proof object, chart, table, background, decoration, navigation, and content sections should stay meaningful.
 - Charts and tables must carry data, not only drawn marks.
 - Export HTML for inspection and element-level editing.
-- Export PPTX for delivery. The bundled MVP exports editable text, shapes, image placeholders, and simple chart layers as editable slide objects.
-- Run `scripts/design_layer_tool.py validate` before exporting HTML or PPTX.
+- Run `scripts/design_layer_tool.py validate` before exporting HTML.
 - For image-derived designs, use the image only to infer the layer document; future edits happen in the layer document.
 
 Commands:
@@ -192,7 +211,6 @@ Commands:
 ```bash
 python3 scripts/design_layer_tool.py validate examples/opc-homepage.layerdoc.json
 python3 scripts/design_layer_tool.py html examples/opc-homepage.layerdoc.json outputs/opc-homepage.html
-python3 scripts/design_layer_tool.py pptx examples/opc-homepage.layerdoc.json outputs/opc-homepage.pptx
 ```
 
 ## Composition Workflow
@@ -200,6 +218,7 @@ python3 scripts/design_layer_tool.py pptx examples/opc-homepage.layerdoc.json ou
 1. Inspect the local project first: framework, component library, styling system, existing tokens, routes, and nearby screens.
 2. State a concise design brief before implementation:
    - surface mode
+   - selected style family and whether it was user-chosen or inferred
    - primary user mission
    - information density
    - keep/defer/delete content judgment
@@ -247,7 +266,7 @@ python3 scripts/design_layer_tool.py pptx examples/opc-homepage.layerdoc.json ou
 - Treat taste as deletion, proportion, and specificity before decoration.
 - Treat React Bits-style motion as an expressive layer, not a default layout system. Use it to focus, reveal, connect, or create a signature moment.
 - For minimal persuasive UI, use color as appetite and attention, not decoration: avoid defaulting to black and white; choose a small expressive palette with a clear base, emotional accent, and action color.
-- Do not fake interaction with labels like "drag", "click", or "slide" on static or conceptual UI. Show the product's relationship model instead.
+- Do not fake interaction with labels like "drag", "click", or "swipe" on static or conceptual UI. Show the product's relationship model instead.
 - Avoid generic AI signatures: purple-blue gradients, decorative orbs, nested cards, arbitrary glass panels, huge rounded icon tiles, vague SaaS copy, and ornamental layout flourishes.
 - Do not make a one-hue interface. Use neutrals, semantic colors, and one or two purposeful accents.
 - Do not scale font size with viewport width. Use stable type scales and responsive layout constraints.
@@ -271,5 +290,4 @@ For editable layer documents, use the bundled exporter:
 ```bash
 python3 scripts/design_layer_tool.py validate <file.layerdoc.json>
 python3 scripts/design_layer_tool.py html <file.layerdoc.json> <out.html>
-python3 scripts/design_layer_tool.py pptx <file.layerdoc.json> <out.pptx>
 ```

@@ -36,7 +36,7 @@ Use one dominant mechanism per viewport:
 
 For transformation scenes, the "after" side must be genuinely desirable. Do not fill it with unrelated lifestyle photos, inspirational quotes, metric widgets, or decorative proof fragments. The result should look like a coherent product artifact the user wants to own, touch, or create.
 
-Do not express participation by defaulting to "drag", "click", or "slide" labels. If the real product interaction is judgment, review, negotiation, or guided refinement, make that relationship visible instead of inventing a physical gesture.
+Do not express participation by defaulting to "drag", "click", or "swipe" labels. If the real product interaction is judgment, review, negotiation, or guided refinement, make that relationship visible instead of inventing a physical gesture.
 
 ## Color Guidance
 
