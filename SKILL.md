@@ -1,6 +1,6 @@
 ---
 name: product-composer
-description: "Use when designing, redesigning, generating, critiquing, or implementing high-quality UI surfaces: websites, apps, dashboards, SaaS workflows, AI products, command canvases, forms, data views, landing pages, product content pages, cultural/editorial pages, multi-screen flows, prototypes, design systems, editable layer documents, HTML previews, or PPTX exports that need product clarity, distinctive art direction, interaction grammar, desire-led minimalism, and responsive verification. If Ant Design APIs/components are explicit, also use antd."
+description: "Use when designing, redesigning, generating, critiquing, or implementing high-quality UI surfaces: websites, apps, dashboards, SaaS workflows, AI products, command canvases, forms, data views, landing pages, React Bits-style motion pages, product content pages, cultural/editorial pages, multi-screen flows, prototypes, design systems, editable layer documents, HTML previews, or PPTX exports that need product clarity, distinctive art direction, expressive React motion, interaction grammar, desire-led minimalism, and responsive verification. If Ant Design APIs/components are explicit, also use antd."
 ---
 
 # Product Composer
@@ -24,6 +24,7 @@ Read only the references needed for the task:
 - `references/desire-minimalism-psychology.md`: read when the user asks for minimalism plus psychology, viewing desire, product desire, conversion pull, appetite, emotional attraction, comfortable but not boring color, or a layout that makes people want to keep watching or use the product.
 - `references/image-generation-aesthetic-calibration.md`: read when the user asks to directly generate, draw, or preview UI as an image without code, when image-generated UI looks better than hand-built/vector attempts, when generated UI is rejected as ugly or lacking taste, or when the agent needs reusable prompt templates for elegant UI images.
 - `references/visual-direction.md`: read for any net-new UI, homepage, concept, visual redesign, product identity, or when the output risks becoming diagrammatic, generic, cluttered, or ugly.
+- `references/react-bits-motion-layer.md`: read for React/Next.js surfaces that mention React Bits, reactbits.dev, animated text, kinetic typography, cursor or hover effects, scroll reveals, particles, WebGL, Three.js backgrounds, expressive motion, portfolio polish, or kinetic landing pages.
 - `references/signature-aesthetic-systems.md`: read for cultural, editorial, museum, hospitality, fashion, premium brand, emotionally rich homepages, multi-screen visual consistency, or when the user asks for the quality of the stronger Dunhuang-style result without copying that style.
 - `references/design-layer-document.md`: read when the user asks for layer decomposition, editable UI output, HTML editing, PPT/PPTX export, design-to-deck workflows, chart/table layers, or any pipeline that should turn a visual design into structured elements instead of a flat image.
 - `references/anti-patterns.md`: read before visual implementation or design review.
@@ -50,6 +51,7 @@ Before designing any substantial surface, define:
 - User mission: what the viewer or operator needs to understand, choose, complete, or desire.
 - Evidence source: product screenshot, workflow state, cultural material, venue/object imagery, dataset, brand asset, or existing design system.
 - Signature system: the dominant form, material language, palette source, motion/continuity idea, and one ownable detail.
+- Motion role: none, feedback, focus, reveal, continuity, or signature brand moment; define reduced-motion fallback for substantial animation.
 - Density contract: sparse, medium, dense, or dense-with-air; decide what is absent as deliberately as what is present.
 - Output path: image mockup, coded implementation, design critique, design prompt, design-system guidance, layer document, HTML preview, or PPTX export.
 
@@ -208,6 +210,7 @@ python3 scripts/design_layer_tool.py pptx examples/opc-homepage.layerdoc.json ou
    - signature system and continuity device when the surface needs memorable visual identity
    - aesthetic risk to avoid
    - one justified design risk
+   - motion role and reduced-motion fallback when animation is substantial
    - interaction grammar for frontier surfaces
    - constraints from the existing codebase
 3. Shape the screen around workflow, not decoration:
@@ -217,6 +220,7 @@ python3 scripts/design_layer_tool.py pptx examples/opc-homepage.layerdoc.json ou
 4. Build with existing primitives:
    - use local components and tokens where available
    - use familiar controls for familiar jobs
+   - use React Bits-style components only as an accent or signature layer after the core hierarchy works statically
    - keep dimensions stable for boards, grids, tables, toolbars, counters, and icon buttons
 5. Tune deliberately:
    - `bolder`: increase identity when the page is correct but forgettable
@@ -241,11 +245,13 @@ python3 scripts/design_layer_tool.py pptx examples/opc-homepage.layerdoc.json ou
 - Make the first impression visually composed before making every secondary function visible.
 - Prefer one strong signature form over many small clever widgets.
 - Treat taste as deletion, proportion, and specificity before decoration.
+- Treat React Bits-style motion as an expressive layer, not a default layout system. Use it to focus, reveal, connect, or create a signature moment.
 - For minimal persuasive UI, use color as appetite and attention, not decoration: avoid defaulting to black and white; choose a small expressive palette with a clear base, emotional accent, and action color.
 - Do not fake interaction with labels like "drag", "click", or "slide" on static or conceptual UI. Show the product's relationship model instead.
 - Avoid generic AI signatures: purple-blue gradients, decorative orbs, nested cards, arbitrary glass panels, huge rounded icon tiles, vague SaaS copy, and ornamental layout flourishes.
 - Do not make a one-hue interface. Use neutrals, semantic colors, and one or two purposeful accents.
 - Do not scale font size with viewport width. Use stable type scales and responsive layout constraints.
+- Support `prefers-reduced-motion` for large, repeated, background, WebGL, particle, or text animation.
 - Use visual assets when a website, game, object, venue, product, or brand page needs inspection or emotional specificity.
 - Prefer icons for tool actions and text labels for commands that need interpretation.
 - Ensure text never overlaps, clips, or spills out of buttons, tabs, cards, inputs, tables, or mobile containers.
