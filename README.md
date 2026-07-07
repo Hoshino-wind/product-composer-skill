@@ -27,7 +27,7 @@ Every substantial use should produce or preserve a compact design contract:
 2. Visual thesis: the one sentence that explains the surface's aesthetic direction.
 3. Taste constraints: 3-5 choices that make the UI specific.
 4. Anti-defaults: 2-3 patterns the UI must avoid.
-5. Asset plan: user-provided, local, or imagegen-generated assets, with missing assets named honestly.
+5. Asset plan: user-provided, local, or imagegen-generated assets, with missing assets named honestly. If missing visual assets would weaken the page, use text-to-image generation in Codex through imagegen before implementation, unless the asset must be real or official.
 6. Page experience plan: for ambitious homepages or launches, define the screen model, asset system, pagination/page rhythm, and continuity device.
 7. Implementation lock: what must survive coding, and what may adapt for engineering.
 8. Visual verification: rendered checks across key sections and responsive states when feasible.
@@ -46,7 +46,7 @@ Taste is selection under pressure: proportion, deletion, restraint, contrast, an
 
 ### Assets Before Invention
 
-Real assets, local assets, and generated assets shape the surface. Generated assets are allowed, but their role must be explicit and they must not impersonate real product proof.
+Real assets, local assets, and generated assets shape the surface. Generated assets are allowed, but their role must be explicit and they must not impersonate real product proof. When the user has not provided enough strong media for a visual page, generate with imagegen and select assets by role instead of designing around empty placeholders.
 
 ### Screens Before Sections
 

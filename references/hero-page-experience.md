@@ -27,7 +27,7 @@ A single image is not an asset system. Define roles before building:
 - Transition motif: object trail, edge treatment, progress rail, section marker, horizon, path, mask, or motion bridge.
 - Proof asset: product shot, credible interface slice, real metric source, workflow state, or generated concept clearly labeled by role.
 
-User-provided assets are strongest. Local assets and imagegen-generated assets are acceptable when their role is explicit. Do not present generated assets as official logos, real product photos, real metrics, or production screenshots.
+User-provided assets are strongest. Local assets and imagegen-generated assets are acceptable when their role is explicit. If missing visual assets would leave the hero generic, generate with imagegen before implementation or image mockup work, then choose the best result as a role-specific asset. Do not present generated assets as official logos, real product photos, real metrics, or production screenshots.
 
 ## Pagination And Page Rhythm
 
@@ -58,6 +58,7 @@ Before implementation or image generation, state:
 - Hero/page experience thesis: what the page should feel like and why.
 - Screen model: 3-4 screens, each with one job.
 - Asset system: hero, support, material, transition, and proof assets.
+- Text-to-image plan: what to generate when the user has not provided enough strong assets.
 - Pagination/page rhythm: the chosen rhythm device and how it behaves.
 - Continuity device: what keeps sections from feeling unrelated.
 - Deletion rule: what disappears first if the page feels crowded.

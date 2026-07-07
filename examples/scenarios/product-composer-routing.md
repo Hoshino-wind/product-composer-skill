@@ -95,6 +95,7 @@ Output contract:
 
 - Identify missing real assets.
 - Offer user-provided, local, or imagegen-generated asset paths.
+- If missing visual assets would make the page generic, use text-to-image generation through imagegen before implementation, unless real product proof is required.
 - Avoid pretending generated assets are official product photos.
 
 Acceptance checks:
@@ -196,6 +197,7 @@ Output contract:
 - Define the hero/page experience thesis.
 - Define a 3-4 screen model with one job per screen.
 - Define the asset system: hero, support, material, transition, and proof assets.
+- Define what to generate with imagegen when the user has not provided enough strong assets.
 - Choose the pagination/page rhythm and continuity device.
 
 Acceptance checks:

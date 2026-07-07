@@ -143,6 +143,22 @@ class SkillGuidanceStructureTests(unittest.TestCase):
         ]:
             self.assertNotIn(forbidden_term.lower(), public_text.lower())
 
+    def test_missing_visual_assets_trigger_text_to_image_generation(self):
+        skill = self.read("SKILL.md")
+        asset_protocol = self.read("references/asset-context-protocol.md")
+        hero_page = self.read("references/hero-page-experience.md")
+        readmes = f"{self.read('README.md')}\n{self.read('README.zh-CN.md')}"
+        combined = f"{skill}\n{asset_protocol}\n{hero_page}\n{readmes}"
+
+        for required_term in [
+            "missing visual assets",
+            "text-to-image",
+            "call imagegen before implementation",
+            "Codex",
+            "generate with imagegen",
+        ]:
+            self.assertIn(required_term, combined)
+
 
 if __name__ == "__main__":
     unittest.main()

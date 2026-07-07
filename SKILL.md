@@ -121,7 +121,7 @@ Before creating or changing visual direction, inspect durable context:
 - asset context: user-provided assets, local assets, imagegen-generated assets, brand mark, product shots, UI screenshots, object/venue images, icon and illustration style, media constraints, and missing assets
 - component memory: button heights, table density, card padding, radius scale, shadow/depth model, navigation behavior, empty/error/loading states, and action naming
 
-If context is missing, state the gap and design around an honest placeholder, inferred local system, or generated asset. Imagegen-generated assets can become first-class design assets when their role is explicit, but they must not impersonate official logos, real product screenshots, real venue/object photos, metrics, or brand assets.
+If context is missing, state the gap and design around an honest placeholder, inferred local system, or generated asset. When missing visual assets would make a website, brand page, hero/page experience, portfolio, game, or product page generic, use text-to-image generation before implementation when authenticity does not require user-provided media. In Codex, use the `imagegen` skill/tool to create beautiful role-specific assets, then assign each result a role before coding. Imagegen-generated assets can become first-class design assets when their role is explicit, but they must not impersonate official logos, real product screenshots, real venue/object photos, metrics, or brand assets.
 
 For redesigns, separate what remains, what changes, and what gets deprecated.
 
@@ -238,6 +238,7 @@ For image UI mockups:
 - Do not scale font size with viewport width. Use stable type scales and responsive layout constraints.
 - Support `prefers-reduced-motion` for large, repeated, background, WebGL, particle, or text animation.
 - Use visual assets when a website, game, object, venue, product, or brand page needs inspection or emotional specificity.
+- If missing visual assets are the reason a page would become generic, generate with imagegen before settling the layout unless the asset must be real, official, user-provided, or legally accurate.
 - For hero/page experience work, treat the page as designed screens with a screen model, asset system, pagination/page rhythm, and continuity device; do not stack independent sections by habit.
 - One small image or one full product screenshot is not enough when the user asks for a visually ambitious page. Use user-provided assets, local assets, or imagegen-generated assets with explicit roles.
 - Prefer icons for tool actions and text labels for commands that need interpretation.

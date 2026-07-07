@@ -6,6 +6,8 @@ Use this for named brands, products, venues, portfolios, marketing pages, image-
 
 Visual invention should start from asset context when the subject has one. Assets can be user-provided, already present in the project, or generated through imagegen. Colors and fonts are not enough. Product images, UI screenshots, object materials, logo behavior, generated support imagery, and media constraints often carry the design.
 
+When missing visual assets would make the page generic and authenticity does not require real media, use text-to-image generation instead of leaving the design empty. In Codex, call imagegen before implementation and give every generated result a clear design role.
+
 ## Context Questions
 
 Before visual direction, identify:
@@ -22,6 +24,7 @@ Before visual direction, identify:
 - media constraints: aspect ratios, transparency, resolution, rights, missing files
 - required public facts for named products or venues
 - asset gaps that require generated placeholders or explicit omission
+- missing visual assets that should trigger text-to-image generation
 
 ## Asset Inventory
 
@@ -35,6 +38,7 @@ Asset context:
 - Must use:
 - Can use:
 - Missing:
+- Text-to-image plan:
 - Generate with imagegen:
 - Infer only:
 - Do not fake:
@@ -48,11 +52,13 @@ Asset context:
 - Do not use random stock-like imagery when the user needs to inspect a real product, venue, object, or UI state.
 - Do not hide missing assets behind blur, darkness, or atmospheric cropping.
 - If a product screenshot is the proof object, make it inspectable.
+- If missing visual assets would weaken a website, hero/page experience, portfolio, game, product page, or brand page, call imagegen before implementation to create beautiful role-specific assets: hero object, product scene, environment, texture, transition motif, thumbnail, illustration, or empty state.
 - If generated media is acceptable, call imagegen and give the result a clear role: hero object, empty state, background texture, product scene, thumbnail, illustration, icon family, or concept support asset.
 - Imagegen-generated assets become first-class assets after selection, but their generated nature must stay clear in the plan when authenticity matters.
 - Generated assets may depict invented product scenes, abstracted product metaphors, illustrations, textures, thumbnails, empty states, and non-official support imagery.
 - Generated assets must not impersonate official logos, real UI screenshots, real venue/object photos, customer portraits, metrics, certifications, or brand-owned assets.
 - If assets are missing, state the gap and design around a realistic placeholder instead of pretending.
+- Use omission or placeholders only when image generation is unavailable, the asset must be real/official/user-provided, or the generated asset would create false proof.
 
 ## Media Treatment
 
