@@ -95,6 +95,24 @@ class SkillGuidanceStructureTests(unittest.TestCase):
         ]:
             self.assertNotIn(removed_scope, combined)
 
+    def test_public_docs_do_not_reference_removed_route_files(self):
+        public_paths = [
+            ROOT / "SKILL.md",
+            ROOT / "README.md",
+            ROOT / "README.zh-CN.md",
+            *sorted((ROOT / "references").glob("*.md")),
+            *sorted((ROOT / "examples").glob("**/*.md")),
+        ]
+        public_text = "\n".join(path.read_text(encoding="utf-8") for path in public_paths)
+
+        for removed_reference in [
+            "design-review-output.md",
+            "input-output-mode-router.md",
+            "design-layer-document.md",
+            "ui-generation-skill-distillation.md",
+        ]:
+            self.assertNotIn(removed_reference, public_text)
+
 
 if __name__ == "__main__":
     unittest.main()

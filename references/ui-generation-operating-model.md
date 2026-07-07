@@ -8,7 +8,6 @@ The real job is not to make UI. The real job is to make a sequence of irreversib
 
 Read the companion references when the problem is not only visual taste:
 
-- `input-output-mode-router.md`: choose the right workflow for the input and deliverable.
 - `asset-context-protocol.md`: gather real assets and media constraints before visual invention.
 - `design-memory-consistency.md`: preserve decisions across screens, sessions, and edits.
 
