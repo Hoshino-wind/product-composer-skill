@@ -2,7 +2,7 @@
 
 English | [Chinese](README.zh-CN.md)
 
-Product Composer is a Codex skill for designing, critiquing, generating, and implementing high-quality product UI surfaces.
+Product Composer is a Codex skill for creating and implementing UI with stronger taste, clearer visual direction, and better control over AI-generated aesthetics.
 
 It is built for cases where a normal UI prompt tends to produce generic SaaS pages, crowded dashboards, weak visual hierarchy, or attractive but unusable mockups. The skill pushes Codex to treat UI as a product system: clear mission, deliberate content judgment, distinctive visual direction, interaction grammar, asset context, design memory, and rendered verification.
 
@@ -14,12 +14,20 @@ It is built for cases where a normal UI prompt tends to produce generic SaaS pag
 - Cultural, editorial, museum, hospitality, portfolio, and premium brand pages
 - Product content pages that need desire, clarity, and visual continuity
 - Image-generated UI mockups that should avoid template-like AI aesthetics
-- Figma/reference-to-code, screenshot-derived design systems, and DESIGN.md-driven UI work
 - User-provided, local, or imagegen-generated asset workflows
-- Editable UI layer documents and HTML previews
-- Existing UI critique and redesign direction
+- Coded UI implementation after a visual direction or concept is selected
 
 ## Core Ideas
+
+### Aesthetic Control Loop
+
+The skill keeps UI work centered on a short control loop:
+
+1. Identify the generic-default risk.
+2. Write one visual thesis.
+3. Lock taste constraints and anti-defaults.
+4. Compose or implement under that contract.
+5. Verify the rendered result and repair the weakest visual decision.
 
 ### Product Clarity
 
@@ -52,49 +60,19 @@ The routing also includes quality floors for practical product styles. Utility s
 
 ### UI Generation Direction
 
-The skill absorbs UI generation patterns into one local direction model: reference anchor, choice mode, style dials, concept fidelity, artifact mode, and visual check.
+The skill absorbs UI generation patterns into one local direction model: route, visual thesis, asset context, style dials, concept fidelity, implementation lock, and visual check.
 
-The deeper layer is judgment: visual-quality scoring, reference DNA extraction, direction matrices that vary the design thesis, and implementation locks that preserve accepted concepts.
+The deeper layer is judgment: visual-quality scoring, direction matrices that vary the design thesis, and implementation locks that preserve accepted concepts.
 
-The deepest layer is operating behavior: choose the surface register, write a design thesis inventory before code, run a generic-default self-test, treat copy as design material, and verify implementation section by section.
-
-The latest layer adds context durability: route by input/output mode, gather asset context before visual invention, and preserve design memory so repeated edits do not drift.
-
-These are integrated into the main skill defaults, not only deep references:
-
-- Mode before style
-- Assets before invention: user-provided, local, or imagegen-generated
-- Memory before novelty
-- Direction before code
-- Concepts are contracts
-- Parity in slices
-- Copy is interface
-- Generic-default self-test
+The deepest layer is operating behavior: choose the surface register, write a design thesis before code, run a generic-default self-test, treat copy as design material, and verify implementation section by section.
 
 ### Desire-Led Minimalism
 
 Minimalism is treated as focus, not emptiness. The skill asks what desire the page should create: curiosity, confidence, relief, mastery, aspiration, participation, or belonging. Color, layout, proof, and interaction are then chosen to support that job.
 
-### Market Calibration
-
-For official sites, landing pages, and commercial content pages, the skill can also use market references such as ThemeForest WordPress themes, Webflow-style template markets, SaaS landing libraries, and high-performing product sites. The goal is commercial maturity: clear category fit, finished-site proof, modular section rhythm, trust signals, and a direct preview/booking/purchase path without copying a specific template.
-
 ### Interaction Grammar
 
 For AI, agentic, automation, creative, or complex workflow products, the skill defines the interaction relationship before choosing components. It distinguishes cognitive interaction design from literal drag, swipe, and click labels.
-
-### Design Layer Documents
-
-The skill can turn a UI concept into a structured `.layerdoc.json` file:
-
-```text
-brief / image / data
--> semantic layers
--> .layerdoc.json
--> HTML preview
-```
-
-This is useful when a generated UI should become an editable HTML preview or a future visual editor surface, not just a flat PNG.
 
 ## Installation
 
@@ -138,45 +116,41 @@ Use $product-composer to design a frontier AI workflow surface.
 Define the interaction grammar before layout. Do not use fake drag or node-graph aesthetics.
 ```
 
-For an editable UI layer pipeline:
+For selected concept implementation:
 
 ```text
-Use $product-composer to convert this homepage concept into a design layer document.
-Export an HTML preview with editable text, shapes, and chart layers.
+Use $product-composer to implement the selected UI direction in React.
+Preserve the visual thesis, hierarchy, palette roles, and responsive behavior.
 ```
 
 ## Reference Map
 
 The main skill file routes Codex to focused references only when needed:
 
-- `references/task-router.md` - choose the smallest route for quick patches, reviews, Figma work, image mockups, accepted concepts, layer documents, and full redesigns
-- `references/design-review-output.md` - structured UI review output with severity levels and actionable changes
+- `references/task-router.md` - choose the smallest route for UI design and implementation work
 - `references/ant-design-product-values.md` - enterprise product order and Ant Design-inspired values
 - `references/execution-discipline.md` - execution discipline for non-generic UI
 - `references/style-family-router.md` - user style choices and visual family routing
 - `references/interaction-grammar.md` - new interaction models for AI and complex workflows
-- `references/taste-calibration.md` - taste gates and anti-generic critique
+- `references/taste-calibration.md` - taste gates and anti-generic judgment
 - `references/market-calibration.md` - product homepage calibration against real market expectations
 - `references/content-judgment.md` - deciding what to keep, defer, and delete
 - `references/desire-minimalism-psychology.md` - minimalism that creates product desire
 - `references/image-generation-aesthetic-calibration.md` - prompts and repair passes for UI image generation
-- `references/ui-generation-skill-distillation.md` - distilled UI generation workflow patterns
-- `references/ui-generation-operating-model.md` - deeper UI generation operating model for register, thesis, anti-template review, and parity loops
-- `references/input-output-mode-router.md` - route prompt, screenshot, Figma, concept, app, prototype, and layer-document work
+- `references/ui-generation-operating-model.md` - deeper UI generation operating model for register, thesis, anti-template checks, and parity loops
 - `references/asset-context-protocol.md` - gather user-provided, local, and imagegen-generated assets before design
 - `references/design-memory-consistency.md` - preserve tokens, component decisions, spacing, depth, and surface consistency across work
 - `references/visual-quality-rubric.md` - visual quality scoring for hierarchy, type, palette, material, and AI-flavored failure modes
-- `references/reference-dna-extraction.md` - extracting design DNA from screenshots, Figma, references, and accepted mockups
+- `references/reference-dna-extraction.md` - extracting design DNA from screenshots, references, and accepted mockups
 - `references/direction-matrix-builder.md` - creating genuinely different visual directions before committing
 - `references/concept-to-implementation-lock.md` - preserving accepted image concepts during coded implementation
 - `references/visual-direction.md` - composition, palette, material, and silhouette guidance
 - `references/react-bits-motion-layer.md` - expressive React motion and kinetic accent layers
 - `references/signature-aesthetic-systems.md` - complete visual worlds and multi-screen continuity
-- `references/design-layer-document.md` - semantic layer documents for HTML export
 - `references/anti-patterns.md` - common AI UI and product design failures
 - `references/verification.md` - final verification guidance
 
-Scenario examples live in `examples/scenarios/` and define expected routing behavior for common UI requests.
+Scenario examples live in `examples/scenarios/` and define expected routing behavior for UI design and implementation requests.
 
 ## Included Tooling
 
@@ -185,15 +159,6 @@ node scripts/ui-pattern-scan.mjs <project-or-src-dir>
 ```
 
 The scanner flags common visual anti-patterns in frontend projects. Treat the output as warnings, then confirm visually.
-
-Validate and export a design layer document:
-
-```bash
-python3 scripts/design_layer_tool.py validate examples/opc-homepage.layerdoc.json
-python3 scripts/design_layer_tool.py html examples/opc-homepage.layerdoc.json outputs/opc-homepage.html
-```
-
-The current MVP exports editable text, shapes, image placeholders, and simple bar charts to HTML. Native editor bindings, tables, masks, complex gradients, and typography-perfect line wrapping are planned extension points.
 
 ## Validation
 

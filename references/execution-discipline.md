@@ -14,7 +14,7 @@ Before changing UI, inspect or infer:
 - content voice
 - implementation constraints
 
-If the repo contains `DESIGN.md`, `PRODUCT.md`, `AGENTS.md`, design tokens, Storybook, Figma exports, or nearby screens, read them before inventing style.
+If the repo contains `DESIGN.md`, `PRODUCT.md`, `AGENTS.md`, design tokens, Storybook, or nearby screens, read them before inventing style.
 
 ## Use Design Verbs
 
@@ -26,8 +26,8 @@ Apply these verbs during work:
 - `arrange`: improve spatial rhythm, alignment, grouping, and scanning.
 - `clarify`: rewrite copy, labels, and empty/error states so the UI explains itself.
 - `animate`: add restrained motion only when it communicates continuity, status, or causality.
-- `critique`: review hierarchy, clarity, brand fit, and emotional tone.
-- `audit`: check accessibility, responsive behavior, performance, and edge cases.
+- `repair`: improve hierarchy, clarity, brand fit, and emotional tone when the surface feels wrong.
+- `verify`: check accessibility, responsive behavior, performance, and edge cases.
 - `polish`: final visual pass after behavior is correct.
 - `harden`: protect against long text, missing data, permissions, loading, errors, and mobile constraints.
 
@@ -62,4 +62,4 @@ Use these when a UI is functionally correct but visually wrong:
 
 ## Live Iteration Habit
 
-Prefer changing the real source and reviewing diffs over producing throwaway mockups. When possible, run the app, capture screenshots, patch source, and re-check the rendered result.
+Prefer changing the real source and inspecting diffs over producing throwaway mockups. When possible, run the app, capture screenshots, patch source, and re-check the rendered result.

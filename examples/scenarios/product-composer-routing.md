@@ -1,86 +1,33 @@
 # Product Composer Routing Scenarios
 
-These scenarios define expected routing behavior for common UI requests. They are not templates for user-visible responses; they are regression examples for how the skill should choose references and output shape.
+These scenarios define expected routing behavior for UI design and implementation requests. They are not templates for user-visible responses; they are regression examples for how the skill should choose references and output shape.
 
-## Scenario 1: Quick Patch
-
-User prompt:
-
-```text
-This settings drawer looks cramped on mobile. Fix the spacing and button row.
-```
-
-Expected routing:
-
-- Work mode: quick patch
-- Read: `task-router.md`, `design-memory-consistency.md`, `anti-patterns.md`, `verification.md`
-- Skip: style family prompt, direction matrix, signature system
-
-Output contract:
-
-- Preserve the existing component system.
-- Make the smallest useful spacing/layout change.
-- Mention affected states only if touched.
-
-Acceptance checks:
-
-- Mobile text does not clip or overlap.
-- Button row has stable dimensions.
-- Existing tokens/components are preserved.
-
-## Scenario 2: Design Review
+## Scenario 1: New UI Design
 
 User prompt:
 
 ```text
-Review this dashboard screenshot and tell me what feels weak.
+Design a polished homepage UI for our AI research product. It should avoid generic SaaS templates.
 ```
 
 Expected routing:
 
-- Work mode: design review
-- Read: `task-router.md`, `design-review-output.md`, `visual-quality-rubric.md`, `anti-patterns.md`
-- Skip: implementation workflow unless requested
+- Work mode: new UI design
+- Read: `task-router.md`, `style-family-router.md`, `visual-direction.md`, `asset-context-protocol.md`, `visual-quality-rubric.md`
+- Choose a visual thesis before layout.
 
 Output contract:
 
-- Start with findings.
-- Use severity levels.
-- Do not redesign the UI unless asked.
+- Define mission, style family, asset assumptions, dominant visual form, and taste constraints.
+- Produce a specific visual direction, not a reusable template.
 
 Acceptance checks:
 
-- Findings are prioritized.
-- Every issue has a clear change.
-- Review covers hierarchy, task flow, visual craft, and responsive/state risk when visible.
+- The first viewport has a memorable product signal.
+- The design would not still fit after swapping only the product name.
+- Asset assumptions are explicit.
 
-## Scenario 3: Figma To Code
-
-User prompt:
-
-```text
-Implement this Figma frame in our app.
-```
-
-Expected routing:
-
-- Work mode: Figma
-- Read: `task-router.md`, `reference-dna-extraction.md`, `concept-to-implementation-lock.md`, `asset-context-protocol.md`, `verification.md`
-- Also use Figma-specific skills/tools when available
-
-Output contract:
-
-- Extract hierarchy, tokens, assets, spacing, and component structure.
-- Reuse local components where possible.
-- Validate against screenshot or rendered view in slices.
-
-Acceptance checks:
-
-- Major layout regions match.
-- Assets are not replaced by unrelated placeholders when real assets exist.
-- Deviations are named.
-
-## Scenario 4: Image Mockup
+## Scenario 2: Image Mockup
 
 User prompt:
 
@@ -92,7 +39,7 @@ Expected routing:
 
 - Work mode: image mockup
 - Read: `task-router.md`, `image-generation-aesthetic-calibration.md`, `asset-context-protocol.md`, `direction-matrix-builder.md` when taste is unclear
-- Use image generation when available
+- Use image generation when available.
 
 Output contract:
 
@@ -106,7 +53,7 @@ Acceptance checks:
 - It avoids dashboard-template and dense-widget failure.
 - Missing real assets are identified honestly.
 
-## Scenario 5: Accepted Concept Implementation
+## Scenario 3: Accepted Concept Implementation
 
 User prompt:
 
@@ -131,7 +78,7 @@ Acceptance checks:
 - Major sections preserve the concept.
 - Mobile layout adapts without changing the visual thesis.
 
-## Scenario 6: Brand Homepage With Missing Assets
+## Scenario 4: Brand Homepage With Missing Assets
 
 User prompt:
 
@@ -156,7 +103,7 @@ Acceptance checks:
 - Hero is not pure abstract decoration.
 - Asset assumptions are explicit.
 
-## Scenario 7: Frontier Interaction Surface
+## Scenario 5: Frontier Interaction Surface
 
 User prompt:
 
@@ -180,33 +127,7 @@ Acceptance checks:
 - User can pause, inspect, approve, override, or rewind where appropriate.
 - State and uncertainty are visible.
 
-## Scenario 8: Layer Document
-
-User prompt:
-
-```text
-Convert this landing page idea into an editable layer document and HTML preview.
-```
-
-Expected routing:
-
-- Work mode: layer document
-- Read: `task-router.md`, `design-layer-document.md`, `asset-context-protocol.md`, `verification.md`
-- Use `scripts/design_layer_tool.py`
-
-Output contract:
-
-- Produce `.layerdoc.json` first.
-- Keep semantic groups for headline, CTA, proof object, sections, charts, tables, and media.
-- Export HTML after validation.
-
-Acceptance checks:
-
-- Layer document validates.
-- HTML preview opens and preserves semantic layer groups.
-- Charts/tables carry data when present.
-
-## Scenario 9: Full Redesign
+## Scenario 6: Substantial SaaS Redesign
 
 User prompt:
 
@@ -216,12 +137,12 @@ This SaaS app looks generic. Redesign it so it feels premium but still useful.
 
 Expected routing:
 
-- Work mode: full redesign
-- Read: `task-router.md`, `direction-matrix-builder.md`, `visual-quality-rubric.md`, `design-memory-consistency.md`, `ant-design-product-values.md`, `content-judgment.md`
+- Work mode: substantial redesign
+- Read: `task-router.md`, `direction-matrix-builder.md`, `taste-calibration.md`, `visual-quality-rubric.md`, `design-memory-consistency.md`, `ant-design-product-values.md`, `content-judgment.md`
 
 Output contract:
 
-- Diagnose current failure.
+- Diagnose current visual failure.
 - Preserve useful local components and tokens.
 - Produce meaningfully different directions if taste is unclear.
 - Choose one direction before implementation.
@@ -231,3 +152,27 @@ Acceptance checks:
 - Result is not a generic admin shell.
 - Product task clarity improves.
 - Repeated components have a stable system.
+
+## Scenario 7: Product App Implementation
+
+User prompt:
+
+```text
+Implement the selected UI direction inside our dashboard app.
+```
+
+Expected routing:
+
+- Work mode: product app implementation
+- Read: `task-router.md`, `design-memory-consistency.md`, `concept-to-implementation-lock.md`, `verification.md`
+
+Output contract:
+
+- Map the chosen visual direction to local components, tokens, states, and responsive constraints.
+- Preserve the accepted hierarchy and visual thesis while hardening the UI for real use.
+
+Acceptance checks:
+
+- Layout, text fitting, and key states are checked in a rendered environment.
+- Local components are reused where they support the direction.
+- Any visible deviation from the selected direction is named.

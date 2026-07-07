@@ -1,6 +1,6 @@
 # Reference DNA Extraction
 
-Use this when working from a screenshot, Figma frame, reference site, accepted mockup, existing product screen, or visual style sample.
+Use this when working from a screenshot, reference site, accepted mockup, existing product screen, or visual style sample.
 
 ## Principle
 
