@@ -75,6 +75,26 @@ class SkillGuidanceStructureTests(unittest.TestCase):
         for forbidden_scenario in ["Quick Patch", "Design Review", "Figma To Code", "Layer Document"]:
             self.assertNotIn(forbidden_scenario, scenario_text)
 
+    def test_readmes_present_narrow_aesthetic_control_positioning(self):
+        english = self.read("README.md")
+        chinese = self.read("README.zh-CN.md")
+        combined = f"{english}\n{chinese}"
+
+        self.assertIn("not a general UI toolkit", english)
+        self.assertIn("不是通用 UI 工具包", chinese)
+        self.assertIn("aesthetic control", english)
+        self.assertIn("审美控制", chinese)
+
+        for removed_scope in [
+            "Figma",
+            "reference-to-code",
+            "design review",
+            "quick patch",
+            "layer document",
+            "HTML preview",
+        ]:
+            self.assertNotIn(removed_scope, combined)
+
 
 if __name__ == "__main__":
     unittest.main()

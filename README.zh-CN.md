@@ -2,157 +2,106 @@
 
 中文 | [English](README.md)
 
-Product Composer 是一个 Codex skill，用于创建和实现更有审美、更有视觉方向、更可控的 AI 生成 UI。
+Product Composer 是一个 Codex skill，用于 AI 辅助 UI 设计与实现中的审美控制。
 
-它适合普通 UI prompt 容易产出模板化 SaaS 页面、拥挤 dashboard、弱视觉层级、好看但不好用的 mockup 的场景。这个 skill 会让 Codex 把 UI 当作一个产品系统来处理：先明确任务、内容取舍、视觉方向、交互语法、资产上下文、设计记忆和渲染验证。
+它不是通用 UI 工具包。只有当 UI 本身需要更强审美、更清晰的视觉 thesis、更可控的 AI 输出时，才应该使用它。它要解决的核心失败很具体：AI 做出的 UI 泛化、过度装饰、构图松散、视觉焦点不清，或者在代码实现时无法保住原本的设计方向。
 
-## 能解决什么
+## 什么时候使用
 
-- 官网、落地页、产品驱动首页
-- SaaS 应用、dashboard、后台、表单、数据视图
-- AI 产品、agent 工作流、命令界面、前沿交互模型
-- 文化、编辑、博物馆、酒店、作品集、高端品牌页面
-- 需要欲望感、清晰度和视觉连续性的产品内容页
-- 需要避免模板化 AI 味的 image-generated UI mockup
-- 用户提供、本地已有、或 imagegen 生成的资产工作流
-- 视觉方向或概念确定后的代码实现
+适合使用 Product Composer 的场景：
 
-## 核心思想
+- 从零设计 UI，并且需要先建立清晰视觉方向
+- 大幅重设计现有界面，因为当前 UI 显得泛、弱、丑或不可控
+- 产品应用、dashboard、落地页、AI 界面、编辑/品牌页面中，视觉质量是核心问题
+- 生成 UI 图片概念，并且需要更强构图和更少模板感
+- 已选视觉方向的代码实现，需要保住层级、色彩角色、密度、动效和资产处理
 
-### 审美控制循环
+如果任务只是机械修改、局部处理，或者和视觉方向无关，就不要使用这个 skill。
 
-这个 skill 把 UI 工作压缩到一个短循环里：
+## 核心契约
 
-1. 识别默认模板风险。
-2. 写出一个视觉 thesis。
-3. 锁定审美约束和反默认项。
-4. 在这个契约下生成或实现。
-5. 检查渲染结果，并修复最弱的视觉决策。
+每次重要使用都应该产出或保留一个紧凑的设计契约：
 
-### 产品清晰度
+1. 默认模板风险：AI 最可能把哪里做坏。
+2. 视觉 thesis：一句话说明这个界面的审美方向。
+3. 审美约束：3-5 个让 UI 具体起来的选择。
+4. 反默认项：2-3 个必须避免的模板化模式。
+5. 资产计划：用户提供、本地已有、或 imagegen 生成的资产，并诚实说明缺失资产。
+6. 实现锁定：哪些设计必须在代码里保住，哪些可以因工程原因调整。
+7. 视觉验证：可行时检查渲染结果、关键 section 和响应式状态。
 
-每个界面都从用户任务开始：用户需要理解什么、选择什么、完成什么、或产生什么欲望。这个 skill 优先关注任务结构、状态清晰度、渐进披露和可复用产品模式。
+如果只替换产品名后这套方案仍然成立，说明视觉方向还不够具体。
 
-### 签名视觉系统
+## 操作模型
 
-好的 UI 不只是布局。强页面通常成立于一个完整视觉世界：所有可见选择都属于同一套逻辑。
+### 先定方向，再定布局
 
-`signature-aesthetic-systems` reference 会把这件事变成可复用方法：
+从任务、材料、受众和产品证明出发。视觉 thesis 清楚之后，再选择布局。
 
-- 识别主题原生的 motif 和 material
-- 选择一个主导空间隐喻
-- 从主题、产品或材料世界提取 palette
-- 定义跨屏连续性装置
-- 让 UI 控件看起来属于这个视觉系统
-- 删除削弱这个世界的东西
+### 先有审美，再加装饰
 
-### 风格路由
+审美不是堆效果，而是在压力下做选择：比例、删除、克制、对比、具体性，都先于视觉特效。
 
-在全新 UI 生成前，skill 可以让用户选择风格家族、密度和颜色胃口。这样可以避免两个常见问题：视觉方向随机漂移，或者所有结果都变成同一种高端极简首页。
+### 先处理资产，再发明视觉
 
-示例回答：
+真实资产、本地资产和生成资产都会影响界面。可以使用生成资产，但必须明确它的角色，不能伪装成真实产品证明。
 
-```text
-B + 稀疏 + 温暖有欲望
-```
+### 实现是保真，不是二次重设计
 
-路由里也包含实用产品风格的质量底线。工具界面不能退化成普通后台壳，技术界面不能变成黑色驾驶舱、科幻 dashboard、假终端或 `运行舱` 幻想。如果发生这种情况，skill 会把它当作失败方向并重新路由或修复。
+写代码不是重新设计。除非有明确工程理由，否则要保住已接受方向里的层级、主导形体、色彩角色、字体性格、密度、动效角色和资产处理。
 
-### UI 生成方向
+### 验证必须是视觉的
 
-这个 skill 把 UI 生成模式吸收到一个本地方向模型中：route、visual thesis、asset context、style dials、concept fidelity、implementation lock 和 visual check。
+build 或 lint 通过不等于 UI 成立。可行时要检查实际渲染、移动端布局、文字容纳、关键状态和可见偏差。
 
-更深一层是判断力：视觉质量评分、真正不同的方向矩阵、以及保护已接受概念的实现锁。
-
-最深一层是操作行为：选择 surface register、编码前写 design thesis、运行 generic-default self-test、把 copy 当作界面材料、按 section 做验证。
-
-### 欲望驱动的极简
-
-极简不是空。这个 skill 会先判断页面要制造什么心理动机：好奇、信任、解脱、掌控、向往、参与或归属。颜色、布局、证明和交互都会围绕这个目标选择。
-
-### 交互语法
-
-对于 AI、agentic、自动化、创作工具或复杂工作流产品，skill 会先定义用户和系统之间的交互关系，再选择组件。它会区分真正的认知交互设计和字面上的拖拽、滑动、点击标签。
-
-## 安装
-
-把这个 skill 目录放到 Codex skills 目录：
-
-```bash
-mkdir -p ~/.codex/skills
-# 期望路径: ~/.codex/skills/product-composer
-```
-
-如果环境需要，重启 Codex 或重新加载 skills。
-
-## 使用方式
-
-显式调用：
+## 使用示例
 
 ```text
 Use $product-composer to design a homepage UI for my product.
-First create a signature system. Avoid SaaS templates.
-Generate a polished image mockup, no code.
+Avoid generic SaaS templates. Create a strong visual thesis first.
 ```
-
-产品界面：
 
 ```text
 Use $product-composer to redesign this dashboard.
-Prioritize workflow clarity, hierarchy, state visibility, and reusable UI patterns.
+Keep it useful, but make the visual system less generic and more controlled.
 ```
-
-文化或编辑页面：
 
 ```text
-Use $product-composer to design a museum homepage.
-Build a complete visual world with source motifs, palette origin, and multi-screen continuity.
+Use $product-composer to generate an image concept for this AI workflow UI.
+Use real product structure, not a method diagram.
 ```
-
-AI 产品：
-
-```text
-Use $product-composer to design a frontier AI workflow surface.
-Define the interaction grammar before layout. Do not use fake drag or node-graph aesthetics.
-```
-
-已选概念实现：
 
 ```text
 Use $product-composer to implement the selected UI direction in React.
-Preserve the visual thesis, hierarchy, palette roles, and responsive behavior.
+Preserve the hierarchy, palette roles, density, and responsive behavior.
 ```
 
 ## Reference Map
 
-主 skill 会按任务只读取需要的 focused references：
+主 skill 只会在需要时路由到 focused references：
 
-- `references/task-router.md` - 为 UI 设计与实现选择最小有效路径
-- `references/ant-design-product-values.md` - 企业产品秩序和 Ant Design 启发的产品价值
-- `references/execution-discipline.md` - 避免模板化 UI 的执行纪律
-- `references/style-family-router.md` - 用户风格选择和视觉家族路由
-- `references/interaction-grammar.md` - AI 和复杂工作流的新交互模型
-- `references/taste-calibration.md` - 审美 gate 和反模板判断
-- `references/market-calibration.md` - 产品首页对真实市场预期的校准
-- `references/content-judgment.md` - 决定保留、推迟和删除什么
-- `references/desire-minimalism-psychology.md` - 能制造产品欲望的极简
-- `references/image-generation-aesthetic-calibration.md` - UI image generation 的 prompt 和修复流程
-- `references/ui-generation-operating-model.md` - register、thesis、反模板检查和还原循环
-- `references/asset-context-protocol.md` - 设计前收集用户提供、本地已有、imagegen 生成的资产
-- `references/design-memory-consistency.md` - 在多轮工作中保留 token、组件决策、spacing、depth 和表面一致性
-- `references/visual-quality-rubric.md` - 层级、字体、色彩、材质和 AI 味失败模式的视觉质量评分
-- `references/reference-dna-extraction.md` - 从截图、reference、已接受 mockup 中提取设计 DNA
+- `references/task-router.md` - 选择最小有效的 UI 设计与实现路线
+- `references/style-family-router.md` - 选择风格家族、密度和颜色胃口
+- `references/visual-direction.md` - 构图、色彩、材质、轮廓和具体性
+- `references/taste-calibration.md` - 审美立场、反默认项、克制和记忆点
 - `references/direction-matrix-builder.md` - 生成真正不同的视觉方向
-- `references/concept-to-implementation-lock.md` - 代码实现时保护已接受的 image concept
-- `references/visual-direction.md` - composition、palette、material、silhouette 指导
-- `references/react-bits-motion-layer.md` - expressive React motion 和 kinetic accent layer
-- `references/signature-aesthetic-systems.md` - 完整视觉世界和多屏连续性
-- `references/anti-patterns.md` - 常见 AI UI 和产品设计失败
-- `references/verification.md` - 最终验证指导
+- `references/concept-to-implementation-lock.md` - 代码实现时保住已接受概念
+- `references/asset-context-protocol.md` - 规划用户提供、本地已有、imagegen 生成的资产
+- `references/design-memory-consistency.md` - 保留 token、组件决策、spacing、depth 和界面一致性
+- `references/visual-quality-rubric.md` - 判断层级、字体、色彩、材质、深度和 AI 味失败
+- `references/image-generation-aesthetic-calibration.md` - UI 图片概念的 prompt 与修复
+- `references/interaction-grammar.md` - 为 AI 和复杂工作流定义控制关系
+- `references/ant-design-product-values.md` - 让企业产品界面保持秩序和可用性
+- `references/content-judgment.md` - 决定保留、推迟和删除什么
+- `references/desire-minimalism-psychology.md` - 构建有产品欲望的极简 UI
+- `references/market-calibration.md` - 用真实市场预期校准商业页面
+- `references/signature-aesthetic-systems.md` - 建立完整视觉世界和连续性
+- `references/react-bits-motion-layer.md` - 把 React 动效作为受控强调层
+- `references/execution-discipline.md` - 让实现扎根于本地上下文
+- `references/anti-patterns.md` - 避免常见 AI UI 失败
+- `references/verification.md` - 最终渲染验证
 
-场景样例位于 `examples/scenarios/`，用于约束 UI 设计与实现请求的预期路由行为。
-
-## 内置工具
+## 工具
 
 ```bash
 node scripts/ui-pattern-scan.mjs <project-or-src-dir>
@@ -162,16 +111,9 @@ scanner 会标记前端项目里的常见视觉反模式。把输出当作 warni
 
 ## 验证
 
-使用 Codex skill validator 验证结构：
-
 ```bash
 python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py ~/.codex/skills/product-composer
-```
-
-期望结果：
-
-```text
-Skill is valid!
+python3 tests/test_skill_guidance_structure.py
 ```
 
 ## License
