@@ -28,6 +28,7 @@ Read only the references needed for the design task:
 - `references/desire-minimalism-psychology.md`: read when the user asks for minimalism plus psychology, viewing desire, product desire, conversion pull, appetite, emotional attraction, comfortable but not boring color, or a layout that makes people want to keep watching or use the product.
 - `references/image-generation-aesthetic-calibration.md`: read when the user asks to directly generate, draw, or preview UI as an image without code, when generated UI is rejected as ugly or lacking taste, or when the agent needs reusable prompt templates for elegant UI images.
 - `references/ui-generation-operating-model.md`: read when the output still feels shallow after normal gates, when the task needs deeper UI generation judgment, or when the agent must avoid default templates through surface register, design thesis inventory, generic-default self-test, and section-by-section parity.
+- `references/hero-page-experience.md`: read for high-impact homepages, launch pages, portfolios, product/brand pages, or any hero/page experience that needs a screen model, asset system, pagination, page rhythm, stronger first viewport, richer assets, or more spacious composition.
 - `references/asset-context-protocol.md`: read for named brands, products, venues, public sites, portfolios, marketing pages, image-heavy pages, or any UI where logos, product shots, screenshots, icons, textures, media treatment, or missing assets shape the result.
 - `references/design-memory-consistency.md`: read for multi-screen work, design systems, repeated edits, long-running threads, or any task where tokens, spacing, component decisions, depth, or surface treatment could drift.
 - `references/visual-quality-rubric.md`: read when judging whether a UI is high quality, generic, ugly, too AI-flavored, visually flat, overdecorated, poorly typeset, weakly composed, or ready for final visual polish.
@@ -51,6 +52,7 @@ Before loading multiple references or running a full design workflow, choose one
 - product app implementation: turn a chosen visual direction into local components, tokens, states, and responsive behavior.
 - image mockup: gather asset context, define the dominant object or interaction relationship, then use image generation when appropriate.
 - accepted concept: freeze the accepted hierarchy, palette roles, dominant object, and spatial relationship before coding.
+- hero/page experience: compose a signature page experience with a screen model, asset system, pagination/page rhythm, dominant first viewport scene, and continuity device.
 - brand/landing: build around product proof, first-viewport memorability, desire mechanism, and a clear conversion path.
 - dashboard/data: prioritize task order, scanability, state clarity, table/chart grammar, and calm density.
 - frontier interaction: define intent, system agency, control transfer, time model, object model, and commitment model before layout.
@@ -88,6 +90,8 @@ Before generating or implementing any important UI surface, define:
 - Selected style family: chosen by user or inferred, with one sentence why.
 - User mission: what the viewer or operator needs to understand, choose, complete, or desire.
 - Asset context: user-provided assets, local assets, imagegen-generated assets, missing assets, and do-not-fake items.
+- Page experience: for homepages, launches, portfolios, and brand/product pages, define the screen model, pagination/page rhythm, first-viewport scene, next-screen hint, and continuity device.
+- Asset system: for image-heavy or ambitious pages, define hero, support, material, transition, and proof asset roles before layout.
 - Design memory: tokens, components, spacing, radius, depth, state behavior, and accepted decisions to preserve.
 - Visual thesis: palette roles, type roles, layout thesis, signature element, content voice, and one justified risk.
 - Taste contract: three desired feeling words, three anti-defaults, one restraint, one memorability hook, and one deletion rule.
@@ -188,7 +192,7 @@ For image UI mockups:
 ## Implementation Workflow
 
 1. Inspect the local project first: framework, component library, styling system, existing tokens, routes, and nearby screens.
-2. Choose the UI route before styling: new design, substantial redesign, product app implementation, brand/landing, dashboard/data, frontier interaction, image mockup, or accepted concept.
+2. Choose the UI route before styling: new design, substantial redesign, product app implementation, hero/page experience, brand/landing, dashboard/data, frontier interaction, image mockup, or accepted concept.
 3. State the design direction contract before implementation.
 4. Shape the screen around workflow, not decoration:
    - primary task first
@@ -234,6 +238,8 @@ For image UI mockups:
 - Do not scale font size with viewport width. Use stable type scales and responsive layout constraints.
 - Support `prefers-reduced-motion` for large, repeated, background, WebGL, particle, or text animation.
 - Use visual assets when a website, game, object, venue, product, or brand page needs inspection or emotional specificity.
+- For hero/page experience work, treat the page as designed screens with a screen model, asset system, pagination/page rhythm, and continuity device; do not stack independent sections by habit.
+- One small image or one full product screenshot is not enough when the user asks for a visually ambitious page. Use user-provided assets, local assets, or imagegen-generated assets with explicit roles.
 - Prefer icons for tool actions and text labels for commands that need interpretation.
 - Ensure text never overlaps, clips, or spills out of buttons, tabs, cards, inputs, tables, or mobile containers.
 

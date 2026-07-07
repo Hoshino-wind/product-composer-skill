@@ -176,3 +176,31 @@ Acceptance checks:
 - Layout, text fitting, and key states are checked in a rendered environment.
 - Local components are reused where they support the direction.
 - Any visible deviation from the selected direction is named.
+
+## Scenario 8: Signature Hero Page Experience
+
+User prompt:
+
+```text
+Design a visually ambitious product launch page. The hero should feel spacious and crafted, with stronger assets, section pagination, and a clear sense that the next screen continues the story.
+```
+
+Expected routing:
+
+- Work mode: hero/page experience
+- Read: `task-router.md`, `hero-page-experience.md`, `signature-aesthetic-systems.md`, `asset-context-protocol.md`, `visual-direction.md`, `visual-quality-rubric.md`
+- Build a signature page experience before choosing ordinary section layouts.
+
+Output contract:
+
+- Define the hero/page experience thesis.
+- Define a 3-4 screen model with one job per screen.
+- Define the asset system: hero, support, material, transition, and proof assets.
+- Choose the pagination/page rhythm and continuity device.
+
+Acceptance checks:
+
+- First viewport has one memorable dominant scene.
+- The page has a visible next-screen hint or rhythm device.
+- Assets have roles beyond one decorative image.
+- Proof and secondary UI do not crowd the hero.

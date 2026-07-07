@@ -13,6 +13,7 @@ The goal is to choose the smallest route that can produce a specific, controllab
 | product app implementation | A chosen UI direction must become local components, states, layout, and responsive behavior | `design-memory-consistency.md`, `concept-to-implementation-lock.md`, `verification.md` | Replacing the local system without a redesign reason |
 | image mockup | User asks for generated UI image, visual concept, or no-code mockup | `image-generation-aesthetic-calibration.md`, `asset-context-protocol.md`, `direction-matrix-builder.md` when taste is unclear | Hand-built SVG mockups unless deterministic vectors are needed |
 | accepted concept | User approved a generated image, design board, mockup, or direction | `concept-to-implementation-lock.md`, `asset-context-protocol.md`, `verification.md` | Silent redesign during implementation |
+| hero/page experience | Homepage, launch page, portfolio, or brand/product page needs high visual ambition, stronger first viewport, more assets, section pagination, or screen-based page rhythm | `hero-page-experience.md`, `signature-aesthetic-systems.md`, `asset-context-protocol.md`, `visual-direction.md`, `visual-quality-rubric.md` | Treating the page as a standard hero plus feature-card stack |
 | brand/landing | Public homepage, launch page, portfolio, product marketing | `market-calibration.md`, `desire-minimalism-psychology.md`, `signature-aesthetic-systems.md`, `asset-context-protocol.md` | Abstract decoration with no product proof |
 | dashboard/data | Admin panel, analytics, table-heavy flow, CRM, settings | `ant-design-product-values.md`, `content-judgment.md`, `visual-quality-rubric.md` | Marketing hero composition inside the product surface |
 | frontier interaction | AI agent, command canvas, automation, simulation, complex creative workflow | `interaction-grammar.md`, `visual-direction.md`, `visual-quality-rubric.md` | Literal drag/click labels or dashboard shells |
@@ -23,6 +24,7 @@ The goal is to choose the smallest route that can produce a specific, controllab
 - Escalate from image mockup to accepted concept after a generated visual is selected.
 - Escalate from accepted concept to product app implementation when the selected direction must be coded.
 - Escalate from product app implementation to substantial redesign only when preserving the local system would keep the main visual failure intact.
+- Escalate from brand/landing to hero/page experience when the request emphasizes first-viewport impact, spacing, visual ambition, assets, section pagination, or scroll rhythm.
 
 ## Output By Route
 
@@ -57,6 +59,14 @@ For accepted concept:
 - Freeze visible hierarchy, palette roles, dominant object, copy intent, and spatial relationship.
 - Adapt only for accessibility, responsiveness, and local code conventions.
 - Compare first viewport, major sections, key states, and mobile layout in slices.
+
+For hero/page experience:
+
+- State the hero/page experience thesis before layout.
+- Define a 3-4 screen model with one job per screen.
+- Define the asset system: hero, support, material, transition, and proof asset roles.
+- Choose pagination/page rhythm: section pagination, scroll snap, progress rail, scene transition, or next-screen hint.
+- Keep the hero spacious enough for one dominant scene before adding proof and secondary UI.
 
 ## Anti-Dilution Guard
 

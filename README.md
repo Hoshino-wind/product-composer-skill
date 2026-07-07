@@ -13,6 +13,7 @@ Use Product Composer for:
 - net-new UI surfaces that need a distinctive direction before code
 - substantial redesigns where the current UI feels generic, weak, or uncontrolled
 - product apps, dashboards, landing pages, AI surfaces, and editorial/brand pages when visual quality is central
+- high-impact hero/page experience work that needs screen-based rhythm, pagination, richer assets, and more spacious first-view composition
 - generated UI image concepts that need stronger composition and fewer template artifacts
 - implementation of an accepted visual direction where hierarchy, palette roles, density, motion, and asset treatment must survive coding
 
@@ -27,8 +28,9 @@ Every substantial use should produce or preserve a compact design contract:
 3. Taste constraints: 3-5 choices that make the UI specific.
 4. Anti-defaults: 2-3 patterns the UI must avoid.
 5. Asset plan: user-provided, local, or imagegen-generated assets, with missing assets named honestly.
-6. Implementation lock: what must survive coding, and what may adapt for engineering.
-7. Visual verification: rendered checks across key sections and responsive states when feasible.
+6. Page experience plan: for ambitious homepages or launches, define the screen model, asset system, pagination/page rhythm, and continuity device.
+7. Implementation lock: what must survive coding, and what may adapt for engineering.
+8. Visual verification: rendered checks across key sections and responsive states when feasible.
 
 If the same plan would still work after swapping only the product name, the direction is not specific enough.
 
@@ -45,6 +47,10 @@ Taste is selection under pressure: proportion, deletion, restraint, contrast, an
 ### Assets Before Invention
 
 Real assets, local assets, and generated assets shape the surface. Generated assets are allowed, but their role must be explicit and they must not impersonate real product proof.
+
+### Screens Before Sections
+
+For a signature page experience, define a screen model and page rhythm before stacking sections. A strong page needs a first-viewport scene, a visible continuation cue, and an asset system with clear roles.
 
 ### Implementation As Preservation
 
@@ -83,6 +89,7 @@ The main skill routes Codex to focused references only when needed:
 - `references/task-router.md` - choose the smallest UI design and implementation route
 - `references/style-family-router.md` - choose a style family, density, and color appetite
 - `references/visual-direction.md` - composition, palette, material, silhouette, and specificity
+- `references/hero-page-experience.md` - screen model, asset system, pagination, and page rhythm for signature page experience work
 - `references/taste-calibration.md` - taste stance, anti-defaults, restraint, and memorability
 - `references/direction-matrix-builder.md` - create meaningfully different visual directions
 - `references/concept-to-implementation-lock.md` - preserve accepted concepts during coded implementation

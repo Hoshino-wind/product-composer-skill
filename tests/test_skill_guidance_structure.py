@@ -47,6 +47,7 @@ class SkillGuidanceStructureTests(unittest.TestCase):
             "new UI design",
             "substantial redesign",
             "product app implementation",
+            "hero/page experience",
             "brand/landing",
             "dashboard/data",
             "frontier interaction",
@@ -112,6 +113,35 @@ class SkillGuidanceStructureTests(unittest.TestCase):
             "ui-generation-skill-distillation.md",
         ]:
             self.assertNotIn(removed_reference, public_text)
+
+    def test_hero_page_experience_guidance_is_distilled_without_source_branding(self):
+        public_paths = [
+            ROOT / "SKILL.md",
+            ROOT / "README.md",
+            ROOT / "README.zh-CN.md",
+            *sorted((ROOT / "references").glob("*.md")),
+            *sorted((ROOT / "examples").glob("**/*.md")),
+        ]
+        public_text = "\n".join(path.read_text(encoding="utf-8") for path in public_paths)
+
+        for required_term in [
+            "hero/page experience",
+            "signature page experience",
+            "screen model",
+            "asset system",
+            "pagination",
+            "page rhythm",
+        ]:
+            self.assertIn(required_term, public_text)
+
+        for forbidden_term in [
+            "aw" + "wwards",
+            "aw" + "ard-winning",
+            "design aw" + "ards",
+            "获" + "奖",
+            "奖" + "项",
+        ]:
+            self.assertNotIn(forbidden_term.lower(), public_text.lower())
 
 
 if __name__ == "__main__":
