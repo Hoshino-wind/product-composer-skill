@@ -26,7 +26,7 @@ Before making the UI, define:
 - In a transformation layout, the result side must be more beautiful and more coherent than the source side; it cannot become a collage of proof fragments.
 - Use asymmetry deliberately; avoid perfectly distributed widgets that feel like a diagram.
 - Use negative space as structure, not leftover emptiness.
-- Create a clear visual path for the eye: anchor, secondary read, action, evidence.
+- Create a clear visual path for the eye: anchor, secondary read, action, proof.
 - Let important objects have room to breathe.
 - Use fewer labels when shape, grouping, and state can communicate.
 - Design the silhouette first; details come second.
@@ -85,7 +85,7 @@ For utility product screens:
 For technical instrument screens:
 
 - Precision is not the same as darkness, glow, or complexity.
-- Start with a specific control object: audit lens, simulation strip, execution timeline, approval surface, risk dial, or evidence ledger.
+- Start with a specific control object: audit lens, simulation strip, execution timeline, approval surface, risk dial, or proof ledger.
 - When the product can plausibly be physical or inspectable, start with a 3D instrument/digital-twin viewport instead of flat panels.
 - Anchor overlays, labels, readings, warnings, and controls to parts of the 3D object.
 - Use warm precision when in doubt: graphite, ivory, muted cyan, brass, paper, and technical ink.

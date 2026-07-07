@@ -4,7 +4,7 @@ Use this when a design needs to become editable UI output: HTML, chart/table lay
 
 ## Principle
 
-Use `.layerdoc.json` as the source of truth.
+Use `.layerdoc.json` as the canonical design record.
 
 Do not treat generated UI images or HTML as the only canonical representation. Images are good for taste exploration; HTML is good for editing and preview. The layer document is the stable bridge between them.
 

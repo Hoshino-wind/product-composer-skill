@@ -29,7 +29,7 @@ Example:
 你可以直接回复：B + 稀疏 + 温暖有欲望。
 ```
 
-If asking only one question, ask for `style family` and infer density/color from product evidence.
+If asking only one question, ask for `style family` and infer density/color from product context.
 
 ## Style Families
 
@@ -48,7 +48,7 @@ If asking only one question, ask for `style family` and infer density/color from
 
 - Operational or repeated-use SaaS screen -> start with A and apply Ant Design product values: natural task order, certainty, meaningful work objects, and progressive capability.
 - Public homepage with strong brand emotion -> ask between B, C, F, G, or H.
-- AI or automation workflow -> start with D only when the primary value is control, audit, simulation, or execution safety. If D produces a cockpit, command-room, terminal, or sci-fi surface, reroute to A for calm product, E for evidence-heavy analytics, or B for product-led editorial proof.
+- AI or automation workflow -> start with D only when the primary value is control, audit, simulation, or execution safety. If D produces a cockpit, command-room, terminal, or sci-fi surface, reroute to A for calm product, E for proof-heavy analytics, or B for product-led editorial proof.
 - Physical, industrial, medical, scientific, IoT, robotics, or monitoring products -> start with D and make a 3D instrument/digital-twin object the central proof. Do not flatten it into a card dashboard.
 - Cultural or place-based subject -> start with C, then define source motifs before layout.
 - If the user says "像敦煌那版一样好看", choose the method, not the motifs: coherent world, source-derived palette, continuity device, paced density.

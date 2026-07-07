@@ -69,7 +69,7 @@ Do not fix it by adding more panels, more glow, or more "technical" detail. The 
 
 For A Utility Product:
 
-- Replace the default admin shell with one product-specific workflow object: review queue, approval lane, claim desk, evidence board, case timeline, or workbench.
+- Replace the default admin shell with one product-specific workflow object: review queue, approval lane, claim desk, proof board, case timeline, or workbench.
 - Use a warmer or more editorial base when the screen feels sterile: porcelain, warm gray, ink, muted green, amber, or clay accents.
 - Reduce equal cards. Let navigation, list, detail, and action form one composed work surface.
 - Keep operational clarity, but make one object memorable enough to survive the thumbnail test.

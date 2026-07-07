@@ -1,10 +1,6 @@
-# Impeccable-Inspired Execution Model
+# Execution Discipline
 
-Use this as execution discipline, not as a clone. The goal is to give the agent a design vocabulary and staged workflow.
-
-Sources for inspiration:
-- https://impeccable.style/
-- https://github.com/pbakaus/impeccable
+Use this as local execution discipline. The goal is to give the agent a design vocabulary and staged workflow without copying an external style system.
 
 ## Capture Context
 

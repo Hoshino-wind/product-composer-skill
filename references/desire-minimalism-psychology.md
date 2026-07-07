@@ -30,7 +30,7 @@ Use one dominant mechanism per viewport:
 - Transformation: before to after, raw to refined, scattered to composed.
 - Participation: the viewer feels they can influence the outcome, make a judgment, or enter the product's loop.
 - Progress promise: the next step feels close and achievable.
-- Social proof: evidence that credible people or products already trust it.
+- Social proof: credible signals that people or products already trust it.
 - Scarcity of attention: one rare accent or motion makes one thing feel important.
 - Unfinished story: the page implies a next scene without explaining everything.
 

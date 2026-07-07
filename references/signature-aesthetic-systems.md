@@ -21,7 +21,7 @@ Do not reuse these Dunhuang motifs unless the subject is actually Dunhuang or a 
 
 Before visual generation or implementation, define:
 
-1. Subject evidence: real motifs, materials, artifacts, places, product surfaces, or states that make this subject recognizable.
+1. Subject material: real motifs, materials, artifacts, places, product surfaces, or states that make this subject recognizable.
 2. Dominant scene: one memorable spatial idea such as a cave, chamber, stage, atlas, table, corridor, horizon, instrument, archive, or portrait.
 3. Motif hierarchy: one large framing motif, one movement motif, one detail motif, and one UI motif.
 4. Palette source: colors from physical material, product state, environment, or brand asset.
@@ -41,7 +41,7 @@ Before visual generation or implementation, define:
 
 ### Product / SaaS
 
-- Use a product-state metaphor: control surface, review desk, secure chamber, decision canvas, execution preview, evidence ledger, or audit trail.
+- Use a product-state metaphor: control surface, review desk, secure chamber, decision canvas, execution preview, proof ledger, or audit trail.
 - Make the real product proof or primary workflow the most beautiful object.
 - Keep brand expression subordinate to task clarity.
 - Avoid turning dashboards into marketing heroes or adding decorative illustrations that do not prove the product.
@@ -60,7 +60,7 @@ When the user asks for second and third screens, do not design independent secti
 For each screen define:
 
 - Screen 1: emotional anchor and spatial world.
-- Screen 2: evidence, collection, features, or proof that continues the same world.
+- Screen 2: collection, features, or proof that continues the same world.
 - Screen 3: deeper exploration, action, archive, or conversion using the same motif language.
 - Transition: one visible connector such as torn paper, shadow edge, route line, ribbon, horizon, shelf, timeline, or repeated object.
 - Rhythm change: each screen should have a different job, but the same visual DNA.
@@ -78,7 +78,7 @@ Use this block inside image-generation prompts when the output needs strong art 
 
 ```text
 Signature system:
-Subject evidence: [real motifs/materials/artifacts/states]
+Subject material: [real motifs/materials/artifacts/states]
 Dominant scene: [one spatial metaphor]
 Motif hierarchy: large frame [x], movement motif [y], detail motif [z], UI motif [w]
 Palette source: [material/environment/product state colors]

@@ -7,7 +7,7 @@ description: "Use when designing, redesigning, generating, critiquing, or implem
 
 ## Overview
 
-Compose UI as a product system, not a decorative page. Use Ant Design's product-order mindset for complex work surfaces, Impeccable-inspired execution discipline to avoid generic AI UI, signature art direction for memorable pages, and interaction grammar to invent new control relationships when traditional pages are insufficient.
+Compose UI as a product system, not a decorative page. Use product-order thinking for complex work surfaces, local execution discipline to avoid generic AI UI, signature art direction for memorable pages, and interaction grammar to invent new control relationships when traditional pages are insufficient.
 
 Prefer the user's existing design system, component library, routing, and styling conventions. Introduce a new visual language only when the project lacks one or the user explicitly asks for a redesign.
 
@@ -16,14 +16,23 @@ Prefer the user's existing design system, component library, routing, and stylin
 Read only the references needed for the task:
 
 - `references/ant-design-product-values.md`: read for enterprise products, dashboards, admin tools, forms, tables, Ant Design projects, or complex workflows.
-- `references/impeccable-execution-model.md`: read for new UI, redesigns, visual polish, critique, or avoiding generic AI output.
+- `references/execution-discipline.md`: read for new UI, redesigns, visual polish, critique, or avoiding generic AI output.
 - `references/style-family-router.md`: read before net-new UI generation when the user has not specified a style, when outputs feel random or same-looking, or when the agent needs to ask the user to choose a direction before composing.
 - `references/interaction-grammar.md`: read for AI products, agent workflows, command surfaces, creative tools, simulations, complex operations, or any request for new interaction design.
 - `references/taste-calibration.md`: read before net-new visual concepts, after user feedback like "ugly", "generic", "no taste", "too traditional", or when the design needs a sharper aesthetic stance.
-- `references/market-calibration.md`: read after user asks to look at excellent market examples, ThemeForest/WordPress/Webflow/template-marketplace references, when a homepage feels fake, self-indulgent, too conceptual, or disconnected from real product evidence.
+- `references/market-calibration.md`: read after user asks to look at excellent market examples, ThemeForest/WordPress/Webflow/template-marketplace references, when a homepage feels fake, self-indulgent, too conceptual, or disconnected from real product proof.
 - `references/content-judgment.md`: read when a surface feels dense, over-explained, crowded, or when the user says the design should make stronger decisions.
 - `references/desire-minimalism-psychology.md`: read when the user asks for minimalism plus psychology, viewing desire, product desire, conversion pull, appetite, emotional attraction, comfortable but not boring color, or a layout that makes people want to keep watching or use the product.
 - `references/image-generation-aesthetic-calibration.md`: read when the user asks to directly generate, draw, or preview UI as an image without code, when image-generated UI looks better than hand-built/vector attempts, when generated UI is rejected as ugly or lacking taste, or when the agent needs reusable prompt templates for elegant UI images.
+- `references/ui-generation-skill-distillation.md`: read for broad UI generation workflows, image-first concepts, Figma/reference-to-code, screenshot-derived design systems, DESIGN.md-driven work, style-option matrices, fidelity-ledger QA, or when the user asks to absorb UI generation patterns into this skill.
+- `references/ui-generation-operating-model.md`: read when the output still feels shallow after normal gates, when the task needs deeper UI generation judgment, or when the agent must avoid default templates through surface register, design thesis inventory, generic-default self-test, and section-by-section parity.
+- `references/input-output-mode-router.md`: read when the input type or deliverable is ambiguous: rough prompt, screenshot, Figma, video, existing app, accepted concept, 3D/WebGL request, quick patch, full redesign, coded app, HTML preview, design canvas, prototype, or structured layer document.
+- `references/asset-context-protocol.md`: read for named brands, products, venues, public sites, portfolios, marketing pages, image-heavy pages, or any UI where logos, product shots, screenshots, icons, textures, media treatment, or missing assets shape the result.
+- `references/design-memory-consistency.md`: read for existing projects, multi-screen work, design systems, repeated edits, long-running threads, or any task where tokens, spacing, component decisions, depth, or surface treatment could drift.
+- `references/visual-quality-rubric.md`: read when judging whether a UI is high quality, generic, ugly, too AI-flavored, visually flat, overdecorated, poorly typeset, weakly composed, or ready for final visual polish.
+- `references/reference-dna-extraction.md`: read when working from a screenshot, Figma frame, reference site, accepted mockup, existing screen, or visual style sample that must be translated without copying blindly.
+- `references/direction-matrix-builder.md`: read when the user wants options, taste is unclear, the first result feels same-looking, or the agent needs 3-5 genuinely different visual directions before implementation.
+- `references/concept-to-implementation-lock.md`: read when implementing from an accepted image concept, generated mockup, screenshot, visual comp, or design-board result where hierarchy, palette, dominant object, and spatial relationship must survive coding.
 - `references/visual-direction.md`: read for any net-new UI, homepage, concept, visual redesign, product identity, or when the output risks becoming diagrammatic, generic, cluttered, or ugly.
 - `references/react-bits-motion-layer.md`: read for React/Next.js surfaces that mention React Bits, reactbits.dev, animated text, kinetic typography, cursor or hover effects, scroll reveals, particles, WebGL, Three.js backgrounds, expressive motion, portfolio polish, or kinetic landing pages.
 - `references/signature-aesthetic-systems.md`: read for cultural, editorial, museum, hospitality, fashion, premium brand, emotionally rich homepages, multi-screen visual consistency, or when the user asks for the quality of the stronger Dunhuang-style result without copying that style.
@@ -44,6 +53,21 @@ Classify the surface before coding:
 
 Default to `product` when the screen is operational or data-heavy.
 
+## Distilled UI Generation Defaults
+
+These rules are default behavior, not optional references:
+
+- Mode before style: classify the input and output mode before choosing visual direction. A rough prompt, screenshot, Figma frame, accepted concept, existing app patch, full redesign, prototype, and layer document require different workflows.
+- Assets before invention: for named brands, products, venues, portfolios, launches, or image-heavy pages, identify user-provided, local, and imagegen-generated assets before inventing visuals.
+- Memory before novelty: inspect existing design memory before changing UI. Preserve tokens, spacing, radius, depth, component families, state behavior, and media treatment unless redesign is requested.
+- Direction before code: write the design thesis inventory before implementation: surface register, one job, palette roles, type roles, layout thesis, signature element, content voice, motion role, one justified risk, and one refusal.
+- Concepts are contracts: accepted mockups, screenshots, Figma frames, and image concepts lock hierarchy, dominant form, copy intent, palette roles, type character, density, media treatment, and spatial relationship.
+- Parity in slices: implement and visually compare the first viewport, major sections, repeated components, key states, and mobile layout before moving on.
+- Copy is interface: action labels, empty states, error states, helper text, headings, and proof strings must follow the product's voice and interaction promise.
+- One orchestrated motion idea beats scattered effects. Motion must focus, reveal, connect, or brand, with reduced-motion fallback for substantial animation.
+- Run a generic-default self-test before coding: if the same plan would work after swapping only the product name, revise the plan.
+- Final output needs rendered visual verification when feasible. A build or lint pass is not enough.
+
 ## Style Selection Gate
 
 Before net-new UI generation, choose or ask for a style family. This gate prevents two failure modes: random style drift and repeated high-end-minimal sameness.
@@ -56,22 +80,65 @@ Ask at most three choices:
 - Density: sparse, balanced, or dense-with-air.
 - Color appetite: quiet restrained, warm/desirable, bold contrast, or source-derived.
 
-If the user says to proceed without questions, infer the family from product evidence and state the choice before designing. Do not silently default to Editorial Premium.
+If the user says to proceed without questions, infer the family from product context and state the choice before designing. Do not silently default to Editorial Premium.
 
 ## Universal UI Brief Gate
 
 Before designing any substantial surface, define:
 
 - Surface mode: product, brand, hybrid, frontier, editorial, cultural, or utility.
+- Surface register: brand leads, product serves, hybrid balances, or artifact packages.
+- Input/output mode: rough prompt, reference implementation, concept-first, existing-system extension, quick patch, full redesign, app, page, prototype, design canvas, or layer document.
 - Selected style family: chosen by user or inferred, with one sentence why.
 - User mission: what the viewer or operator needs to understand, choose, complete, or desire.
-- Evidence source: product screenshot, workflow state, cultural material, venue/object imagery, dataset, brand asset, or existing design system.
+- Design input: product screenshot, workflow state, cultural material, venue/object imagery, dataset, brand asset, or existing design system.
+- Generation direction: reference anchor, choice mode, style dials, concept fidelity level, artifact mode, and visual check.
+- Design thesis inventory: palette roles, type roles, layout thesis, signature element, content voice, and one justified risk.
+- Asset context and design memory: what user-provided assets, local assets, imagegen-generated assets, local tokens, and prior decisions must be preserved.
 - Signature system: the dominant form, material language, palette source, motion/continuity idea, and one ownable detail.
 - Motion role: none, feedback, focus, reveal, continuity, or signature brand moment; define reduced-motion fallback for substantial animation.
 - Density contract: sparse, medium, dense, or dense-with-air; decide what is absent as deliberately as what is present.
 - Output path: image mockup, coded implementation, design critique, design prompt, design-system guidance, UI layer document, or HTML preview.
 
-Do not start from a generic layout pattern. Start from the surface's evidence, mission, and signature system, then choose layout.
+Do not start from a generic layout pattern. Start from the surface's material, mission, and signature system, then choose layout.
+
+## UI Generation Direction Gate
+
+For substantial UI generation, define the direction before writing code, prompting images, or composing screens:
+
+- Reference anchor: brief, existing UI, screenshot, Figma, accepted image concept, DESIGN.md, product data, or brand asset.
+- Choice mode: infer, ask, style matrix, strict reference, or product-system extension.
+- Style dials: visual variance, motion appetite, density, color appetite, and realism level.
+- Concept fidelity: exploratory direction, selected concept, strict reference parity, or existing-system continuation.
+- Artifact mode: coded app, HTML artifact, image mockup, Figma/reference implementation, design-layer document, or critique.
+- Visual check: rendered screenshot, mobile screenshot, reference comparison, copy/content diff, visual QA notes, or reduced-motion check.
+
+Then bind the direction to implementation:
+
+- Mode route: rough prompt, screenshot/Figma, video/motion, accepted concept, existing app patch, full redesign, 3D/immersive, prototype, or layer document.
+- Asset route: user-provided assets, local assets, imagegen-generated assets, missing assets, generated placeholders, media treatment, and do-not-fake items.
+- Memory route: local tokens, component families, spacing/radius/depth rules, state behavior, and prior accepted decisions.
+- Lock route: what is locked, what may adapt for engineering, and what would require user approval.
+
+If taste is unclear, ask or generate a style matrix with meaningfully different directions. Do not produce tiny variations of the same layout.
+
+If the user supplies a Figma file, screenshot, reference site, accepted image concept, or DESIGN.md, preserve its visible hierarchy, copy intent, palette logic, component density, and interaction promise unless the user explicitly requests reinterpretation.
+
+If an image concept has been accepted, freeze the visible hierarchy, key copy, palette, dominant object, and spatial relationship before implementation. Implementation may harden responsiveness and accessibility, but should not silently redesign the concept.
+
+Rendered verification is part of the output, not an optional polish step. A build or lint pass is not visual proof.
+
+## Context And Memory Gate
+
+Before creating or changing visual direction, inspect durable context:
+
+- local design files: `DESIGN.md`, token files, component docs, Storybook, nearby routes, screenshots, accepted concepts, and `.product-composer/design-system.md`
+- asset context: user-provided assets, local assets, imagegen-generated assets, brand mark, product shots, UI screenshots, object/venue images, icon and illustration style, media constraints, and missing assets
+- component memory: button heights, table density, card padding, radius scale, shadow/depth model, navigation behavior, empty/error/loading states, and action naming
+
+If context is missing, state the gap and design around an honest placeholder, inferred local system, or generated asset. Imagegen-generated assets can become first-class design assets when their role is explicit, but they must not impersonate official logos, real product screenshots, real venue/object photos, metrics, or brand assets.
+
+For existing projects, extend the local system before inventing a new one. For redesigns, separate what remains, what changes, and what gets deprecated.
 
 ## Interaction Grammar Gate
 
@@ -99,6 +166,8 @@ Before finalizing any visual surface, pass this gate:
 - Does the palette have taste and tension rather than merely safe enterprise neutrals?
 - Is the density intentional, with enough breathing room for the eye to rest?
 - Would this still look good if the labels were blurred?
+- Would the same visual plan appear for a similar prompt with only the product name changed? If yes, revise the plan before coding.
+- Does the design pass visual-quality checks for hierarchy, proportion, type, palette, material, depth, specificity, and motion discipline?
 - For utility or technical surfaces, does it avoid generic admin-shell and black cockpit aesthetics? Reject `运行舱`-style industrial fantasy unless the real domain requires it.
 - For SaaS, does it apply Ant Design product values: natural task order, certainty, meaningful work objects, and progressive capability?
 - For technical instrument surfaces, should the proof object be a 3D instrument/digital twin with anchored state and controls instead of flat cards?
@@ -116,7 +185,7 @@ Define:
 - Spatial metaphor: cave opening, stage, instrument, scroll, atlas, object portrait, workbench, quiet chamber, or another scene that fits the subject.
 - Palette origin: colors sampled from the subject's material world, not arbitrary trend palettes.
 - Continuity device: a ribbon, horizon, timeline, edge treatment, light path, object trail, or section boundary that connects screens.
-- Narrative rhythm: one strong first impression, one slower evidence section, one deeper exploration section.
+- Narrative rhythm: one strong first impression, one slower proof section, one deeper exploration section.
 - Modernization ratio: what remains authentic and what becomes contemporary UI.
 - Deletion rule: remove any motif, card, label, or decoration that does not strengthen the world.
 
@@ -148,7 +217,7 @@ Before regenerating a weak homepage, identify:
 - One brand behavior that feels ownable.
 - One conversion path with low friction.
 
-If the design relies on a decorative hero object that does not prove the product, replace it with product evidence or an interaction preview.
+If the design relies on a decorative hero object that does not prove the product, replace it with product proof or an interaction preview.
 
 ## Content Judgment Gate
 
@@ -195,11 +264,11 @@ For image UI mockups:
 
 ## Layer Document UI Gate
 
-When the user asks for layer decomposition, editable UI output, HTML editing, chart/table layers, or structured UI elements, use a Design Layer Document as the source of truth.
+When the user asks for layer decomposition, editable UI output, HTML editing, chart/table layers, or structured UI elements, use a Design Layer Document as the canonical design record.
 
 Rules:
 
-- Store the design as `.layerdoc.json` before exporting. Do not make HTML the source of truth.
+- Store the design as `.layerdoc.json` before exporting. Do not make HTML the canonical record.
 - Preserve semantic groups: headline, CTA, proof object, chart, table, background, decoration, navigation, and content sections should stay meaningful.
 - Charts and tables must carry data, not only drawn marks.
 - Export HTML for inspection and element-level editing.
@@ -216,37 +285,56 @@ python3 scripts/design_layer_tool.py html examples/opc-homepage.layerdoc.json ou
 ## Composition Workflow
 
 1. Inspect the local project first: framework, component library, styling system, existing tokens, routes, and nearby screens.
-2. State a concise design brief before implementation:
+   Also inspect local design memory files when present: `DESIGN.md`, Storybook, token files, component docs, screenshots, or `.product-composer/design-system.md`.
+2. Choose the workflow mode before styling:
+   - rough prompt -> direction matrix or inferred design thesis
+   - screenshot/Figma/reference -> DNA extraction and parity implementation
+   - accepted concept -> concept lock and parity slices
+   - existing app patch -> design memory and smallest useful change
+   - full redesign -> failure audit, direction matrix, then new system
+   - prototype/layer document -> choose artifact structure before visual polish
+3. State a concise design brief before implementation:
    - surface mode
+   - surface register
+   - input/output mode
    - selected style family and whether it was user-chosen or inferred
    - primary user mission
+   - generation direction: reference anchor, choice mode, style dials, concept fidelity, artifact mode, and visual check
+   - design thesis inventory: palette roles, type roles, layout thesis, signature element, content voice, and one justified risk
+   - asset context and design memory constraints
    - information density
    - keep/defer/delete content judgment
    - desire job, desire mechanism, and palette appetite
    - taste stance and anti-reference
    - visual thesis
    - dominant visual form
+   - quality target: what must make the surface feel specific, composed, and non-generic
    - signature system and continuity device when the surface needs memorable visual identity
    - aesthetic risk to avoid
    - one justified design risk
    - motion role and reduced-motion fallback when animation is substantial
    - interaction grammar for frontier surfaces
    - constraints from the existing codebase
-3. Shape the screen around workflow, not decoration:
+   - generated asset plan when imagegen should create hero media, product scenes, illustrations, textures, thumbnails, empty-state art, or concept support imagery
+4. Shape the screen around workflow, not decoration:
    - primary task first
    - clear hierarchy between navigation, work area, controls, feedback, and secondary details
    - predictable states for loading, empty, error, success, disabled, selected, and active
-4. Build with existing primitives:
+5. Build with existing primitives:
    - use local components and tokens where available
    - use familiar controls for familiar jobs
    - use React Bits-style components only as an accent or signature layer after the core hierarchy works statically
    - keep dimensions stable for boards, grids, tables, toolbars, counters, and icon buttons
-5. Tune deliberately:
+6. Preserve locked design decisions while coding:
+   - map visible concept/reference elements to code, user-provided assets, local assets, imagegen-generated assets, or intentional deviations
+   - keep copy voice, type roles, color roles, density, media treatment, and component families consistent
+   - compare first viewport, major sections, repeated components, key states, and mobile layout in slices
+7. Tune deliberately:
    - `bolder`: increase identity when the page is correct but forgettable
    - `quieter`: reduce visual noise when the UI competes with the task
    - `distill`: remove decoration, copy, or controls that do not serve the user mission
    - `harden`: cover overflow, i18n, edge cases, accessibility, and responsive states
-6. Verify in a real rendered environment when feasible, using screenshots across desktop and mobile before claiming the UI is finished.
+8. Verify in a real rendered environment when feasible, using screenshots across desktop and mobile before claiming the UI is finished. Name visible deviations, fixes, or blockers.
 
 ## Product UI Rules
 

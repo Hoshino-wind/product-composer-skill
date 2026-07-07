@@ -106,5 +106,5 @@ Good prompt fragment:
 Taste stance: precise, quiet, charged.
 Anti-reference: no dashboard template, no startup gradient, no enterprise flowchart.
 Dominant form: one tactile mission instrument that carries the whole composition.
-Signature restraint: most system evidence is implied through form and state, not shown as panels.
+Signature restraint: most system state is implied through form and behavior, not shown as panels.
 ```

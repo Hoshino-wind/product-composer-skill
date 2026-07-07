@@ -124,7 +124,7 @@ Make the system's reasoning and work inspectable over time.
 Use a timeline for:
 - intent interpretation
 - tool calls
-- evidence gathered
+- proof gathered
 - decisions made
 - uncertainty discovered
 - user approvals
@@ -155,7 +155,7 @@ Canvas regions may include:
 - timeline spine
 - simulation shadow
 - autonomy controls
-- evidence tray
+- proof tray
 - risk ledger
 - commit rail
 

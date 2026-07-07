@@ -19,16 +19,16 @@ Market calibration is not the same as copying common SaaS composition. A page ca
 
 ## Observed Patterns
 
-Examples to study:
+Examples to study by name:
 
-- Linear: https://linear.app/
-- Raycast: https://www.raycast.com/
-- Framer: https://www.framer.com/
-- Vercel: https://vercel.com/
-- v0: https://v0.app/
-- Godly inspiration library: https://godly.website/
-- SaaS Landing Page library: https://saaslandingpage.com/
-- ThemeForest WordPress marketplace: https://themeforest.net/category/wordpress
+- Linear
+- Raycast
+- Framer
+- Vercel
+- v0
+- Godly inspiration library
+- SaaS Landing Page library
+- ThemeForest WordPress marketplace
 
 ## What Good Sites Do
 
@@ -42,7 +42,7 @@ Good pattern:
 - explicit audience or job
 - no generic "beautiful, powerful, seamless" filler
 
-### 2. Show Product Evidence Early
+### 2. Show Product Proof Early
 
 The hero visual should prove the product, not symbolize it.
 
@@ -58,7 +58,7 @@ Avoid:
 - abstract 3D object
 - fake device render
 - decorative dashboard collage
-- metaphor object with no product evidence
+- metaphor object with no product proof
 
 ### 3. Build A Narrative, Not A Poster
 
@@ -69,7 +69,7 @@ Structure:
 - subcopy: why it matters
 - product proof: how it works
 - CTA: what to try next
-- next-section hint: what evidence comes next
+- next-section hint: what proof comes next
 
 ### 4. Make The Brand System Behave
 
@@ -100,7 +100,7 @@ Credibility can come from:
 Before accepting a homepage:
 
 - What do I know about the product after five seconds?
-- What evidence did I see?
+- What proof did I see?
 - What makes this product different from a template?
 - Is the hero visual proving the product or just decorating the page?
 - Would the page still work if the art direction were toned down?
@@ -146,7 +146,7 @@ Pick one direction based on fit, not novelty.
 
 Use this when the user points to ThemeForest, WordPress themes, Elementor templates, landing page marketplaces, Webflow templates, or commercial website template galleries.
 
-The useful lesson is commercial maturity, not copying template skins. Theme marketplaces optimize for immediate buyer confidence: a page must show category fit, polished section rhythm, visible demos, and conversion evidence quickly.
+The useful lesson is commercial maturity, not copying template skins. Theme marketplaces optimize for immediate buyer confidence: a page must show category fit, polished section rhythm, visible demos, and conversion proof quickly.
 
 Observed marketplace signals:
 

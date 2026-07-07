@@ -1,8 +1,10 @@
 # Product Composer Skill
 
+English | [Chinese](README.zh-CN.md)
+
 Product Composer is a Codex skill for designing, critiquing, generating, and implementing high-quality product UI surfaces.
 
-It is built for cases where a normal UI prompt tends to produce generic SaaS pages, crowded dashboards, weak visual hierarchy, or attractive but unusable mockups. The skill pushes Codex to treat UI as a product system: clear mission, deliberate content judgment, distinctive visual direction, interaction grammar, and verification.
+It is built for cases where a normal UI prompt tends to produce generic SaaS pages, crowded dashboards, weak visual hierarchy, or attractive but unusable mockups. The skill pushes Codex to treat UI as a product system: clear mission, deliberate content judgment, distinctive visual direction, interaction grammar, asset context, design memory, and rendered verification.
 
 ## What It Helps With
 
@@ -12,6 +14,8 @@ It is built for cases where a normal UI prompt tends to produce generic SaaS pag
 - Cultural, editorial, museum, hospitality, portfolio, and premium brand pages
 - Product content pages that need desire, clarity, and visual continuity
 - Image-generated UI mockups that should avoid template-like AI aesthetics
+- Figma/reference-to-code, screenshot-derived design systems, and DESIGN.md-driven UI work
+- User-provided, local, or imagegen-generated asset workflows
 - Editable UI layer documents and HTML previews
 - Existing UI critique and redesign direction
 
@@ -27,14 +31,12 @@ Good UI is not just layout. Strong pages often work because every visible choice
 
 The skill includes a `signature-aesthetic-systems` reference that turns this into a repeatable method:
 
-- identify subject-native motifs and evidence
+- identify subject-native motifs and material
 - choose one dominant spatial metaphor
 - derive a palette from the subject, product, or material world
 - define a continuity device across screens
 - make UI controls feel native to the visual system
 - remove anything that weakens the world
-
-This was distilled from a successful Dunhuang Museum page direction, but the method is general. It does not copy Dunhuang motifs unless the subject actually calls for them.
 
 ### Style Family Routing
 
@@ -43,14 +45,31 @@ Before net-new UI generation, the skill can ask the user to choose a style famil
 Example answer:
 
 ```text
-B + 稀疏 + 温暖有欲望
+B + sparse + warm and desirable
 ```
 
-The routing also includes quality floors for practical product styles. Utility screens should not collapse into a generic admin shell, and technical surfaces should not become black cockpits, sci-fi dashboards, fake terminals, or `运行舱`-style industrial fantasy. When that happens, the skill treats it as a failed direction and reroutes or repairs before regenerating.
+The routing also includes quality floors for practical product styles. Utility screens should not collapse into a generic admin shell, and technical surfaces should not become black cockpits, sci-fi dashboards, fake terminals, or command-center industrial fantasy. When that happens, the skill treats it as a failed direction and reroutes or repairs before regenerating.
 
-For SaaS, the skill references Ant Design's product values: natural task order, certainty, meaningful work objects, and progressive capability. This means stable navigation, explicit states, contextual actions, disciplined tables/forms/filters/drawers, and dense-but-readable work surfaces.
+### UI Generation Direction
 
-For technical-instrument UI, the skill can shift from flat panels to 3D instrument displays: digital twins, cutaway devices, sensor overlays, calibration rings, diagnostic callouts, and controls anchored to parts of the object.
+The skill absorbs UI generation patterns into one local direction model: reference anchor, choice mode, style dials, concept fidelity, artifact mode, and visual check.
+
+The deeper layer is judgment: visual-quality scoring, reference DNA extraction, direction matrices that vary the design thesis, and implementation locks that preserve accepted concepts.
+
+The deepest layer is operating behavior: choose the surface register, write a design thesis inventory before code, run a generic-default self-test, treat copy as design material, and verify implementation section by section.
+
+The latest layer adds context durability: route by input/output mode, gather asset context before visual invention, and preserve design memory so repeated edits do not drift.
+
+These are integrated into the main skill defaults, not only deep references:
+
+- Mode before style
+- Assets before invention: user-provided, local, or imagegen-generated
+- Memory before novelty
+- Direction before code
+- Concepts are contracts
+- Parity in slices
+- Copy is interface
+- Generic-default self-test
 
 ### Desire-Led Minimalism
 
@@ -66,7 +85,7 @@ For AI, agentic, automation, creative, or complex workflow products, the skill d
 
 ### Design Layer Documents
 
-The skill can also turn a UI concept into a structured `.layerdoc.json` file. This gives the design a stable intermediate representation:
+The skill can turn a UI concept into a structured `.layerdoc.json` file:
 
 ```text
 brief / image / data
@@ -79,11 +98,11 @@ This is useful when a generated UI should become an editable HTML preview or a f
 
 ## Installation
 
-Clone this repository into your Codex skills directory:
+Place this skill directory in your Codex skills directory:
 
 ```bash
 mkdir -p ~/.codex/skills
-git clone https://github.com/Hoshino-wind/product-composer-skill.git ~/.codex/skills/product-composer
+# expected location: ~/.codex/skills/product-composer
 ```
 
 Restart Codex or reload skills if your environment requires it.
@@ -131,7 +150,7 @@ Export an HTML preview with editable text, shapes, and chart layers.
 The main skill file routes Codex to focused references only when needed:
 
 - `references/ant-design-product-values.md` - enterprise product order and Ant Design-inspired values
-- `references/impeccable-execution-model.md` - execution discipline for non-generic UI
+- `references/execution-discipline.md` - execution discipline for non-generic UI
 - `references/style-family-router.md` - user style choices and visual family routing
 - `references/interaction-grammar.md` - new interaction models for AI and complex workflows
 - `references/taste-calibration.md` - taste gates and anti-generic critique
@@ -139,7 +158,17 @@ The main skill file routes Codex to focused references only when needed:
 - `references/content-judgment.md` - deciding what to keep, defer, and delete
 - `references/desire-minimalism-psychology.md` - minimalism that creates product desire
 - `references/image-generation-aesthetic-calibration.md` - prompts and repair passes for UI image generation
+- `references/ui-generation-skill-distillation.md` - distilled UI generation workflow patterns
+- `references/ui-generation-operating-model.md` - deeper UI generation operating model for register, thesis, anti-template review, and parity loops
+- `references/input-output-mode-router.md` - route prompt, screenshot, Figma, concept, app, prototype, and layer-document work
+- `references/asset-context-protocol.md` - gather user-provided, local, and imagegen-generated assets before design
+- `references/design-memory-consistency.md` - preserve tokens, component decisions, spacing, depth, and surface consistency across work
+- `references/visual-quality-rubric.md` - visual quality scoring for hierarchy, type, palette, material, and AI-flavored failure modes
+- `references/reference-dna-extraction.md` - extracting design DNA from screenshots, Figma, references, and accepted mockups
+- `references/direction-matrix-builder.md` - creating genuinely different visual directions before committing
+- `references/concept-to-implementation-lock.md` - preserving accepted image concepts during coded implementation
 - `references/visual-direction.md` - composition, palette, material, and silhouette guidance
+- `references/react-bits-motion-layer.md` - expressive React motion and kinetic accent layers
 - `references/signature-aesthetic-systems.md` - complete visual worlds and multi-screen continuity
 - `references/design-layer-document.md` - semantic layer documents for HTML export
 - `references/anti-patterns.md` - common AI UI and product design failures

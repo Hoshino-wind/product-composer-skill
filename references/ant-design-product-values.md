@@ -2,10 +2,6 @@
 
 Use these values as product UI decision checks, especially for enterprise software and complex work surfaces.
 
-Sources for inspiration:
-- https://ant.design/docs/spec/values/
-- https://ant.design/docs/spec/introduce/
-
 ## Natural
 
 Reduce cognitive and operational cost.
