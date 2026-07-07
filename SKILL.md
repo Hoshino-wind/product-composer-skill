@@ -1,6 +1,6 @@
 ---
 name: product-composer
-description: "Use when designing, redesigning, generating, critiquing, or implementing high-quality UI surfaces: websites, apps, dashboards, SaaS workflows, AI products, command canvases, forms, data views, landing pages, React Bits-style motion pages, product content pages, cultural/editorial pages, multi-screen flows, prototypes, design systems, image mockups, editable UI layer documents, or HTML previews that need product clarity, distinctive art direction, expressive React motion, interaction grammar, desire-led minimalism, and responsive verification. If Ant Design APIs/components are explicit, also use antd."
+description: "Use when designing, redesigning, generating, critiquing, or implementing high-quality UI surfaces: product apps, dashboards, SaaS workflows, AI/agent interfaces, landing pages, brand/editorial pages, React motion pages, image mockups, Figma/screenshot/reference-to-code work, design systems, editable layer documents, or HTML previews. If Ant Design APIs/components are explicit, also use antd."
 ---
 
 # Product Composer
@@ -15,6 +15,8 @@ Prefer the user's existing design system, component library, routing, and stylin
 
 Read only the references needed for the task:
 
+- `references/task-router.md`: read when the work mode is ambiguous, broad, narrow, or likely to be over-processed; use it to choose the smallest route that preserves quality.
+- `references/design-review-output.md`: read for UI review, critique, audit, PR review, screenshot review, design comparison, or when the user asks what is weak or wrong.
 - `references/ant-design-product-values.md`: read for enterprise products, dashboards, admin tools, forms, tables, Ant Design projects, or complex workflows.
 - `references/execution-discipline.md`: read for new UI, redesigns, visual polish, critique, or avoiding generic AI output.
 - `references/style-family-router.md`: read before net-new UI generation when the user has not specified a style, when outputs feel random or same-looking, or when the agent needs to ask the user to choose a direction before composing.
@@ -41,6 +43,21 @@ Read only the references needed for the task:
 - `references/verification.md`: read before final validation of rendered UI.
 
 If the project explicitly uses `antd`, also use the `antd` skill and query the actual component APIs before writing or changing Ant Design code.
+
+## Task Route Gate
+
+Before loading multiple references or running a full design workflow, choose a route:
+
+- quick patch: preserve the local system and make the smallest useful change.
+- design review: use `references/design-review-output.md`; findings first; do not redesign unless asked.
+- existing system: inspect tokens, components, local screens, and design memory before inventing.
+- Figma/screenshot/reference: extract DNA, lock what matters, and validate in slices.
+- image mockup: gather asset context, define dominant object/interaction, then use image generation when appropriate.
+- accepted concept: freeze the accepted hierarchy, palette roles, dominant object, and spatial relationship before coding.
+- layer document: create `.layerdoc.json` as the canonical design record before HTML export.
+- full redesign: diagnose failure, build a direction matrix when taste is unclear, then implement one chosen direction.
+
+Use `references/task-router.md` whenever the route is not obvious. Do not ask broad style questions for a quick patch, and do not skip direction work for a full redesign.
 
 ## Surface Decision
 
@@ -175,6 +192,20 @@ Before finalizing any visual surface, pass this gate:
 
 If the answer is no, run a `visual direction` pass before adding more UI detail.
 
+## Design Review Output Gate
+
+When the user asks for review, critique, audit, comparison, or "what is weak", output findings before summaries. Use `references/design-review-output.md`.
+
+Default review shape:
+
+- Blocking: prevents primary task completion, breaks layout, blocks accessibility, or violates an accepted concept in a high-impact way.
+- Major: weak hierarchy, generic direction, missing key state, broken system fit, or unclear action path.
+- Minor: local inconsistency, small responsive issue, weak copy, or repeated one-off style.
+- Polish: optical alignment, text wrapping, motion feel, asset treatment, focus styling, or visual finishing.
+- Verification: checks still needed or checks already run.
+
+Each finding should say what is wrong, why it matters, and what to change. Do not turn a review into a redesign unless the user asks.
+
 ## Signature System Gate
 
 For visually memorable pages, especially cultural, editorial, brand, museum, hospitality, portfolio, and premium product surfaces, create a signature visual system before composing sections.
@@ -287,6 +318,8 @@ python3 scripts/design_layer_tool.py html examples/opc-homepage.layerdoc.json ou
 1. Inspect the local project first: framework, component library, styling system, existing tokens, routes, and nearby screens.
    Also inspect local design memory files when present: `DESIGN.md`, Storybook, token files, component docs, screenshots, or `.product-composer/design-system.md`.
 2. Choose the workflow mode before styling:
+   - quick patch -> design memory and smallest useful change
+   - design review -> severity findings, no redesign unless requested
    - rough prompt -> direction matrix or inferred design thesis
    - screenshot/Figma/reference -> DNA extraction and parity implementation
    - accepted concept -> concept lock and parity slices

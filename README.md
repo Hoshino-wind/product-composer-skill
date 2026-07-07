@@ -149,6 +149,8 @@ Export an HTML preview with editable text, shapes, and chart layers.
 
 The main skill file routes Codex to focused references only when needed:
 
+- `references/task-router.md` - choose the smallest route for quick patches, reviews, Figma work, image mockups, accepted concepts, layer documents, and full redesigns
+- `references/design-review-output.md` - structured UI review output with severity levels and actionable changes
 - `references/ant-design-product-values.md` - enterprise product order and Ant Design-inspired values
 - `references/execution-discipline.md` - execution discipline for non-generic UI
 - `references/style-family-router.md` - user style choices and visual family routing
@@ -173,6 +175,8 @@ The main skill file routes Codex to focused references only when needed:
 - `references/design-layer-document.md` - semantic layer documents for HTML export
 - `references/anti-patterns.md` - common AI UI and product design failures
 - `references/verification.md` - final verification guidance
+
+Scenario examples live in `examples/scenarios/` and define expected routing behavior for common UI requests.
 
 ## Included Tooling
 

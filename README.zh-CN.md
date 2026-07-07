@@ -149,6 +149,8 @@ Export an HTML preview with editable text, shapes, and chart layers.
 
 主 skill 会按任务只读取需要的 focused references：
 
+- `references/task-router.md` - 为 quick patch、review、Figma、image mockup、accepted concept、layer document 和 full redesign 选择最小有效路径
+- `references/design-review-output.md` - 带严重级别和可执行修改建议的 UI review 输出格式
 - `references/ant-design-product-values.md` - 企业产品秩序和 Ant Design 启发的产品价值
 - `references/execution-discipline.md` - 避免模板化 UI 的执行纪律
 - `references/style-family-router.md` - 用户风格选择和视觉家族路由
@@ -173,6 +175,8 @@ Export an HTML preview with editable text, shapes, and chart layers.
 - `references/design-layer-document.md` - 用于 HTML export 的 semantic layer document
 - `references/anti-patterns.md` - 常见 AI UI 和产品设计失败
 - `references/verification.md` - 最终验证指导
+
+场景样例位于 `examples/scenarios/`，用于约束常见 UI 请求的预期路由行为。
 
 ## 内置工具
 
