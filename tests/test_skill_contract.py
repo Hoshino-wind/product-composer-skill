@@ -471,6 +471,25 @@ class SkillContractTests(unittest.TestCase):
             "do not code a media- or scroll-led website until its archetype",
             self.get_labeled_field(section, "Experience architecture gate"),
         )
+        art_repair = self.get_labeled_field(section, "Art-direction repair gate")
+        for term in [
+            "diagnose the lowest failure",
+            "Form, Proportion, Memory, or repeated structure",
+            "otherwise repair one axis",
+            "full/thumbnail/crop/blurred-label",
+            "preserve truth/mission",
+        ]:
+            self.assertIn(term, art_repair)
+
+        interaction = self.get_labeled_field(section, "Interaction-causality gate")
+        for term in [
+            "if direction promises a primary interaction",
+            "living object",
+            "input -> response -> durable consequence -> handoff -> fallback",
+            "Utility filters/accordions may remain but do not count",
+            "use one state machine",
+        ]:
+            self.assertIn(term, interaction)
 
     def test_composition_divergence_gate_rejects_theme_only_reskins(self):
         section = self.section_map["Hard Gates"]

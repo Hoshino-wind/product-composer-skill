@@ -51,7 +51,7 @@ Product Composer 保留产品正确性、本地约定、内容与资产真实性
 
 - [`SKILL.md`](SKILL.md) 是唯一 runtime authority。
 - [`references/`](references) 存放由 `SKILL.md` 索引的 focused runtime-owner 文档。
-- [`scripts/compile-image-prompt.py`](scripts/compile-image-prompt.py) 校验资产家族契约，并输出不偷偷附加预设风格的确定性有序提示段落。
+- [`scripts/compile-image-prompt.py`](scripts/compile-image-prompt.py) 分流视觉素材与 UI mockup 参考，校验由真实布局派生的挂载契约，实例化单一探索轴，并输出不复制风格词库的可移植 prompt-engine 或 UI-mockup 适配请求。
 - [`scripts/ui-pattern-scan.mjs`](scripts/ui-pattern-scan.mjs) 提供可选的确定性 scanner。
 - [`tests/`](tests) 包含结构、来源、完整性与 scanner 检查。
 - [`evals/discovery-scenarios.md`](evals/discovery-scenarios.md) 与 [`evals/routing-scenarios.md`](evals/routing-scenarios.md) 让激活边界和 reference-window 预期可审查。

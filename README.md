@@ -51,7 +51,7 @@ These are claim levels, not a list of artifacts shipped by this repository. The 
 
 - [`SKILL.md`](SKILL.md) is the only runtime authority.
 - [`references/`](references) contains the focused runtime-owner documents indexed by `SKILL.md`.
-- [`scripts/compile-image-prompt.py`](scripts/compile-image-prompt.py) validates an asset-family contract and emits deterministic ordered prompt sections without adding a hidden style preset.
+- [`scripts/compile-image-prompt.py`](scripts/compile-image-prompt.py) separates visual assets from UI mockup references, validates layout-derived mount contracts, instantiates the single exploration axis, and emits portable prompt-engine or UI-mockup adapter requests without copying a style catalog.
 - [`scripts/ui-pattern-scan.mjs`](scripts/ui-pattern-scan.mjs) provides the optional deterministic scanner.
 - [`tests/`](tests) contains structural, provenance, integrity, and scanner checks.
 - [`evals/discovery-scenarios.md`](evals/discovery-scenarios.md) and [`evals/routing-scenarios.md`](evals/routing-scenarios.md) make activation and reference-window expectations reviewable.

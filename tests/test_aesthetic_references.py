@@ -123,6 +123,12 @@ class AestheticReferenceTests(unittest.TestCase):
             "dominant silhouette",
             "generic-default",
             "Override condition",
+            "thumbnail read",
+            "focal hierarchy",
+            "foreground/middle-ground/background",
+            "background pressure",
+            "leading line",
+            "layout-derived exclusion zones",
         ])
 
     def test_direction_system_has_required_h2_sections_once_in_order(self):
@@ -171,6 +177,10 @@ class AestheticReferenceTests(unittest.TestCase):
             "affected DirectionContract field", "alternative rejected and why",
             "first focal point", "one tension pair", "artist, studio, or work name",
             "fixed anchors", "one exploration axis", "adjectives without visible consequences",
+            "resolve the composition as a shot", "thumbnail read",
+            "foreground/middle-ground/background jobs", "background pressure",
+            "leading line", "negative space", "layout-derived exclusion zones",
+            "do not ask the image model to invent a safe zone",
         ]:
             with self.subTest(term=term):
                 self.assertIn(term, derivation)
@@ -249,6 +259,24 @@ class AestheticReferenceTests(unittest.TestCase):
         self.assertIn("Override condition", override)
         self.assertIn("evidence predicate", override)
         self.assertIn("contract fields it changes", override)
+
+    def test_direction_repair_resets_failed_art_direction_not_just_polish(self):
+        sections = self.assert_h2_structure(
+            "references/direction-system.md",
+            DIRECTION_HEADINGS,
+        )
+        repair = sections["Repair Selection"]
+        for term in [
+            "ugly, ordinary, stiff, generic, or same-looking",
+            "more polish or a longer avoid list",
+            "full view, thumbnail scale, target crop",
+            "labels blurred",
+            "silhouette, focal hierarchy, proportion, depth, negative space",
+            "same component tree or shot",
+            "replace the composition family or experience architecture",
+        ]:
+            with self.subTest(term=term):
+                self.assertIn(term, repair)
 
     def test_direction_orthogonality_rejects_repeated_hero_scaffolds(self):
         sections = self.assert_h2_structure(
@@ -469,6 +497,8 @@ class AestheticReferenceTests(unittest.TestCase):
             "headline anchor and scale",
             "proof or media geometry",
             "agency placement",
+            "living page object and initial state",
+            "first meaningful state transition and retained consequence",
             "navigation or orientation",
             "continuation mechanism and first handoff",
             "rejected scaffold and override evidence",
@@ -495,6 +525,43 @@ class AestheticReferenceTests(unittest.TestCase):
                 self.assertIn(opener, first_viewport)
         self.assertIn("Theme or subject changes", first_viewport)
         self.assertIn("surface treatment is not sufficient divergence", first_viewport)
+
+    def test_brand_interactions_have_causal_state_and_responsive_composition(self):
+        sections = self.assert_h2_structure(
+            "references/brand-experiences.md",
+            BRAND_HEADINGS,
+        )
+        region_model = sections["Content And Region Model"]
+        for term in [
+            "Interaction causality record",
+            "relationship model",
+            "living page object",
+            "input and equivalent input",
+            "immediate response",
+            "durable consequence",
+            "downstream handoff",
+            "reversibility and reset",
+            "no-JavaScript behavior",
+            "only changes selected styling",
+            "signature interaction must create a legible cause, consequence, and retained state",
+            "one semantic state machine",
+            "desktop and narrow-screen composition independently",
+            "headline -> copy -> controls -> media",
+        ]:
+            with self.subTest(term=term):
+                self.assertIn(term, region_model)
+
+        rhythm = sections["Page Rhythm And Continuation"]
+        self.assertIn(
+            "must carry focus, state, evidence, agency, or a real region handoff",
+            rhythm,
+        )
+        self.assertIn("movement alone is decoration", rhythm)
+
+        acceptance = sections["Acceptance Checks"]
+        self.assertIn("change a living page object", acceptance)
+        self.assertIn("durable consequence", acceptance)
+        self.assertIn("desktop and narrow-screen compositions", acceptance)
 
     def test_implementation_memory_preserves_composition_comparison(self):
         text = (ROOT / "references/implementation-fidelity.md").read_text(encoding="utf-8")

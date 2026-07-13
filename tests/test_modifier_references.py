@@ -22,7 +22,7 @@ HEADINGS = {
     "image-concepts.md": [
         "Principle", "Contents", "Image eligibility", "Image World Bible",
         "Medium Router", "Asset Family Contract", "Prompt contract", "Candidate Protocol",
-        "Experience-Architecture Output", "Composition families", "Visible text",
+        "Interface and interaction boundary", "Composition families", "Visible text",
         "Aesthetic repair", "Anti-convergence", "Result inspection", "Retake Loop",
         "Direction-to-asset-pack", "Asset handoff", "Failure signs",
     ],
@@ -289,8 +289,8 @@ class ModifierReferenceTests(unittest.TestCase):
         text, sections = self.read_reference("image-concepts.md")
         self.assert_terms(text, [
             "Prompt contract", "Asset Family Contract", "Image World Bible",
-            "composition family", "exact visible text",
-            "aesthetic repair", "Do not default to left-copy/right-object",
+            "composition family", "reference-only text",
+            "Art-direction repair", "Do not default to left-copy/right-object",
             "Image generation is an eligibility decision, not a default",
         ])
         self.assert_terms(sections["Image eligibility"], [
@@ -307,6 +307,10 @@ class ModifierReferenceTests(unittest.TestCase):
             "material logic", "continuity anchors", "forbidden drift",
             "do not silently apply a stored style", "artist, director, studio, or work name",
             "Keep UI and image causally related",
+            "Composition plan", "dominant asset read", "focal hierarchy",
+            "foreground, middle ground, and background", "background pressure",
+            "leading line", "negative space", "mountContract",
+            "Do not guess a left/right safe zone",
         ])
 
         medium = sections["Medium Router"]
@@ -315,7 +319,7 @@ class ModifierReferenceTests(unittest.TestCase):
         self.assertEqual({
             "photography", "illustration", "3D or rendered object",
             "texture or material field", "transparent cutout",
-            "UI or architecture concept", "sequence or storyboard",
+            "UI mockup reference", "sequence or storyboard",
         }, {row[0] for row in medium_rows})
         self.assert_terms(medium, [
             "deterministic HTML, CSS, SVG, canvas, or component code",
@@ -326,33 +330,56 @@ class ModifierReferenceTests(unittest.TestCase):
         self.assert_terms(family, [
             '"direction"', '"thesis"', '"aestheticStance"', '"tensionPair"',
             '"visualGenre"', '"attentionStrategy"', '"dominantSilhouette"',
-            '"compositionFamily"', '"world"', '"camera"', '"light"',
+            '"compositionFamily"', '"typographyMood"', '"deletionRule"',
+            '"world"', '"camera"', '"light"',
             '"material"', '"color"', '"asset"', '"familyId"', '"id"',
-            '"promptContractVersion"', '"parentId"', '"stateId"',
+            '"promptContractVersion"', '"conceptType"', '"parentId"', '"stateId"',
             '"transition"', '"fromState"', '"event"', '"toState"',
             '"handoffFrame"', '"role"',
             '"maturity"', '"truthBoundary"', '"medium"', '"intendedUse"',
-            '"targetRegion"', '"aspectRatio"', '"focalPoint"', '"composition"',
-            '"depthOrder"', '"cropBehavior"', '"safeArea"', '"variants"',
+            '"targetRegion"', '"aspectRatio"', '"cropBehavior"',
+            '"deliveryIntent"', '"rasterTextPolicy"', '"visibleText"',
+            '"compositionPlan"', '"thumbnailRead"', '"focalHierarchy"',
+            '"subjectPlacement"', '"frameOccupancy"', '"shotDistance"',
+            '"viewpoint"', '"depthLayers"', '"foreground"',
+            '"middleGround"', '"background"', '"backgroundPressure"',
+            '"leadingLine"', '"negativeSpace"', '"mountContract"',
+            '"consumingRoute"', '"consumingRegion"', '"mountMode"',
+            '"layoutSource"', '"breakpointFrames"', '"exclusionZones"',
+            '"focalAnchor"', '"focalDrift"', '"variants"',
+            '"ui-mockup-reference"', '"targetFidelity"',
+            '"interfaceArchetype"', '"layoutThesis"',
+            '"hierarchyStrategy"', '"densityRhythm"',
+            '"interfaceFramePlan"', '"navigationAndShell"',
+            '"regionGeometry"', '"primaryTask"', '"activeState"',
+            '"controlsAndAffordances"', '"reconstructionBoundary"',
             '"subject"', '"scene"', '"action"', '"fixedAnchors"',
             '"explorationAxis"', '"referenceRoles"', '"constraints"', '"avoid"',
             '"candidateSettings"', '"mode"', '"count"', '"selectionCriteria"',
-            '"variable"', '"allowedValues"',
+            '"variable"', '"binding"', '"allowedValues"',
             "exactly one structured `explorationAxis` per batch",
             "Use `variants` when target device", "simplest useful master first",
+            "deterministic compiler requires `typographyMood` and `deletionRule`",
+            "two to four ordered reads", "only asset-frame spatial source of truth",
+            "Interaction and experience architecture are not image concept types",
         ])
 
         prompt = sections["Prompt contract"]
         self.assert_terms(prompt, [
             "family and asset identity, prompt-contract version",
             "role, intended use, maturity, and truth boundary",
-            "visual thesis, attention strategy, tension pair, and visual genre",
-            "primary target region plus any structured device or target-region variants",
-            "aspect ratio, focal point", "fixed anchors",
+            "visual thesis, attention strategy, tension pair, visual genre, typography mood, and deletion rule",
+            "primary target region and the art-directed composition plan",
+            "foreground/middle-ground/background", "background pressure",
+            "leading line", "negative space", "mount contract",
+            "device or target-region variants", "complete composition plan",
+            "`ui-mockup-reference`", "cinematic shot/depth pipeline", "fixed anchors",
             "exactly one exploration axis", "scripts/compile-image-prompt.py",
             "--format json", "Preserve the user's language",
             "bounded set of recognizable quality-praise shortcuts",
-            "named artist or studio", "framework", "material", "polish",
+            "prompt-engine-shot", "styleKey: no_style", "imagegen-ui-mockup",
+            "operation `build_six_layer_prompt`", "candidate-resolved inputs",
+            "framework", "material", "polish",
             "Modifier delta", "chinese-aesthetic.md",
         ])
         self.assertIn("`chinese-aesthetic.md` supplies the Modifier delta", prompt)
@@ -366,11 +393,12 @@ class ModifierReferenceTests(unittest.TestCase):
             "Automated ranking or VLM critique", "user or responsible design judgment",
         ])
 
-        scope_output = sections["Experience-Architecture Output"]
+        scope_output = sections["Interface and interaction boundary"]
         self.assert_terms(scope_output, [
-            "opener or hero", "route or page experience", "multi-route website",
+            "route map", "primary interaction state machine", "wireframe",
             "Do not use one attractive image to stand in for a complete website experience",
-            "ordinary-flow and immersive passages", "repeated hero posters",
+            "input -> response -> durable consequence -> handoff -> fallback",
+            "must not invent the information architecture",
         ])
 
         escaped_header, escaped_rows = self.parse_markdown_table(
@@ -434,7 +462,10 @@ class ModifierReferenceTests(unittest.TestCase):
             "style family", "visual genre", "dominant silhouette",
             "material language", "attention strategy", "image-world thesis",
             "typography mood", "tension pair", "fixed anchors and exploration axis",
-            "deletion rule",
+            "deletion rule", "Art-direction repair", "labels blurred",
+            "visual composition plan", "UI hierarchy strategy", "region geometry",
+            "control/proof placement", "density rhythm",
+            "mounted crop", "deterministic rebuild",
         ])
 
         retake = sections["Retake Loop"]

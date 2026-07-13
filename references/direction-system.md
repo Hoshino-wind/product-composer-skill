@@ -53,6 +53,8 @@ Build the direction in this order:
 7. Record fixed anchors for truth, identity, the local system, and the signature; name one exploration axis that may change in the next candidate batch.
 8. Apply the Deletion rule and confirm that the direction survives without decorative explanation.
 
+For a visual concept or a scene-led region, resolve the composition as a shot before styling components: thumbnail read, ordered focal hierarchy, subject or work-object placement, occupied area, viewpoint, foreground/middle-ground/background jobs, background pressure, leading line, negative space, and the intended relationship to type. These are visible relationships, not extra adjectives. For project-bound media, convert that relationship into layout-derived exclusion zones after a DOM skeleton exists; do not ask the image model to invent a safe zone. If the composition works only after labels explain it, the form is unresolved.
+
 Do not accept adjectives without visible consequences. `Precise`, for example, must alter alignment, tolerance, edge behavior, timing, or evidence density; `warm` must alter light, material, color temperature, voice, or pacing. When direction is unresolved, create `2–3` internally coherent alternatives that differ structurally, then compare them as artifacts. Within one selected direction or repair batch, change only the named exploration axis so causality remains inspectable.
 
 ## Direction Contract
@@ -288,6 +290,8 @@ Choose the lowest credible score as the single repair axis:
 - weak Intentional control: reduce simultaneous competition, clarify timing and handoffs, or apply the Deletion rule without flattening the whole sequence
 - weak Tension: clarify the stance, palette roles, or type-role contrast
 - weak Craft: resolve typography, palette, material, and state details without changing the thesis
+
+When the user says the result is ugly, ordinary, stiff, generic, or same-looking, do not treat the feedback as a request for more polish or a longer avoid list. Inspect the actual artifact at full view, thumbnail scale, target crop, and—when possible—with labels blurred. Preserve truth, user mission, and successful fixed anchors; then reset the lowest failed relationship among silhouette, focal hierarchy, proportion, depth, negative space, material, typography mood, and tension. If the same component tree or shot still survives after only changing the product name, replace the composition family or experience architecture before regenerating or recoding.
 
 Patch one slice, then re-score the same dimensions. Preserve successful fields so repair does not become an uncontrolled redesign.
 

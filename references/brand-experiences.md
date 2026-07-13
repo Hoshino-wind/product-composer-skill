@@ -120,6 +120,24 @@ Region record
 - loading, interruption, reduced-motion, and static behavior:
 ```
 
+For every primary interactive region, record one causal interaction instead of listing controls:
+
+```text
+Interaction causality record
+- relationship model: how the visitor relates to the page object
+- living page object: route, collection, scene, comparison, instrument, record, or another stateful subject
+- input and equivalent input: pointer, keyboard, touch, wheel, or explicit control paths into the same state
+- immediate response: the visible consequence in the current region
+- durable consequence: what selection, progress, evidence, or commitment remains after the moment
+- downstream handoff: which later region, proof, action, or media state changes because of it
+- reversibility and reset:
+- reduced-motion, interrupted, and no-JavaScript behavior:
+```
+
+A primary interaction fails when it only changes selected styling, swaps a small text block, filters an otherwise unchanged section, or plays decorative motion while the page object and later handoff remain identical. Familiar filters, accordions, tabs, and forms may still serve real utility, but they do not become a signature interaction by being animated. The signature interaction must create a legible cause, consequence, and retained state.
+
+For responsive work, keep one semantic state machine but design desktop and narrow-screen composition independently. Map each state, focal order, control path, and handoff to the available viewport; do not collapse a spatial desktop scene into `headline -> copy -> controls -> media` merely by stacking it. Scroll observation, direct controls, keyboard navigation, and touch must converge on the same valid transitions rather than mutating unrelated DOM fragments.
+
 The sequence should be causal when the content is causal, but not every portfolio, collection, or cultural exploration needs a linear argument. If regions can be reordered, determine whether that expresses legitimate collection freedom or an accidental lack of structure.
 
 ## First-Viewport Contract
@@ -139,6 +157,8 @@ Hero composition record
 - headline anchor and scale:
 - proof or media geometry:
 - agency placement:
+- living page object and initial state:
+- first meaningful state transition and retained consequence:
 - navigation or orientation:
 - continuation mechanism and first handoff:
 - rejected scaffold and override evidence:
@@ -206,7 +226,7 @@ Mix region geometries according to reading and interaction needs. Ordinary docum
 
 Vary density, media ratio, color field, and motion energy over the route. Continuity may come from a persistent object, route line, crop, horizon, material seam, type posture, navigation behavior, audio field, or transformation rule; it does not require every region to share one layout or one effect.
 
-Give each handoff a job: deepen, prove, compare, release, reorient, or invite action. Pinned regions need a clear entry and exit. Horizontal tracks need progress and an obvious return to vertical flow. Spatial canvases need orientation, escape, and an accessible path to their content.
+Give each handoff a job: deepen, prove, compare, release, reorient, or invite action. When a route line, seam, horizon, mask, or persistent object is the continuity device, it must carry focus, state, evidence, agency, or a real region handoff; movement alone is decoration. Pinned regions need a clear entry and exit. Horizontal tracks need progress and an obvious return to vertical flow. Spatial canvases need orientation, escape, and an accessible path to their content.
 
 ## Desire Mechanisms
 
@@ -269,6 +289,8 @@ Use full-viewport cinematic luxury only when a credible dominant subject and bra
 - Are intrinsic, subviewport, viewport, pinned, horizontal, spatial, and ordinary-flow regions chosen by content rather than a screen recipe?
 - Does a reference study inspect the complete route or clearly label the evidence limit?
 - Does every interactive region record trigger, state change, handoff, input control, and fallback?
+- Does every primary interaction change a living page object, leave a durable consequence, and alter a downstream handoff rather than only swapping local UI state?
+- Do desktop and narrow-screen compositions expose the same semantic transitions through viewport-appropriate focal order and controls instead of one collapsed component stack?
 - Does the media map allow zero-to-many media per beat and reuse one asset across several beats without tying source count to quality?
 - Is proof timing calibrated to the archetype and commitment risk rather than one universal rule?
 - Can different regions use different effects while remaining coherent through a named motion grammar?

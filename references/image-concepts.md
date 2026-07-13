@@ -14,7 +14,7 @@ Own why the asset should look and behave a certain way; let the image tool own r
 - [Asset Family Contract](#asset-family-contract)
 - [Prompt contract](#prompt-contract)
 - [Candidate Protocol](#candidate-protocol)
-- [Experience-Architecture Output](#experience-architecture-output)
+- [Interface and interaction boundary](#interface-and-interaction-boundary)
 - [Composition families](#composition-families)
 - [Visible text](#visible-text)
 - [Aesthetic repair](#aesthetic-repair)
@@ -40,7 +40,7 @@ Do not generate when a supplied reference or local asset already answers the nee
 
 For a physical-product direction with no official media, keep the selected Surface and Image Modifier. When the absence constrains proof or composition, close the current window and hand off to Asset truth even when no file exists; resume from the updated Design Contract before selecting or generating atmosphere.
 
-Name the intended artifact and maturity before generating: exploratory direction, selected concept, support asset, or production candidate. A chat preview alone is not a saved implementation asset.
+Name the intended artifact, maturity, and consumption mode before generating: exploratory direction, selected concept, support asset, or production candidate; `preview-only` or `project-bound`. A chat preview alone is not a saved implementation asset. A project-bound bitmap is complete only after it is saved in the project, mounted by code, and checked in the consuming layout.
 
 ## Image World Bible
 
@@ -60,6 +60,24 @@ Image World Bible
 - forbidden drift:
 ```
 
+For every framed visual asset—photograph, illustration, rendered object, object stage, scene, or Hero background—add an art-directed `compositionPlan` before prompting:
+
+```text
+Composition plan
+- thumbnail read: the contour or relationship that survives when text is blurred
+- focal hierarchy: 2–4 ordered reads, not a list of equally loud objects
+- subject placement and frame occupancy: location plus approximate share of the frame
+- shot distance and viewpoint: the viewing relationship, not a quality adjective
+- depth layers: distinct foreground, middle ground, and background jobs
+- background pressure: where the environment compresses or releases the subject
+- leading line: the content-native path that moves the eye
+- negative space: the silence that protects the dominant form
+```
+
+The plan must preserve one dominant asset read at thumbnail scale. It must not turn an interface, route, or interaction into a key visual. A decorative arrow, route, horizon, cut, or rail is not a leading line unless it changes focal order or depth. Do not use an avoid list to compensate for an unresolved silhouette, focal hierarchy, or depth relationship.
+
+Type and control clearance does not belong to the image model. For project-bound media, derive exclusion zones, focal drift, crop, edge, and contrast from an inspectable DOM/layout skeleton and record them in `mountContract`. Do not guess a left/right safe zone before the consuming layout exists.
+
 Start from the active direction, real content, available references, and intended use; do not silently apply a stored style. Describe visible mechanisms rather than an artist, director, studio, or work name. A reference may contribute composition, camera, light, material, or rhythm only through the authorized translation rules in `reference-translation.md`.
 
 Keep UI and image causally related: the same attention strategy, tension pair, palette roles, material behavior, and continuity rule should remain legible in both. Do not force literal sameness. An austere UI may intentionally frame an expressive image when the tension pair names that relationship and the image does not compete with controls or proof.
@@ -75,14 +93,18 @@ Choose a medium because its controllable variables fit the role. Do not send eve
 | 3D or rendered object | geometry, scale reference, material response, edge wear, camera, light rig, grounding, reflection, and render realism | fake product truth, impossible material behavior, or decorative CG with no role |
 | texture or material field | physical scale, repeat or seam policy, directional grain, surface response, tonal range, and crop tolerance | a focal subject or narrative scene when the role is only a reusable field |
 | transparent cutout | contour, source identity, viewpoint, edge quality, transparency, contact shadow, and target-background compatibility | complex transparency or reverse views that the available source cannot support |
-| UI or architecture concept | hierarchy, region geometry, states, proof placement, exact-text boundary, media relationship, and target-device scope | production UI, correct runtime behavior, or factual screenshots inferred from a concept image |
+| UI mockup reference | real viewport, hierarchy, region geometry, primary task, active state, controls, proof placement, realistic density, exact-text boundary, and deterministic reconstruction boundary | production UI, runtime behavior, responsive proof, or a publishable screenshot inferred from the mockup |
 | sequence or storyboard | stable identity and world anchors, from-state, event, to-state, camera relationship, and handoff frame | multiple incompatible events compressed into one frame or continuity inferred from prose alone |
 
-Prefer deterministic HTML, CSS, SVG, canvas, or component code for exact UI, charts, icons, logos, diagrams, and typography when those are the required deliverables. Use generation for exploration, authored raster media, atmosphere, texture, illustration, or another eligible role; composite exact text, data, logos, and controls deterministically for publish-bound work.
+Prefer deterministic HTML, CSS, SVG, canvas, or component code for exact UI, charts, icons, logos, diagrams, and typography when those are the required deliverables. Use generation for exploration, authored raster media, atmosphere, texture, illustration, or another eligible role; composite exact text, data, logos, and controls deterministically for publish-bound work. A static image may show one interface state, but it cannot prove interaction causality, durable consequence, handoff, input equivalence, interruption, or responsiveness.
 
 ## Asset Family Contract
 
 Create one contract for each independent asset role. Related variants share an asset-family identity and lineage; unrelated roles receive separate contracts rather than one prompt with many jobs.
+
+Use `visual-asset` only for a bitmap that can stand apart from the interface. Use `ui-mockup-reference` only to explore a functional interface frame that will be rebuilt deterministically. Interaction and experience architecture are not image concept types.
+
+### Visual asset contract
 
 ```json
 {
@@ -94,6 +116,8 @@ Create one contract for each independent asset role. Related variants share an a
     "attentionStrategy": "...",
     "dominantSilhouette": "...",
     "compositionFamily": "...",
+    "typographyMood": "...",
+    "deletionRule": "...",
     "world": "...",
     "camera": "...",
     "light": "...",
@@ -103,7 +127,11 @@ Create one contract for each independent asset role. Related variants share an a
   "asset": {
     "familyId": "...",
     "id": "...",
-    "promptContractVersion": "1.0",
+    "promptContractVersion": "2.0",
+    "conceptType": "visual-asset",
+    "deliveryIntent": "preview-only | project-bound",
+    "rasterTextPolicy": "none",
+    "visibleText": [],
     "parentId": "...",
     "stateId": "...",
     "transition": {
@@ -119,29 +147,74 @@ Create one contract for each independent asset role. Related variants share an a
     "intendedUse": "...",
     "targetRegion": "...",
     "aspectRatio": "...",
-    "focalPoint": "...",
-    "composition": "...",
-    "depthOrder": "...",
     "cropBehavior": "...",
-    "safeArea": "...",
+    "compositionPlan": {
+      "thumbnailRead": "...",
+      "focalHierarchy": ["first read", "second read", "action or proof read"],
+      "subjectPlacement": "...",
+      "frameOccupancy": "...",
+      "shotDistance": "...",
+      "viewpoint": "...",
+      "depthLayers": {
+        "foreground": "...",
+        "middleGround": "...",
+        "background": "..."
+      },
+      "backgroundPressure": "...",
+      "leadingLine": "...",
+      "negativeSpace": "..."
+    },
     "variants": [{
       "id": "desktop-wide",
       "targetRegion": "...",
       "aspectRatio": "...",
-      "focalPoint": "...",
-      "composition": "...",
-      "depthOrder": "...",
       "cropBehavior": "...",
-      "safeArea": "..."
+      "compositionPlan": {
+        "thumbnailRead": "...",
+        "focalHierarchy": ["...", "..."],
+        "subjectPlacement": "...",
+        "frameOccupancy": "...",
+        "shotDistance": "...",
+        "viewpoint": "...",
+        "depthLayers": {
+          "foreground": "...",
+          "middleGround": "...",
+          "background": "..."
+        },
+        "backgroundPressure": "...",
+        "leadingLine": "...",
+        "negativeSpace": "..."
+      }
     }],
+    "mountContract": {
+      "consumingRoute": "...",
+      "consumingRegion": "...",
+      "mountMode": "background | img | masked | layer",
+      "layoutSource": "DOM skeleton, path, selector, or evidence locator",
+      "breakpointFrames": [{
+        "id": "desktop-wide",
+        "viewport": "1440x900",
+        "renderBox": "normalized or pixel bounds",
+        "exclusionZones": ["DOM-owned normalized or pixel bounds"],
+        "focalAnchor": "...",
+        "focalDrift": "...",
+        "cropAndBleed": "...",
+        "edgeBehavior": "...",
+        "contrastRequirement": "..."
+      }]
+    },
     "subject": "...",
     "scene": "...",
     "action": "...",
     "fixedAnchors": ["..."],
     "explorationAxis": {
-      "variable": "shot-distance",
-      "name": "镜头距离",
-      "allowedValues": ["...", "..."]
+      "variable": "focal-scale",
+      "name": "主体尺度",
+      "binding": "target.compositionPlan.frameOccupancy",
+      "allowedValues": [
+        {"desktop-wide": "..."},
+        {"desktop-wide": "..."}
+      ]
     },
     "referenceRoles": [{"reference": "Image 1", "role": "identity anchor"}],
     "constraints": ["..."],
@@ -149,38 +222,99 @@ Create one contract for each independent asset role. Related variants share an a
   },
   "candidateSettings": {
     "mode": "asset-exploration",
-    "count": 4,
+    "count": 2,
     "selectionCriteria": ["..."],
-    "model": "...",
-    "version": "...",
-    "settings": {}
+    "variationPolicy": "single-axis"
   }
 }
 ```
 
+`mountContract` is required for `project-bound` and forbidden for `preview-only`. Its breakpoint-frame ids must match the explicit variant ids, or use `primary` when no variants exist. Exclusion zones come from layout evidence and protect DOM-owned navigation, copy, actions, proof, and legal text. `rasterTextPolicy: none` plus `visibleText: []` keeps those deterministic. If authored art typography is essential, treat it as a separate asset with a semantic text twin rather than weakening this contract.
+
+### UI mockup reference contract
+
+Reuse the common identity, truth, candidate, anchor, reference, constraint, and avoid fields, but use a UI-only direction and interface projection. Do not inherit image-world, silhouette, composition-family, camera, or shot fields:
+
+```json
+{
+  "direction": {
+    "thesis": "...",
+    "aestheticStance": ["...", "...", "..."],
+    "tensionPair": "... versus ...; ... dominates",
+    "interfaceArchetype": "...",
+    "layoutThesis": "...",
+    "hierarchyStrategy": "...",
+    "densityRhythm": "...",
+    "attentionStrategy": "...",
+    "typographyMood": "...",
+    "deletionRule": "...",
+    "material": "...",
+    "color": "..."
+  },
+  "asset": {
+    "promptContractVersion": "2.0",
+    "conceptType": "ui-mockup-reference",
+    "deliveryIntent": "preview-only",
+    "rasterTextPolicy": "reference-only",
+    "targetFidelity": "low-fi-wireframe | mid-fi-reference | high-fi-reference",
+    "targetRegion": "route or page scope",
+    "aspectRatio": "...",
+    "interfaceFramePlan": {
+      "viewport": "...",
+      "navigationAndShell": "...",
+      "regionGeometry": ["..."],
+      "readingOrder": ["...", "..."],
+      "primaryTask": "...",
+      "activeState": "...",
+      "controlsAndAffordances": ["..."],
+      "proofPlacement": "...",
+      "contentDensity": "...",
+      "responsiveBehavior": ["..."],
+      "reconstructionBoundary": ["HTML/CSS/SVG/component ownership"]
+    },
+    "visibleText": ["reference label", "reference action"],
+    "explorationAxis": {
+      "variable": "content-density",
+      "name": "内容密度",
+      "binding": "target.interfaceFramePlan.contentDensity",
+      "allowedValues": ["sparse task focus", "realistic working density"]
+    }
+  }
+}
+```
+
+A UI mockup reference has no `compositionPlan`, `mountContract`, visual genre, dominant silhouette, composition family, camera shot, transition, or interaction plan. Its exploration axis must be UI-specific—layout geometry, reading order, navigation or content density, control emphasis, proof proximity, responsive strategy, hierarchy, or whitespace—not shot distance, lens, camera height, or viewpoint. Create a separate contract for a materially different viewport or state. The mockup is never mounted as a page background or accepted as runtime evidence; rebuild it, then validate the code in a browser.
+
 Use one stable `familyId` across related assets and a unique `id` for each output. Record `parentId` only for a derivative or edit. Add `stateId` and `transition` only when the asset represents a state change; `transition.toState` must equal `stateId`, and the handoff frame must be usable by the next asset or medium. Keep a versioned prompt lineage instead of overwriting the contract that produced an accepted candidate.
 
-Treat `fixedAnchors` as invariants: truth boundary, subject identity, product contour, world, palette role, material behavior, target geometry, or another selected rule must not drift. Declare exactly one structured `explorationAxis` per batch. Its stable `variable` must be one supported causal variable such as `focal-scale`, `crop`, `viewpoint`, `shot-distance`, `light-direction`, `environment-density`, `abstraction-level`, `texture-scale`, `material-response`, `subject-pose`, or `action-phase`; keep the localized `name` and optional allowed values beside it. Do not combine several repair requests into the same delta.
+Treat `fixedAnchors` as invariants: truth boundary, subject identity, product contour, world, palette role, material behavior, target geometry, or another selected rule must not drift. Declare exactly one structured `explorationAxis` per batch. Bind its stable `variable` to one compiler-owned field and keep one unique allowed value per candidate. A target-specific binding with several variants uses a value map whose keys exactly match target ids, so desktop and narrow compositions receive intentional values rather than one absolute delta. Each binding preserves the destination type, and the compiler revalidates every resolved direction, target plan, and interface frame after applying it; an unframed `notApplicable` plan cannot receive framed composition bindings. Do not combine several repair requests into the same delta.
 
-Use `variants` when target device, region, aspect ratio, focal point, crop behavior, or safe area materially changes; do not hide several target geometries in one prose field. Omit `parentId`, `stateId`, `transition`, `variants`, `subject`, `scene`, or `action` only when they are genuinely inapplicable. The compiler contract otherwise remains complete; write `not applicable` rather than silently dropping a required art-direction field.
+`compositionPlan` is the only asset-frame spatial source of truth. Do not repeat focal point, composition, or depth order as parallel asset fields. `direction.camera` describes global optical behavior; `compositionPlan.viewpoint` and the target-specific plan control placement. `mountContract` owns layout exclusion and integration, not image composition. Each visual-asset variant owns a complete composition plan because device crops may change focal order, occupancy, viewpoint, pressure, leading line, and negative space—not merely crop.
+
+Use `variants` when target device, region, aspect ratio, crop behavior, or composition materially changes; do not hide several target geometries in one prose field. Omit `parentId`, `stateId`, `transition`, `variants`, `subject`, `scene`, or `action` only when they are genuinely inapplicable.
 
 For identity-critical families, create and approve the simplest useful master first, then derive angles, states, crops, or scenes from that reference. A character may need a neutral master and views; a product may need an authorized object master; a scene-led website may need a master environment. Do not force character grids, dense asset graphs, or master imagery onto a simple one-off role.
+
+The deterministic compiler requires `typographyMood` and `deletionRule`. A framed visual asset uses a complete `compositionPlan`: `focalHierarchy` contains two to four ordered reads, and `depthLayers` distinguishes foreground, middle ground, and background—even when one layer is intentionally empty. A genuinely unframed asset such as a seamless tile uses `"compositionPlan": {"notApplicable": "specific reason the asset has no stable frame"}`. A UI mockup reference uses `interfaceFramePlan` instead.
 
 Keep truth role, semantic role, provenance, and rights in the shared Design Contract and `asset-context.md`; the Asset Family Contract controls creative production, not authentication.
 
 ## Prompt contract
 
-Compile the Asset Family Contract into this ordered prompt logic:
+For `visual-asset`, compile the Asset Family Contract into this ordered prompt logic:
 
 1. family and asset identity, prompt-contract version, applicable parent/state lineage, role, intended use, maturity, and truth boundary
-2. visual thesis, attention strategy, tension pair, and visual genre
+2. visual thesis, attention strategy, tension pair, visual genre, typography mood, and deletion rule
 3. image world, applicable transition, and the applicable subject, scene, action, or material field
-4. primary target region plus any structured device or target-region variants: aspect ratio, focal point, composition, depth order, crop behavior, and safe area
-5. medium-specific camera, light, material, texture, palette, and finish logic
-6. fixed anchors and the declared role of every input reference
-7. exactly one exploration axis for the current batch
-8. constraints and a short avoid list tied to real failure risks
-9. candidate count, selection criteria, model, version, and settings as generation metadata
+4. primary target region and the art-directed composition plan in authorial order: thumbnail read, focal hierarchy, subject placement, frame occupancy, shot distance, viewpoint, foreground/middle-ground/background, background pressure, leading line, and negative space
+5. any device or target-region variants, each with its own crop behavior and complete composition plan
+6. project-bound mount contract derived from layout evidence
+7. medium-specific camera, light, material, texture, palette, and finish logic
+8. fixed anchors and the declared role of every input reference
+9. exactly one exploration axis for the current batch
+10. constraints, avoid list, candidate count, selection criteria, and portable adapter request
+
+For `ui-mockup-reference`, compile intent and direction first, then viewport, page scope, navigation, region geometry, reading order, primary task, active state, actual controls and affordances, proof placement, realistic density, responsive intent, reconstruction boundary, and reference-only text. Do not send it through a cinematic shot/depth pipeline.
 
 For a saved or production-candidate contract, run the deterministic compiler:
 
@@ -188,17 +322,27 @@ For a saved or production-candidate contract, run the deterministic compiler:
 python3 scripts/compile-image-prompt.py /absolute/path/asset-contract.json --format text
 ```
 
-Use `--format json` when the execution adapter or evidence record needs ordered sections and candidate metadata. Preserve the user's language. The compiler rejects a bounded set of recognizable quality-praise shortcuts and validates structural continuity, variants, and the single exploration variable; named people or studios and unsupported narrative claims still require human or owner review because string matching cannot establish their meaning reliably. Do not add a named artist or studio, an unsupported narrative object, or a silent style fallback. Keep model-specific settings outside the creative thesis so another execution adapter can consume the same contract.
+Use `--format json` when an execution adapter or evidence record needs ordered sections and instantiated candidates. Preserve the user's language. The compiler rejects a bounded set of recognizable quality-praise shortcuts and validates type boundaries, structural continuity, variants, mount frames, and the single exploration variable; named people or studios and unsupported narrative claims still require human or owner review because string matching cannot establish their meaning reliably.
 
-Resolve composition hierarchy, focal scale, safe area, depth intent, camera logic, light logic, material behavior, and color relationship before generation. Let the model vary local texture and rendering detail only inside those decisions; do not outsource the art direction to a vague request for something `cinematic`, `premium`, or `beautiful`. Do not micromanage a UI concept into a box-by-box pixel diagram.
+The desktop `prompt-engine` remains the single source of truth for style keys, shot vocabulary, composition shorthand, prompt compaction, and Chinese six-layer assembly. Do not copy its catalogs or a desktop path into this skill. The compiler emits a portable `adapterRequest`: visual assets request skill `prompt-engine`, operation `build_six_layer_prompt`, profile `prompt-engine-shot`, and locked default `styleKey: no_style`; UI references request `imagegen-ui-mockup` and bypass cinematic shot/depth assembly. The visual request uses the external function's real parameter names, maps candidate-resolved inputs and target plans into `subject -> action -> camera -> composition/depth -> scene -> light/material/color`, and explicitly leaves unowned inputs empty instead of inventing camera movement, technique, film look, or effects.
 
-When the execution path supports image editing, use three purposeful passes only when they reduce risk:
+```bash
+python3 scripts/compile-image-prompt.py /absolute/path/asset-contract.json --format json
+```
+
+The external runtime resolves that request; this creative contract stays on `no_style`. A user-authorized style change is a separate execution decision validated against the external registry and recorded with the generated output. The adapter does not replace the richer `compositionPlan`. The compiler instantiates one `candidates[]` entry per allowed value, applies its binding to `resolvedInputs` or each resolved target plan, and joins the matching mount frame before handoff; it does not pretend to execute the external engine.
+
+For a multi-candidate asset or repair batch, use `variationPolicy: single-axis` and make candidate count equal the number of allowed values. Direction alternatives receive separate contracts instead of hiding several visual theses inside one prompt. Model, version, seed, and provider settings belong to the image execution record and asset handoff, not the creative contract.
+
+Resolve composition hierarchy, focal scale, layout-derived exclusion zones, depth intent, camera logic, light logic, material behavior, and color relationship before generation. Let the model vary local texture and rendering detail only inside those decisions; do not outsource the art direction to a vague request for something `cinematic`, `premium`, or `beautiful`. Do not micromanage a UI mockup into a box-by-box pixel diagram.
+
+When the external execution path supports image editing, it may use three purposeful runtime passes only when they reduce risk:
 
 - `framework`: establish subject, silhouette, composition, depth, crop, and base color relationship
 - `material`: preserve the framework while resolving material, object detail, light source, and surface response
 - `polish`: preserve structure and identity while refining atmosphere, texture, grading, and artifact defects
 
-Use one full prompt when the role is simple or the tool cannot preserve a prior pass. Do not repeat a pass merely to chase random novelty.
+Use one full prompt when the role is simple or the tool cannot preserve a prior pass. Later passes must carry the parent image, fixed anchors, selected composition, and axis value as a preserve envelope. Passes are stages of one candidate, not candidate variables; do not add nominal pass fields to the creative contract or repeat a pass merely to chase random novelty.
 
 Domain-specific constraints remain with their owners. For Chinese-aesthetic work, `chinese-aesthetic.md` supplies the Modifier delta; do not restate its domain grammar here. Apply the delta after the base contract and record any field it intentionally changes.
 
@@ -206,7 +350,7 @@ Domain-specific constraints remain with their owners. For Chinese-aesthetic work
 
 Treat generation as proposing evidence for selection, not as producing one presumed answer.
 
-- `direction exploration`: compare `2–3` orthogonal directions with the smallest real image set that reveals each spatial and world thesis.
+- `direction exploration`: compare `2–3` orthogonal directions as separate contracts with the smallest real image set that reveals each spatial and world thesis.
 - `asset exploration`: keep one direction and its fixed anchors; normally create `3–4` candidates that vary only the named exploration axis.
 - `production candidate`: use the selected master or reference roles, target geometry, and acceptance criteria; create only the alternatives needed to judge craft and integration.
 - `edit repair`: use the selected image as the parent, repeat every invariant, and change only the diagnosed prompt delta or localized region.
@@ -217,17 +361,16 @@ Name every output with asset id, family or direction id, prompt-contract version
 
 Compare candidates in one review surface at full view, thumbnail scale, and the target crop. Automated ranking or VLM critique may identify defects and recommend an order, but the user or responsible design judgment selects, rejects, promotes maturity, or authorizes another batch.
 
-## Experience-Architecture Output
+## Interface and interaction boundary
 
-Match the generated artifact to the selected architecture:
+Resolve experience architecture before image generation: route map, ordered content beats, region geometry, scroll model, primary interaction state machine, proof/action/orientation placement, device scope, and fallback. Represent those decisions with a wireframe, state table, storyboard, or code prototype—not one generated image.
 
-- `opener or hero`: one concept may specify an opening state, but a multi-state opener needs the key states, region geometry, transition relationship, target-device treatment, and fallback.
-- `route or page experience`: create an architecture board or storyboard containing the ordered content beats, varied region geometries, ordinary-flow and immersive passages, state changes, handoffs, and proof/action/orientation placement.
-- `multi-route website`: add the route map, shared navigation, representative detail/product/collection pages, and cross-route states needed to prove a complete website rather than one landing route.
+- A UI mockup reference may explore one viewport and one explicit state. It is a design reference, not implementation or behavioral proof.
+- A visual asset may serve one or several regions through a recorded mount contract. It remains independent media, not the page shell.
+- A multi-state opener needs code or a state storyboard that names `input -> response -> durable consequence -> handoff -> fallback`; a still image can illustrate one state only.
+- A route or multi-route website needs deterministic structure and representative rendered states. Generated media may support those regions but must not invent the information architecture.
 
-Do not use one attractive image to stand in for a complete website experience. Do not let the model invent later regions from a generic landing-page recipe or render every beat as an equal full-screen poster. Establish the content/region model first, then generate one coherent architecture board per direction or the independent media required by that architecture.
-
-Keep global signature-system fields stable while allowing each region to change height, composition family, focal scale, proof object, media set, interaction mechanism, and density for its content. Inspect the board at route, region, state-pair, and thumbnail-strip scales. Reject repeated hero posters with changed copy or crops, or a board that cannot distinguish intrinsic content flow from pinned, horizontal, or spatial behavior.
+Do not use one attractive image to stand in for a complete website experience. Do not render every beat as an equal full-screen poster, infer sticky or spatial behavior from a still, or let a generated mockup become the page background. Keep signature-system anchors stable in code while allowing regions to change height, composition family, focal scale, proof object, media set, interaction mechanism, and density for their content.
 
 ## Composition families
 
@@ -246,27 +389,42 @@ Select one family because it best exposes the user job or proof. The delta chang
 | atlas or matrix | relationships, coverage, location, or many comparable values drive the task | reading-axis, scale, negative-space | establish a stable field, semantic axes, and one inspectable focus path | a dashboard collage of unrelated widgets |
 | sequence | causality, time, approval, or transformation is the proof | reading-axis, overlap-depth, negative-space | make state transitions and commitment gates legible while preserving one dominant path | a flowchart in which every node has equal weight |
 
-Do not default to left-copy/right-object. Do not default to any family across unrelated briefs. If two concepts are requested, vary dominant silhouette, control placement, proof object, material behavior, and density rhythm before varying color.
+Do not default to left-copy/right-object. Do not default to any family across unrelated briefs. For visual assets, vary dominant silhouette, depth, crop, and material behavior before color. For UI references, vary interface archetype, region geometry, reading order, control/proof placement, and density rhythm—without converting those decisions into a staged object scene.
 
 ## Visible text
 
-List exact visible text rather than asking the model to invent copy. Keep it short enough to render legibly and include only phrases required to identify the product, establish hierarchy, show one meaningful state, or make the action credible.
+For a UI mockup reference, list the small amount of visible text needed to judge hierarchy and one state. Mark it `reference-only`; reconstruct and verify all publish-bound text in DOM/SVG/component code. A production visual asset uses `rasterTextPolicy: none`.
 
 Separate:
 
-- must render exactly: product name, headline, primary action, critical state
-- may be abstracted: non-factual microcopy whose geometry matters more than wording
+- reference-only in the mockup: product name, headline, primary action, critical state
+- may be abstracted in the mockup: non-factual microcopy whose geometry matters more than wording
 - must not invent: metrics, testimonials, customers, certifications, claims, historical labels, URLs, or interface states
 
-Reject an image whose factual or action-critical text is wrong even if the composition is attractive. Treat unreadable incidental glyphs as a concept limitation, not finished product copy.
+Reject a reference whose factual or action-critical text changes the intended hierarchy even if its composition is attractive. Treat unreadable incidental glyphs as a concept limitation, never finished product copy.
 
 ## Aesthetic repair
 
-When a result is correct but generic, run an aesthetic repair rather than adding more negative adjectives. Re-read the already selected fields; do not invent visual genre or tension for the first time after generation:
+When the user calls a result ugly, ordinary, generic, stiff, or same-looking, do not regenerate from the same prompt with more negative adjectives. Treat the criticism as evidence that the art direction or selected relationship failed. Inspect a visual asset at full view, asset thumbnail, mounted crop, and edge; inspect a UI reference with labels blurred and then inspect the deterministic rebuild. Preserve truth, product mission, and successful fixed anchors, then rebuild the lowest weak relationship rather than polishing the same composition.
+
+Use this bounded repair record:
+
+```text
+Art-direction repair
+- observed failure and evidence locator:
+- preserve: truth, mission, and successful fixed anchors
+- reset: silhouette | focal hierarchy | depth | negative space | material | type | tension
+- replacement visual composition family, UI layout thesis, or one exploration axis:
+- revised compositionPlan:
+- deletion applied before regeneration:
+- comparison target: baseline at full view, asset thumbnail, mounted crop, and edge
+```
+
+Re-read the already selected fields; do not invent visual genre or tension for the first time after generation:
 
 - style family: the behavioral visual family supported by evidence
 - visual genre: the specific world the artifact should plausibly belong to
-- dominant silhouette: the contour that survives at thumbnail size
+- visual-asset dominant silhouette, or UI interface archetype and layout thesis
 - material language: how surface, depth, edge, and light behave
 - attention strategy: the intended focal order, silence, and relationship to the consuming UI
 - image-world thesis: the shared camera, light, material, color, and continuity logic
@@ -274,14 +432,15 @@ When a result is correct but generic, run an aesthetic repair rather than adding
 - tension pair: two controlled forces that keep the direction alive
 - fixed anchors and exploration axis: what must survive and what this batch may change
 - deletion rule: what disappears first when the composition becomes busy
+- visual composition plan, or UI hierarchy strategy, region geometry, control/proof placement, and density rhythm
 
 Repair the lowest weak relationship first. If the object is forgettable, change silhouette or family; if hierarchy is flat, change proportion and silence; if the world feels cheap, resolve type, material, palette roles, and edge craft without changing the thesis.
 
 ## Anti-convergence
 
-Compare each candidate with accepted concepts across dominant silhouette, spatial grammar, control placement, proof object, material behavior, accent roles, and density rhythm. Reject a supposed alternative that changes only copy, color, corner radius, or background mood.
+Compare visual-asset candidates across silhouette, depth, focal scale, material behavior, and crop. Compare UI references across interface archetype, layout thesis, region geometry, reading order, control/proof placement, accent roles, and density rhythm. Reject a supposed alternative that changes only copy, color, corner radius, or background mood.
 
-When convergence appears, preserve at most one continuity trait and change at least four structural variables. Choose an opposing composition family before adding novelty. Do not repeatedly retreat to warm cards, a centered rail, a detached action panel, status chips, a lens motif, or a generic floating object.
+When convergence appears, preserve at most one continuity trait and change at least four structural variables. A visual asset may choose an opposing composition family; a UI reference must change interface archetype or layout thesis without borrowing a shot family. Do not repeatedly retreat to warm cards, a centered rail, a detached action panel, status chips, a lens motif, or a generic floating object.
 
 ## Result inspection
 
@@ -289,9 +448,12 @@ Inspect the actual image at full view, thumbnail size, and inside its target reg
 
 - Does the asset perform its declared role and intended use without impersonating proof?
 - Is the first focal point the intended subject, relationship, or product proof rather than decoration?
-- Does the dominant silhouette match the `DirectionContract`?
-- Does the selected composition family reveal the intended relationship?
-- Do safe area, focal point, crop tolerance, edge behavior, and target-background integration work?
+- For a visual asset, do the dominant silhouette and composition family match the selected visual direction?
+- For a UI reference, do interface archetype, layout thesis, hierarchy, region geometry, controls, proof, and density match its UI-only direction?
+- For a visual asset, does its thumbnail retain one dominant read without becoming a poster layout?
+- Do foreground, middle ground, and background have distinct jobs rather than decorative depth?
+- Do background pressure, leading line, and negative space move attention toward the proof or action instead of ornament?
+- Do layout-derived exclusion zones, focal point, crop tolerance, edge behavior, and target-background integration work in the mounted viewport?
 - Does the result obey the Image World Bible and remain coherent with sibling assets?
 - Are camera, light, material, color, depth, and physical relationships plausible for the selected medium?
 - Are factual objects and exact text accurate enough for the artifact maturity?
@@ -327,9 +489,9 @@ Stop when the selected candidate meets its acceptance criteria, the budget is ex
 
 ## Direction-to-asset-pack
 
-An exploratory opener preview proves one local direction decision; it is not an implementation asset pack or a complete website specification. After an architecture board is selected, inspect it and extract only the media required to preserve its visual mechanisms, content beats, region handoffs, and state progressions.
+An exploratory opener preview proves one local direction decision; it is not an implementation asset pack or a complete website specification. After the deterministic experience architecture is selected, inspect it and extract only the media required to preserve its visual mechanisms, content beats, region handoffs, and state progressions.
 
-Possible outputs include persistent scenes, materially different supporting views, transparent foreground or object cutouts, material/texture fields, art-typography treatments, transition plates, video or recording storyboards, poster frames, product UI captures, image sequences, spatial models, and target-device variants. Generate only roles visible in or logically required by the selected concept. Do not manufacture a checklist of assets for every project or allocate one source per region.
+Possible generated outputs include persistent scenes, materially different supporting views, transparent foreground or object cutouts, material/texture fields, transition plates, storyboard frames, image sequences, spatial models, and target-device variants. Product UI captures come from the real product or deterministic reconstruction, not image generation. Generate only roles visible in or logically required by the selected concept. Do not manufacture a checklist of assets for every project or allocate one source per region.
 
 ```text
 Selected-direction asset plan
@@ -368,8 +530,9 @@ Pass saved assets and their role records to `asset-context.md`. If the result ex
 - The direction repeats a prior silhouette, action placement, proof object, and material system.
 - A domain-specific system was copied into the base prompt instead of loaded as its Modifier delta.
 - The saved asset, role, provenance, dimensions, placement, or fallback is missing.
-- The isolated asset looks polished but its focal point, crop, safe area, edge, contrast, or world conflicts with the consuming UI.
+- The isolated asset looks polished but its focal point, crop, exclusion zones, edge, contrast, or world conflicts with the mounted UI.
 - Generated text, logo, chart, icon, or UI was treated as deterministic publish-bound output without reconstruction and verification.
 - A selected opener preview was treated as a complete asset pack, or one source was disguised as variety through derivative crops and effects.
 - A single hero poster was treated as a complete route or website direction.
+- A generated UI mockup was mounted as the page, or cited as interaction or responsive evidence.
 - Later regions were invented from a generic section template instead of the content/region model and many-to-many media map.
