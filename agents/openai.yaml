@@ -1,4 +1,4 @@
 interface:
   display_name: "Product Composer"
-  short_description: "Compose distinctive UI surfaces and systems"
-  default_prompt: "Use $product-composer to design this UI surface with product clarity, signature art direction, and responsive verification."
+  short_description: "Direct distinctive UI systems and image worlds"
+  default_prompt: "Use $product-composer to direct this UI and asset task, choose its phase and surface, and produce the appropriate evidence-backed outcome."

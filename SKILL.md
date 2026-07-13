@@ -1,255 +1,186 @@
 ---
 name: product-composer
-description: "Use when creating or substantially redesigning UI where visual taste, non-generic aesthetics, or controllable visual direction matters: product apps, dashboards, SaaS workflows, AI/agent surfaces, landing pages, brand/editorial pages, React motion pages, or image UI concepts. If Ant Design APIs/components are explicit, also use antd."
+description: "Use when creating or substantially redesigning UI where visual direction, aesthetic judgment, asset-family art direction, image-concept generation, accepted-design fidelity, rendered repair, or artifact-maturity or visual-parity judgment materially affects the result."
 ---
 
 # Product Composer
 
-## Overview
+## Principle
 
-Product Composer is for UI design and implementation when the output needs stronger taste, clearer visual direction, and tighter control than a generic UI prompt usually produces.
+Compose a specific UI system, not a fashionable template. Preserve product correctness, local conventions, and accepted visual decisions while producing the outcome appropriate to the selected phase.
 
-Use it to compose a product surface as a coherent system: one mission, one visual thesis, deliberate content hierarchy, domain-specific assets, durable design memory, and rendered verification.
+## Creative Core
 
-Prefer the user's existing design system, component library, routing, and styling conventions. Introduce a new visual language only when the project lacks one or the user explicitly asks for a redesign.
+Act as a creative director as well as a contract governor. Produce a positive visual thesis before applying anti-defaults; constraint compliance alone is not a designed result.
 
-## Reference Routing
+- Let truth constrain claims, not imagination; never let invention impersonate proof.
+- Derive order from the user mission and expressive force from the intended feeling.
+- Design relationships among content, control, proof, space, and time before components or assets.
+- Resolve attention, silhouette, proportion, rhythm, and silence before surface polish.
+- Use fixed anchors for coherence and one controlled tension or exploration axis for character.
+- Treat layout, type, image, material, and motion as one visual grammar.
+- Generate visibly different alternatives when direction is unresolved; make selection and deletion part of taste.
+- Judge the direction in an inspectable target context, not from adjectives, prompts, or isolated polish.
 
-Read only the references needed for the design task:
+## Route
 
-- `references/task-router.md`: read when the UI design route is ambiguous or broad.
-- `references/ant-design-product-values.md`: read for enterprise products, dashboards, admin tools, forms, tables, Ant Design projects, or complex workflows.
-- `references/execution-discipline.md`: read for new UI, redesigns, visual polish, or avoiding generic AI output.
-- `references/style-family-router.md`: read before net-new UI generation when the user has not specified a style, when outputs feel random or same-looking, or when the agent needs to ask the user to choose a direction before composing.
-- `references/interaction-grammar.md`: read for AI products, agent workflows, command surfaces, creative tools, simulations, complex operations, or any request for new interaction design.
-- `references/taste-calibration.md`: read before net-new visual concepts, after user feedback like "ugly", "generic", "no taste", "too traditional", or when the design needs a sharper aesthetic stance.
-- `references/market-calibration.md`: read after user asks to look at excellent market examples, ThemeForest/WordPress/Webflow/template-marketplace references, when a homepage feels fake, self-indulgent, too conceptual, or disconnected from real product proof.
-- `references/content-judgment.md`: read when a surface feels dense, over-explained, crowded, or when the user says the design should make stronger decisions.
-- `references/desire-minimalism-psychology.md`: read when the user asks for minimalism plus psychology, viewing desire, product desire, conversion pull, appetite, emotional attraction, comfortable but not boring color, or a layout that makes people want to keep watching or use the product.
-- `references/image-generation-aesthetic-calibration.md`: read when the user asks to directly generate, draw, or preview UI as an image without code, when generated UI is rejected as ugly or lacking taste, or when the agent needs reusable prompt templates for elegant UI images.
-- `references/ui-generation-operating-model.md`: read when the output still feels shallow after normal gates, when the task needs deeper UI generation judgment, or when the agent must avoid default templates through surface register, design thesis inventory, generic-default self-test, and section-by-section parity.
-- `references/hero-page-experience.md`: read for high-impact homepages, launch pages, portfolios, product/brand pages, or any hero/page experience that needs a screen model, asset system, pagination, page rhythm, stronger first viewport, richer assets, or more spacious composition.
-- `references/asset-context-protocol.md`: read for named brands, products, venues, public sites, portfolios, marketing pages, image-heavy pages, or any UI where logos, product shots, screenshots, icons, textures, media treatment, or missing assets shape the result.
-- `references/design-memory-consistency.md`: read for multi-screen work, design systems, repeated edits, long-running threads, or any task where tokens, spacing, component decisions, depth, or surface treatment could drift.
-- `references/visual-quality-rubric.md`: read when judging whether a UI is high quality, generic, ugly, too AI-flavored, visually flat, overdecorated, poorly typeset, weakly composed, or ready for final visual polish.
-- `references/reference-dna-extraction.md`: read when working from a screenshot, reference site, accepted mockup, existing screen, or visual style sample that must be translated without copying blindly.
-- `references/direction-matrix-builder.md`: read when the user wants options, taste is unclear, the first result feels same-looking, or the agent needs 3-5 genuinely different visual directions before implementation.
-- `references/concept-to-implementation-lock.md`: read when implementing from an accepted image concept, generated mockup, screenshot, visual comp, or design-board result where hierarchy, palette, dominant object, and spatial relationship must survive coding.
-- `references/visual-direction.md`: read for any net-new UI, homepage, concept, visual redesign, product identity, or when the output risks becoming diagrammatic, generic, cluttered, or ugly.
-- `references/react-bits-motion-layer.md`: read for React/Next.js surfaces that mention React Bits, reactbits.dev, animated text, kinetic typography, cursor or hover effects, scroll reveals, particles, WebGL, Three.js backgrounds, expressive motion, portfolio polish, or kinetic landing pages.
-- `references/signature-aesthetic-systems.md`: read for cultural, editorial, museum, hospitality, fashion, premium brand, emotionally rich homepages, multi-screen visual consistency, or when the user asks for the quality of the stronger Dunhuang-style result without copying that style.
-- `references/anti-patterns.md`: read before visual implementation.
-- `references/verification.md`: read before final validation of rendered UI.
+- Phase: Explore | Implement | Repair
+- Surface: Product | Brand | Hybrid
+- Modifiers: Data | Frontier | Cultural | Image | Motion | Reference-led
 
-If the project explicitly uses `antd`, also use the `antd` skill and query the actual component APIs before writing or changing Ant Design code.
+Choose exactly one Phase and one Surface. Add only Modifiers that change required behavior or evidence; deduplicate repeated owners. Infer and disclose when safe, or ask one focused question when a wrong choice would materially change the result.
 
-## Task Route Gate
+Design read and direction parameters are Design Contract fields, not route axes. Reference-led requires a supplied or accepted visual reference, or an explicit parity or fidelity target. Preserving an existing design system, product workflow, or interaction convention does not add Reference-led.
 
-Before loading multiple references or running a full design workflow, choose one route:
+Add Data only when value or record semantics—such as comparison, monitoring, analysis, source, freshness, provenance, or risk—materially change decisions, states, or evidence. Dashboard work adds Data when its requested purpose is analytics, monitoring, comparison, provenance, or risk, because value and record semantics then define the surface. An analytics label on a generic workspace or onboarding flow alone does not add Data.
 
-- new UI design: define the product mission, visual thesis, asset context, style family, and implementation target.
-- substantial redesign: diagnose the current visual failure, preserve useful product structure, create direction options when taste is unclear, then implement one direction.
-- product app implementation: turn a chosen visual direction into local components, tokens, states, and responsive behavior.
-- image mockup: gather asset context, define the dominant object or interaction relationship, then use image generation when appropriate.
-- accepted concept: freeze the accepted hierarchy, palette roles, dominant object, and spatial relationship before coding.
-- hero/page experience: compose a signature page experience with a screen model, asset system, pagination/page rhythm, dominant first viewport scene, and continuity device.
-- brand/landing: build around product proof, first-viewport memorability, desire mechanism, and a clear conversion path.
-- dashboard/data: prioritize task order, scanability, state clarity, table/chart grammar, and calm density.
-- frontier interaction: define intent, system agency, control transfer, time model, object model, and commitment model before layout.
+## Design Contract
 
-Use `references/task-router.md` whenever the route is not obvious. The route exists to sharpen the design path, not to expand the skill into unrelated work.
+Design Contract is the only runtime record. Every owner reads and updates this same record.
 
-## Core Control Loop
+- Route: selected Phase, Surface, and behavior-changing Modifiers
+- DirectionContract projection: complete visual-direction record below
+- Experience architecture and region model: website archetype, route/page scope, opener scope, ordered content beats, region geometry, interaction states, scroll choreography, page rhythm, continuity, proof/conversion placement, target device scope, and a many-to-many content-to-media map
+- Workflow and required states: behavior, recovery, and, for media-led work, media roles, art type, state progression, interaction-to-media map, target-device variants, and fallbacks
+- Truth and provenance ledger: source, status, role, uncertainty, and rights constraint
+- Artifact target and maturity: requested reusable output and evidenced maturity
+- Functional delta: missing behavior, data, permissions, error recovery, irreversible actions, accessibility, responsive rules, and performance constraints
+- Locked and adaptable decisions: preservation boundary
+- Acceptance checks: behavioral, rendered, structural, provenance, and judgment evidence
 
-For substantial UI work, keep the loop short:
+Do not implement an image concept until Functional delta is complete. Generated or inferred material is not factual proof.
 
-1. Identify the generic-default risk.
-2. Write one visual thesis for the surface.
-3. Lock 3-5 taste constraints and 2-3 anti-defaults.
-4. Compose or implement under that contract.
-5. Verify the rendered result and repair the weakest visual decision.
+### DirectionContract Projection
 
-If the same plan would still work after changing only the product name, revise the visual thesis before coding.
+`DirectionContract` is the named visual-direction projection of the Design Contract, not a second record.
 
-## Surface Decision
+| DirectionContract field | Design Contract field |
+| --- | --- |
+| Design read | Design read |
+| Visual thesis | Visual thesis |
+| user mission | user mission |
+| aesthetic stance | aesthetic stance |
+| tension pair | tension pair |
+| visual genre | visual genre |
+| attention strategy | attention strategy |
+| Style family | Style family |
+| dominant silhouette | dominant silhouette |
+| composition family | composition family |
+| experience architecture | experience architecture |
+| page rhythm and continuity | page rhythm and continuity |
+| Composition variance | Composition variance |
+| Motion energy | Motion energy |
+| Information density | Information density |
+| material language | material language |
+| image-world thesis | image-world thesis |
+| palette roles | palette roles |
+| type roles | type roles |
+| signature detail | signature detail |
+| justified risk | justified risk |
+| restraint | restraint |
+| fixed anchors | fixed anchors |
+| exploration axis | exploration axis |
+| anti-defaults | anti-defaults |
+| Override condition | Override condition |
+| Deletion rule | Deletion rule |
 
-Classify the surface before coding:
+### Stage Handoff
 
-- `product`: apps, dashboards, admin panels, tools, settings, editors, CRM, data views. Optimize for task completion, scanability, state clarity, and repeat use.
-- `brand`: landing pages, marketing sites, portfolios, launch pages, editorial pages. Optimize for identity, story, first-viewport memorability, and emotional clarity.
-- `hybrid`: product-led marketing, public docs, app home pages. Keep brand expression but preserve product clarity.
-- `frontier`: AI systems, agent operations, simulation tools, command canvases, creative copilots, or products where the main task is not well served by pages, forms, tables, and cards.
+Every stage summary updates the same Design Contract. Before unloading owner documents, preserve the complete record rather than a partial field list.
 
-Default to `product` when the screen is operational or data-heavy.
+| Handoff record | Preservation rule |
+| --- | --- |
+| Design Contract | all fields, including the complete DirectionContract projection |
 
-## Design Direction Contract
+## Owner Matrix
 
-Before generating or implementing any important UI surface, define:
+| Axis | Value | Owner reference |
+| --- | --- | --- |
+| Phase | Explore | direction: references/direction-system.md<br>validation-only: references/verification.md + necessary claim owner |
+| Phase | Implement | references/implementation-fidelity.md |
+| Phase | Repair | references/repair-rendered-ui.md |
+| Surface | Product | references/product-surfaces.md |
+| Surface | Brand | references/brand-experiences.md |
+| Surface | Hybrid | references/product-surfaces.md<br>references/brand-experiences.md |
+| Modifier | Data | references/product-surfaces.md |
+| Modifier | Frontier | references/frontier-interactions.md |
+| Modifier | Cultural | references/chinese-aesthetic.md |
+| Modifier | Image | references/image-concepts.md |
+| Modifier | Motion | references/react-motion.md |
+| Modifier | Reference-led | references/reference-translation.md |
+| Gate | Asset truth | references/asset-context.md |
+| Stage | Verify | references/verification.md |
 
-- Surface mode: product, brand, hybrid, frontier, editorial, cultural, or utility.
-- Selected style family: chosen by user or inferred, with one sentence why.
-- User mission: what the viewer or operator needs to understand, choose, complete, or desire.
-- Asset context: user-provided assets, local assets, imagegen-generated assets, missing assets, and do-not-fake items.
-- Page experience: for homepages, launches, portfolios, and brand/product pages, define the screen model, pagination/page rhythm, first-viewport scene, next-screen hint, and continuity device.
-- Asset system: for image-heavy or ambitious pages, define hero, support, material, transition, and proof asset roles before layout.
-- Design memory: tokens, components, spacing, radius, depth, state behavior, and accepted decisions to preserve.
-- Visual thesis: palette roles, type roles, layout thesis, signature element, content voice, and one justified risk.
-- Taste contract: three desired feeling words, three anti-defaults, one restraint, one memorability hook, and one deletion rule.
-- Density contract: sparse, medium, dense, or dense-with-air; decide what is absent as deliberately as what is present.
-- Motion role: none, feedback, focus, reveal, continuity, or signature brand moment; define reduced-motion fallback for substantial animation.
-- Implementation lock: what is locked, what may adapt for engineering, and what would require user approval.
+Apply the Asset truth gate when assets affect behavior, evidence, factual claims, or composition. A missing target UI, source tree, or rendered baseline is a Frame or verification gap, not an Asset truth input unless the task supplies or explicitly requires it as a media artifact or proof object. Asset truth is not a route axis or Modifier. Verify is a subsequent stage owner, not an initial route owner.
 
-Do not start from a generic layout pattern. Start from the surface's material, mission, and signature system, then choose layout.
+## Reference Windows
 
-## Style Selection Gate
+- Active references: owner documents open in the current window
+- Normal maximum: 3
+- Window close: write decisions into the complete Design Contract, then unload all owner documents
+- Owner overflow: open sequential windows of at most 3; never omit an owner
+- Exception set: R3 only
 
-Before net-new UI generation, choose or ask for a style family. This gate prevents two failure modes: random style drift and repeated high-end-minimal sameness.
+| Exception | Initial route | Active owner references | Count |
+| --- | --- | --- | --- |
+| R3 | Implement / Product / Image + Reference-led / accepted image concept | implementation-fidelity.md<br>product-surfaces.md<br>image-concepts.md<br>reference-translation.md | 4 |
 
-Ask a compact choice question when the brief could support multiple visual directions. Ask at most three choices:
+R3 is the only exception. No other window may exceed 3. Close R3 before opening a later verification window.
 
-- Style family: Utility Product, Editorial Premium, Cultural Immersive, Technical Instrument, Data Dense, Playful Consumer, Soft Craft, or Bold Campaign.
-- Density: sparse, balanced, or dense-with-air.
-- Color appetite: quiet restrained, warm/desirable, bold contrast, or source-derived.
+## Phase Outcomes
 
-If the user says to proceed without questions, infer the family from product context and state the choice before designing. Do not silently default to Editorial Premium.
+- Entry intent: direction-only | implementation-authorized | rendered-repair | validation-only
 
-## Context And Memory Gate
+Entry intent interprets the requested outcome; it is not a route axis or Phase. Every request still selects exactly one Phase and one Surface. An implementation-authorized new UI selects Implement and completes a selected or inferred DirectionContract before the first slice. Validation-only uses the artifact's Surface and verification plus only necessary claim owners within the normal reference-window budget; it never opens R3.
 
-Before creating or changing visual direction, inspect durable context:
+Create, design, or redesign alone selects direction-only Explore; Implement requires an explicit request to build, implement, edit target code, or otherwise mutate the target project. Preserve this boundary even when the requested direction concerns an existing interface.
 
-- local design files: `DESIGN.md`, token files, component docs, Storybook, nearby routes, screenshots, accepted concepts, and `.product-composer/design-system.md`
-- asset context: user-provided assets, local assets, imagegen-generated assets, brand mark, product shots, UI screenshots, object/venue images, icon and illustration style, media constraints, and missing assets
-- component memory: button heights, table density, card padding, radius scale, shadow/depth model, navigation behavior, empty/error/loading states, and action naming
+An explicit screenshot, reference-parity, or reference-fidelity implementation uses the accepted-concept path even when the referenced artifact is unavailable; do not open direction-system.md to replace it. Stop inside the selected Implement / Surface / Modifier owners, then apply the normal Asset truth handoff when the missing reference is material.
 
-If context is missing, state the gap and design around an honest placeholder, inferred local system, or generated asset. When missing visual assets would make a website, brand page, hero/page experience, portfolio, game, or product page generic, use text-to-image generation before implementation when authenticity does not require user-provided media. In Codex, use the `imagegen` skill/tool to create beautiful role-specific assets, then assign each result a role before coding. Imagegen-generated assets can become first-class design assets when their role is explicit, but they must not impersonate official logos, real product screenshots, real venue/object photos, metrics, or brand assets.
+A rendered-repair request resolves its baseline gate before inferring any Modifier. When task-scoped rendered evidence or the behavioral baseline is missing, stay in Repair plus the selected Surface with no inferred Modifiers; preserve possible Modifier needs as unresolved Design Contract gaps.
 
-For redesigns, separate what remains, what changes, and what gets deprecated.
+| Trigger class | Entry intent | Phase | Owner | Required input or evidence | Output | Mutation or stop |
+| --- | --- | --- | --- | --- | --- | --- |
+| new UI or substantial-redesign direction | direction-only | Explore | references/direction-system.md | framed inputs | updated Design Contract plus selected direction | stop; enter Implement only with explicit user authorization |
+| new UI or substantial-redesign implementation | implementation-authorized | Implement | references/direction-system.md plus references/implementation-fidelity.md | explicit authorization to infer or select direction, framed inputs, and complete Functional delta | selected or inferred DirectionContract, implemented vertical slice, and updated Design Contract | select or infer direction and complete Functional delta before the first slice; then Verify |
+| image concept | direction-only | Explore | references/direction-system.md plus references/image-concepts.md | framed inputs plus image eligibility | updated Design Contract plus image concept | stop; enter Implement only with explicit user authorization |
+| accepted concept implementation | implementation-authorized | Implement | references/implementation-fidelity.md | complete Functional delta plus locked direction | implemented vertical slice plus updated Design Contract | Verify; enter Repair only from observed failure |
+| rendered repair | rendered-repair | Repair | references/repair-rendered-ui.md | rendered evidence plus observed failure | one evidence-backed repair axis plus updated Design Contract | continue, stop, escalate, or block; stop without new evidence |
+| artifact maturity or visual parity validation | validation-only | Explore | references/verification.md plus necessary claim owner | inspectable artifact or claim | Evidence report plus verification gaps | no mutation; do not enter Build, Implement, or Repair |
 
-## Interaction Grammar Gate
+## Frame
 
-Before designing an AI, agentic, automation, creative, or complex workflow surface, define the interaction grammar before the visual layout:
+Inspect the project, design memory, assets, real content, target, constraints, and nearby surfaces before selecting the route. Inspect a supplied reference before proposing a direction. Reference-first does not automatically add Reference-led.
 
-- User intent: what does the user express, command, inspect, or negotiate?
-- System agency: what does the system infer, propose, simulate, execute, or refuse?
-- Control transfer: where can the user adjust autonomy, pause, approve, override, or rewind?
-- Time model: how do past actions, current execution, future plan, and uncertainty appear?
-- Object model: what is the living object the user manipulates: goal, run, plan, scene, dataset, policy, workspace, or workflow?
-- Commitment model: what can be previewed, simulated, committed, reverted, or audited?
-- Interaction level: cognitive model, decision path, system response, feedback loop, or physical gesture? Do not turn interaction design into literal drag/click/swipe affordances unless the product truly supports them.
+Resolve website archetype and route scope before `hero`. A hero is the opening experience inside a route; it may contain several beats, regions, media, and states across several viewports. It is not required to be one `100vh` section, one image, or the whole website. Complete brand, landing, SaaS, portfolio, and experimental sites continue beyond it. Gallery references select case research, not target archetype or geometry.
 
-Do not default to menus, tables, cards, forms, and dashboards until this grammar is clear. If traditional components remain useful, make them subordinate to the new control model.
+`website archetype and route scope -> content beats -> region geometry and scroll model -> media palette and many-to-many mapping -> motion grammar and per-region choreography -> typography and interaction -> implementation`
 
-## Aesthetic Gate
+A content beat is not a screen. It may be shorter or longer than a viewport; one region may carry several states, and several beats may share a region. Map all media by communication role, not screen count. One asset may persist across several beats, while one region may combine several media. Derivatives remain one provenance source; source count is not a quality score.
 
-Do not treat interaction novelty as visual quality. A concept can be structurally correct and still be ugly.
+For a live reference, trace the complete route from opener to footer or interaction endpoint using its public inputs. Record `content beat -> region geometry -> media set -> trigger -> state change -> handoff -> proof/conversion`. A first-viewport screenshot can establish composition only; it cannot establish sticky, snap, scrubbed, horizontal, spatial, or full-page behavior.
 
-Before finalizing any visual surface, pass this gate:
+## Verify
 
-- Is there one dominant visual form the user remembers after 5 seconds?
-- Is the page composed through proportion, rhythm, contrast, and negative space rather than many equally loud widgets?
-- Is the primary interaction object beautiful enough to be the product's signature?
-- Does the palette have taste and tension rather than merely safe enterprise neutrals?
-- Is the density intentional, with enough breathing room for the eye to rest?
-- Would this still look good if the labels were blurred?
-- Would the same visual plan appear for a similar prompt with only the product name changed? If yes, revise the plan before coding.
-- Does the design pass visual-quality checks for hierarchy, proportion, type, palette, material, depth, specificity, and motion discipline?
-- For utility or technical surfaces, does it avoid generic admin-shell and black cockpit aesthetics? Reject `运行舱`-style industrial fantasy unless the real domain requires it.
-- For SaaS, does it apply Ant Design product values: natural task order, certainty, meaningful work objects, and progressive capability?
-- If this is part of a set, is it structurally different from the other accepted outputs? Reject same-looking variants that reuse warm cards, central rails, right panels, thin borders, status chips, or the same proof-object placement.
+Use the Verify owner after a change-producing phase output or directly for the validation-only Explore entry. Direction-only Explore is not a change-producing output and stops without opening Verify. Acceptance reporting alone does not open Verify; keep future checks and named gaps in the Design Contract. Test workflow, states, keyboard/focus/semantics, long text, declared target devices and inputs, assets, visual hierarchy, and visual parity in a rendered environment when available. When scope is explicitly PC-only, verify the named desktop widths plus pointer, keyboard, wheel/trackpad, interruption, and reduced-motion behavior; do not invent a mobile requirement. Map each artifact maturity or parity claim to matching evidence; otherwise name the verification gap. Do not label a recipe or preview as a runnable starter, tested golden, or production template without matching evidence.
 
-If the answer is no, run a visual direction pass before adding more UI detail.
+## Hard Gates
 
-## Taste Calibration Gate
+| Priority | Rule |
+| --- | --- |
+| 1 | product correctness; state clarity; accessibility; reversibility; truth and provenance; license boundaries |
+| 2 | explicit user direction and approved references within valid options |
+| 3 | existing design system, components, information architecture, routes, and interaction conventions |
+| 4 | owner guidance, then Product Composer aesthetic heuristics |
 
-Taste is selection under pressure. It is not adding premium adjectives.
+- Direction parameters: infer from evidence; no universal default; never override locked decisions
+- Creative-core gate: require source signals, visible consequences, fixed anchors, and one exploration axis; anti-defaults alone are not a direction
+- Aesthetic anti-defaults: require context and an override condition; popularity alone never creates a ban
+- Experience architecture gate: do not code a media- or scroll-led website until its archetype, route scope, ordered content beats, region geometry, interaction states, handoffs, proof/conversion path, and target device scope are recorded in the Design Contract
+- Media-led implementation gate: do not allocate media by screen count; record the many-to-many content-to-media map, truth roles, state coverage, target-device variants, loading behavior, and fallbacks before coding a media-dependent region
 
-Before generating or implementing an important new visual direction, define:
-
-- Taste stance: three words that describe the desired feeling.
-- Anti-reference: three things the design must not resemble.
-- Signature restraint: what the design deliberately refuses to show.
-- Memorability hook: what the viewer should remember.
-- Deletion rule: what gets removed first if the page feels busy.
-
-If a design looks correct but lifeless, run `bolder`. If it looks novel but ugly, run `quieter`, `distill`, and then rebuild around one stronger form.
-
-## Image Mockup Generation Gate
-
-When the user asks to generate UI directly without code, prefer the `imagegen` skill and let the image model resolve aesthetic composition. Do not hand-build SVG mockups unless the user needs deterministic vector structure, diagrams, or editable primitives.
-
-For image UI mockups:
-
-- Define the product desire, interaction relationship, palette appetite, and one dominant product object.
-- For culturally rich or brand-specific pages, define the signature system and continuity device before prompting.
-- Select one reusable prompt template from `image-generation-aesthetic-calibration.md` before calling image generation.
-- If a generated result is rejected as ugly, do not keep regenerating from the same template. Run the aesthetic repair pass in `image-generation-aesthetic-calibration.md` first, then rebuild the prompt around visual direction rather than product explanation.
-- Prompt for `design-board quality` and a real product website/app surface, not a method diagram.
-- Keep exact visible text minimal.
-- Avoid over-specifying geometry into boxes, arrows, or flowcharts.
-- Use constraints to prevent known failures: fake drag/swipe gestures, photo/quote/widget collages, dashboard templates, and dense feature grids.
-- Inspect the result visually before claiming it worked. If the output only appears in chat and does not save to disk, say so instead of copying an old asset.
-
-## Implementation Workflow
-
-1. Inspect the local project first: framework, component library, styling system, existing tokens, routes, and nearby screens.
-2. Choose the UI route before styling: new design, substantial redesign, product app implementation, hero/page experience, brand/landing, dashboard/data, frontier interaction, image mockup, or accepted concept.
-3. State the design direction contract before implementation.
-4. Shape the screen around workflow, not decoration:
-   - primary task first
-   - clear hierarchy between navigation, work area, controls, feedback, and secondary details
-   - predictable states for loading, empty, error, success, disabled, selected, and active
-5. Build with existing primitives:
-   - use local components and tokens where available
-   - use familiar controls for familiar jobs
-   - use React Bits-style components only as an accent or signature layer after the core hierarchy works statically
-   - keep dimensions stable for boards, grids, tables, toolbars, counters, and icon buttons
-6. Preserve locked design decisions while coding:
-   - map visible concept elements to code, user-provided assets, local assets, imagegen-generated assets, or intentional deviations
-   - keep copy voice, type roles, color roles, density, media treatment, and component families consistent
-   - compare first viewport, major sections, repeated components, key states, and mobile layout in slices
-7. Tune deliberately:
-   - `bolder`: increase identity when the page is correct but forgettable
-   - `quieter`: reduce visual noise when the UI competes with the task
-   - `distill`: remove decoration, copy, or controls that do not serve the user mission
-   - `harden`: cover overflow, i18n, edge cases, accessibility, and responsive states
-8. Verify in a real rendered environment when feasible, using screenshots across desktop and mobile before claiming the UI is finished. Name visible deviations, fixes, or blockers.
-
-## Product UI Rules
-
-- Make operational tools dense but calm. Avoid marketing-style hero sections inside dashboards and admin pages.
-- Preserve user orientation: stable navigation, visible filters, clear selected states, and reversible actions.
-- Prefer contextual actions over distant global actions when the action belongs to a specific row, card, record, or field.
-- Use progressive disclosure for advanced capability: defaults first, details on demand.
-- Make status, validation, permissions, and system feedback explicit.
-- Keep copy short and task-facing. Do not use visible instructional filler to explain obvious UI behavior.
-- Avoid one-off styling that cannot be reused, named, or explained.
-
-## Visual Rules
-
-- Choose typography, color, spacing, and motion to support the surface mode.
-- Make the first impression visually composed before making every secondary function visible.
-- Prefer one strong signature form over many small clever widgets.
-- Treat taste as deletion, proportion, and specificity before decoration.
-- Treat React Bits-style motion as an expressive layer, not a default layout system. Use it to focus, reveal, connect, or create a signature moment.
-- For minimal persuasive UI, use color as appetite and attention, not decoration: avoid defaulting to black and white; choose a small expressive palette with a clear base, emotional accent, and action color.
-- Do not fake interaction with labels like "drag", "click", or "swipe" on static or conceptual UI. Show the product's relationship model instead.
-- Avoid generic AI signatures: purple-blue gradients, decorative orbs, nested cards, arbitrary glass panels, huge rounded icon tiles, vague SaaS copy, and ornamental layout flourishes.
-- Do not make a one-hue interface. Use neutrals, semantic colors, and one or two purposeful accents.
-- Do not scale font size with viewport width. Use stable type scales and responsive layout constraints.
-- Support `prefers-reduced-motion` for large, repeated, background, WebGL, particle, or text animation.
-- Use visual assets when a website, game, object, venue, product, or brand page needs inspection or emotional specificity.
-- If missing visual assets are the reason a page would become generic, generate with imagegen before settling the layout unless the asset must be real, official, user-provided, or legally accurate.
-- For hero/page experience work, treat the page as designed screens with a screen model, asset system, pagination/page rhythm, and continuity device; do not stack independent sections by habit.
-- One small image or one full product screenshot is not enough when the user asks for a visually ambitious page. Use user-provided assets, local assets, or imagegen-generated assets with explicit roles.
-- Prefer icons for tool actions and text labels for commands that need interpretation.
-- Ensure text never overlaps, clips, or spills out of buttons, tabs, cards, inputs, tables, or mobile containers.
+Do not synthesize official proof or factual cultural provenance. Do not let novelty hide state or control. Do not silently redesign an accepted concept. Do not force 3D, motion, image generation, or cultural motifs without the matching Modifier and eligibility evidence. Do not expose skill authoring or self-maintenance as runtime work.
 
 ## Optional Scanner
 
-For frontend projects, run the bundled scanner when useful:
-
-```bash
-node scripts/ui-pattern-scan.mjs <project-or-src-dir>
-```
-
-Treat scanner output as warnings, not truth. Confirm visually before changing code.
+Run `node scripts/ui-pattern-scan.mjs ./src` when visual code could contain known generic-default signals. Treat findings as evidence prompts, not automatic failures.

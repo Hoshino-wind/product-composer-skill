@@ -2,125 +2,80 @@
 
 English | [Chinese](README.zh-CN.md)
 
-Product Composer is a Codex skill for aesthetic control in AI-assisted UI design and implementation.
+## Positioning
 
-It is not a general UI toolkit. Use it when the UI itself needs stronger taste, a clearer visual thesis, and tighter control over AI defaults. The target failure is specific: AI output that looks generic, overdecorated, poorly composed, visually unfocused, or hard to preserve during implementation.
+Product Composer is a Codex skill that gives UI work an explicit aesthetic and creative core. It derives a traceable visual thesis, directs coherent image worlds and asset families, compiles inspectable generation prompts, preserves accepted decisions during implementation, repairs rendered UI from evidence, and validates visual parity or artifact maturity.
+
+Runtime authority: root `SKILL.md` only.
+
+This README explains the package without redefining its route contract.
 
 ## When To Use
 
-Use Product Composer for:
+Use Product Composer when visual direction materially affects the result:
 
-- net-new UI surfaces that need a distinctive direction before code
-- substantial redesigns where the current UI feels generic, weak, or uncontrolled
-- product apps, dashboards, landing pages, AI surfaces, and editorial/brand pages when visual quality is central
-- high-impact hero/page experience work that needs screen-based rhythm, pagination, richer assets, and more spacious first-view composition
-- generated UI image concepts that need stronger composition and fewer template artifacts
-- implementation of an accepted visual direction where hierarchy, palette roles, density, motion, and asset treatment must survive coding
+- create a new product, brand, or hybrid surface
+- substantially redesign an existing interface
+- derive a positive visual direction from real product, audience, content, and reference signals
+- direct a coherent image world or asset family, then compare candidates in target context
+- translate an accepted UI or image reference without losing its causal design rules
+- implement without losing locked behavior or visual decisions
+- repair a rendered result from observed evidence
+- validate visual parity or an artifact-maturity claim
 
-Leave it out when the task is only mechanical, local, or unrelated to visual direction.
+Do not activate it for routine UI construction that follows an established system without a material art-direction or fidelity decision, a small mechanical edit, a non-visual engineering task, document translation, or a UX audit that does not request redesign.
 
-## Core Contract
+## Runtime Model
 
-Every substantial use should produce or preserve a compact design contract:
+The root skill selects one Phase and one Surface, adds only behavior-changing Modifiers, and opens the smallest owner-reference window that can do the work. Every owner reads and updates one shared Design Contract. Direction-only Explore stops at an accepted direction. An implementation-authorized new UI selects Implement, establishes a selected or inferred DirectionContract and completes the Functional delta before the first slice, and then builds. The validation-only Explore path reports evidence and verification gaps without mutation. Repair changes one evidence-backed axis at a time, and Verify maps each claim to matching evidence.
 
-1. Generic-default risk: what AI is likely to make badly.
-2. Visual thesis: the one sentence that explains the surface's aesthetic direction.
-3. Taste constraints: 3-5 choices that make the UI specific.
-4. Anti-defaults: 2-3 patterns the UI must avoid.
-5. Asset plan: user-provided, local, or imagegen-generated assets, with missing assets named honestly. If missing visual assets would weaken the page, use text-to-image generation in Codex through imagegen before implementation, unless the asset must be real or official.
-6. Page experience plan: for ambitious homepages or launches, define the screen model, asset system, pagination/page rhythm, and continuity device.
-7. Implementation lock: what must survive coding, and what may adapt for engineering.
-8. Visual verification: rendered checks across key sections and responsive states when feasible.
+The creative core turns source signals into visible consequences across layout, type, image, material, and motion. Image work adds an Image World Bible, chooses the appropriate medium, locks family anchors, compiles a deterministic prompt contract, compares bounded candidate sets, and retakes only the diagnosed causal variable. It never forces image generation when imagery is not material to the result.
 
-If the same plan would still work after swapping only the product name, the direction is not specific enough.
+For brand, landing, SaaS, portfolio, commerce, and experimental websites, Product Composer separates the opener from the complete route and multi-route site. A hero may contain multiple beats, regions, media, and interaction states, but it is not automatically one full-screen section or the whole website. Content beats, region geometry, scroll choreography, and media form independent many-to-many relationships; explicit PC-only work does not inherit a mobile requirement.
 
-## Operating Model
+The full owner matrix, reference budget, exception, phase outcomes, and hard gates live only in [`SKILL.md`](SKILL.md). Executable discovery and initial-window expectations are linked from the package map below.
 
-### Direction Before Layout
+## What The Skill Preserves
 
-Start from mission, material, audience, and product proof. Choose layout only after the visual thesis is clear.
+Product Composer preserves product correctness, local conventions, content and asset truth, the selected aesthetic stance and visual thesis, image-world and asset-family continuity, locked implementation decisions, accessible state behavior, and traceable verification. It separates artifact-maturity labels so evidence cannot be promoted by wording alone:
 
-### Taste Before Decoration
+- **recipe**: complete non-runnable direction metadata and acceptance checks
+- **preview**: a rendered view for a named scenario, state, and viewport, with limitations stated
+- **runnable starter**: an executable entrypoint with behavioral evidence for its declared basic interaction
+- **tested golden**: a named scenario whose applicable behavioral and rendered checks have passed
+- **template**: a reusable package with a manifest, entrypoint, replaceable-input contract, provenance, smoke test, and rendered evidence
 
-Taste is selection under pressure: proportion, deletion, restraint, contrast, and specificity before effects.
+These are claim levels, not a list of artifacts shipped by this repository. The package does not claim to include a runnable starter, tested golden, or production template.
 
-### Assets Before Invention
+## Package Map
 
-Real assets, local assets, and generated assets shape the surface. Generated assets are allowed, but their role must be explicit and they must not impersonate real product proof. When the user has not provided enough strong media for a visual page, generate with imagegen and select assets by role instead of designing around empty placeholders.
+- [`SKILL.md`](SKILL.md) is the only runtime authority.
+- [`references/`](references) contains the focused runtime-owner documents indexed by `SKILL.md`.
+- [`scripts/compile-image-prompt.py`](scripts/compile-image-prompt.py) validates an asset-family contract and emits deterministic ordered prompt sections without adding a hidden style preset.
+- [`scripts/ui-pattern-scan.mjs`](scripts/ui-pattern-scan.mjs) provides the optional deterministic scanner.
+- [`tests/`](tests) contains structural, provenance, integrity, and scanner checks.
+- [`evals/discovery-scenarios.md`](evals/discovery-scenarios.md) and [`evals/routing-scenarios.md`](evals/routing-scenarios.md) make activation and reference-window expectations reviewable.
+- [`evals/source-ledger.json`](evals/source-ledger.json) is repository provenance evidence; it is not a runtime reference.
+- [`examples/scenarios/product-composer-routing.md`](examples/scenarios/product-composer-routing.md) shows two compact routing examples without copying the full route table.
 
-### Screens Before Sections
+## Scanner
 
-For a signature page experience, define a screen model and page rhythm before stacking sections. A strong page needs a first-viewport scene, a visible continuation cue, and an asset system with clear roles.
-
-### Implementation As Preservation
-
-Coding is not a second redesign. Preserve the accepted hierarchy, dominant form, palette roles, type character, density, motion role, and asset treatment unless there is a clear engineering reason to adapt.
-
-### Verification Is Visual
-
-A build or lint pass is not enough. When feasible, inspect the rendered UI, mobile layout, text fitting, key states, and visible deviations.
-
-## Usage Examples
-
-```text
-Use $product-composer to design a homepage UI for my product.
-Avoid generic SaaS templates. Create a strong visual thesis first.
-```
-
-```text
-Use $product-composer to redesign this dashboard.
-Keep it useful, but make the visual system less generic and more controlled.
-```
-
-```text
-Use $product-composer to generate an image concept for this AI workflow UI.
-Use real product structure, not a method diagram.
-```
-
-```text
-Use $product-composer to implement the selected UI direction in React.
-Preserve the hierarchy, palette roles, density, and responsive behavior.
-```
-
-## Reference Map
-
-The main skill routes Codex to focused references only when needed:
-
-- `references/task-router.md` - choose the smallest UI design and implementation route
-- `references/style-family-router.md` - choose a style family, density, and color appetite
-- `references/visual-direction.md` - composition, palette, material, silhouette, and specificity
-- `references/hero-page-experience.md` - screen model, asset system, pagination, and page rhythm for signature page experience work
-- `references/taste-calibration.md` - taste stance, anti-defaults, restraint, and memorability
-- `references/direction-matrix-builder.md` - create meaningfully different visual directions
-- `references/concept-to-implementation-lock.md` - preserve accepted concepts during coded implementation
-- `references/asset-context-protocol.md` - plan user-provided, local, and imagegen-generated assets
-- `references/design-memory-consistency.md` - preserve tokens, component decisions, spacing, depth, and surface consistency
-- `references/visual-quality-rubric.md` - judge hierarchy, type, palette, material, depth, and AI-flavored failures
-- `references/image-generation-aesthetic-calibration.md` - prompt and repair generated UI concepts
-- `references/interaction-grammar.md` - define control relationships for AI and complex workflows
-- `references/ant-design-product-values.md` - keep enterprise product surfaces ordered and usable
-- `references/content-judgment.md` - decide what to keep, defer, and delete
-- `references/desire-minimalism-psychology.md` - build minimal UI with product desire
-- `references/market-calibration.md` - calibrate commercial pages against real market expectations
-- `references/signature-aesthetic-systems.md` - create coherent visual worlds and continuity
-- `references/react-bits-motion-layer.md` - use expressive React motion as a controlled accent
-- `references/execution-discipline.md` - keep implementation grounded in local context
-- `references/anti-patterns.md` - avoid common AI UI failures
-- `references/verification.md` - final rendered verification guidance
-
-## Tooling
+Run the scanner against a project or source directory when visual code may contain known generic-default signals:
 
 ```bash
-node scripts/ui-pattern-scan.mjs <project-or-src-dir>
+node scripts/ui-pattern-scan.mjs ./src
 ```
 
-The scanner flags common visual anti-patterns in frontend projects. Treat the output as warnings, then confirm visually.
+The default JSON findings are evidence prompts, not automatic failures. Use `--strict` only when warnings should make the command fail, then confirm every finding against the active contract and rendered result.
 
 ## Validation
 
+From the repository root, run:
+
 ```bash
-python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py ~/.codex/skills/product-composer
-python3 tests/test_skill_guidance_structure.py
+python3 -B "$HOME/.codex/skills/.system/skill-creator/scripts/quick_validate.py" "$PWD"
+python3 -B -m unittest discover -s tests -p 'test_*.py' -v
+node --test tests/test_scanner.mjs
 ```
 
 ## License

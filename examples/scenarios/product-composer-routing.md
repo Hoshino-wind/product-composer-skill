@@ -1,208 +1,23 @@
-# Product Composer Routing Scenarios
+# Product Composer Routing Examples
 
-These scenarios define expected routing behavior for UI design and implementation requests. They are not templates for user-visible responses; they are regression examples for how the skill should choose references and output shape.
+## Runtime Authority
 
-## Scenario 1: New UI Design
+Runtime authority: root `SKILL.md` only.
 
-User prompt:
+These are two compact examples, not an alternative route table or runtime contract. Use the complete [discovery scenarios](../../evals/discovery-scenarios.md) for activation coverage and [routing scenarios](../../evals/routing-scenarios.md) for the initial reference-window budget.
 
-```text
-Design a polished homepage UI for our AI research product. It should avoid generic SaaS templates.
-```
+## Example 1: Explore
 
-Expected routing:
+Prompt: “Explore a distinctive homepage direction for our research product. No code yet.”
 
-- Work mode: new UI design
-- Read: `task-router.md`, `style-family-router.md`, `visual-direction.md`, `asset-context-protocol.md`, `visual-quality-rubric.md`
-- Choose a visual thesis before layout.
+- Route: Phase `Explore`; Surface `Brand`; no automatic Modifier.
+- Initial owners: direction, brand experience, and the asset-truth gate when media affects composition or factual proof.
+- Outcome: update the shared Design Contract, present the selected direction, and stop before implementation.
 
-Output contract:
+## Example 2: Accepted Image Concept
 
-- Define mission, style family, asset assumptions, dominant visual form, and taste constraints.
-- Produce a specific visual direction, not a reusable template.
+Prompt: “Implement the accepted image concept in our product app and preserve its reference fidelity.”
 
-Acceptance checks:
-
-- The first viewport has a memorable product signal.
-- The design would not still fit after swapping only the product name.
-- Asset assumptions are explicit.
-
-## Scenario 2: Image Mockup
-
-User prompt:
-
-```text
-Generate a polished UI image concept for this AI research product. No code yet.
-```
-
-Expected routing:
-
-- Work mode: image mockup
-- Read: `task-router.md`, `image-generation-aesthetic-calibration.md`, `asset-context-protocol.md`, `direction-matrix-builder.md` when taste is unclear
-- Use image generation when available.
-
-Output contract:
-
-- Define asset context, palette appetite, dominant product object, and interaction relationship.
-- Keep visible text minimal.
-- Inspect generated result before treating it as usable.
-
-Acceptance checks:
-
-- Result is a UI surface, not a method diagram.
-- It avoids dashboard-template and dense-widget failure.
-- Missing real assets are identified honestly.
-
-## Scenario 3: Accepted Concept Implementation
-
-User prompt:
-
-```text
-Use the mockup we approved and build it in React.
-```
-
-Expected routing:
-
-- Work mode: accepted concept
-- Read: `task-router.md`, `concept-to-implementation-lock.md`, `asset-context-protocol.md`, `design-memory-consistency.md`, `verification.md`
-
-Output contract:
-
-- Freeze visible hierarchy, palette roles, dominant object, copy intent, and spatial relationship.
-- Adapt only for accessibility, responsiveness, and local code conventions.
-- Do not silently redesign.
-
-Acceptance checks:
-
-- First viewport parity is checked.
-- Major sections preserve the concept.
-- Mobile layout adapts without changing the visual thesis.
-
-## Scenario 4: Brand Homepage With Missing Assets
-
-User prompt:
-
-```text
-Design a homepage for our new physical product. We do not have product photos yet.
-```
-
-Expected routing:
-
-- Work mode: brand/landing
-- Read: `task-router.md`, `asset-context-protocol.md`, `market-calibration.md`, `desire-minimalism-psychology.md`, `signature-aesthetic-systems.md`
-
-Output contract:
-
-- Identify missing real assets.
-- Offer user-provided, local, or imagegen-generated asset paths.
-- If missing visual assets would make the page generic, use text-to-image generation through imagegen before implementation, unless real product proof is required.
-- Avoid pretending generated assets are official product photos.
-
-Acceptance checks:
-
-- First viewport has product/category signal.
-- Hero is not pure abstract decoration.
-- Asset assumptions are explicit.
-
-## Scenario 5: Frontier Interaction Surface
-
-User prompt:
-
-```text
-Design an agent workflow surface for monitoring autonomous research runs.
-```
-
-Expected routing:
-
-- Work mode: frontier interaction
-- Read: `task-router.md`, `interaction-grammar.md`, `visual-direction.md`, `visual-quality-rubric.md`, `design-memory-consistency.md`
-
-Output contract:
-
-- Define intent, agency, control transfer, time model, object model, and commitment model before layout.
-- Use traditional components only where they serve the interaction grammar.
-
-Acceptance checks:
-
-- UI does not collapse into a fake terminal or generic command dashboard.
-- User can pause, inspect, approve, override, or rewind where appropriate.
-- State and uncertainty are visible.
-
-## Scenario 6: Substantial SaaS Redesign
-
-User prompt:
-
-```text
-This SaaS app looks generic. Redesign it so it feels premium but still useful.
-```
-
-Expected routing:
-
-- Work mode: substantial redesign
-- Read: `task-router.md`, `direction-matrix-builder.md`, `taste-calibration.md`, `visual-quality-rubric.md`, `design-memory-consistency.md`, `ant-design-product-values.md`, `content-judgment.md`
-
-Output contract:
-
-- Diagnose current visual failure.
-- Preserve useful local components and tokens.
-- Produce meaningfully different directions if taste is unclear.
-- Choose one direction before implementation.
-
-Acceptance checks:
-
-- Result is not a generic admin shell.
-- Product task clarity improves.
-- Repeated components have a stable system.
-
-## Scenario 7: Product App Implementation
-
-User prompt:
-
-```text
-Implement the selected UI direction inside our dashboard app.
-```
-
-Expected routing:
-
-- Work mode: product app implementation
-- Read: `task-router.md`, `design-memory-consistency.md`, `concept-to-implementation-lock.md`, `verification.md`
-
-Output contract:
-
-- Map the chosen visual direction to local components, tokens, states, and responsive constraints.
-- Preserve the accepted hierarchy and visual thesis while hardening the UI for real use.
-
-Acceptance checks:
-
-- Layout, text fitting, and key states are checked in a rendered environment.
-- Local components are reused where they support the direction.
-- Any visible deviation from the selected direction is named.
-
-## Scenario 8: Signature Hero Page Experience
-
-User prompt:
-
-```text
-Design a visually ambitious product launch page. The hero should feel spacious and crafted, with stronger assets, section pagination, and a clear sense that the next screen continues the story.
-```
-
-Expected routing:
-
-- Work mode: hero/page experience
-- Read: `task-router.md`, `hero-page-experience.md`, `signature-aesthetic-systems.md`, `asset-context-protocol.md`, `visual-direction.md`, `visual-quality-rubric.md`
-- Build a signature page experience before choosing ordinary section layouts.
-
-Output contract:
-
-- Define the hero/page experience thesis.
-- Define a 3-4 screen model with one job per screen.
-- Define the asset system: hero, support, material, transition, and proof assets.
-- Define what to generate with imagegen when the user has not provided enough strong assets.
-- Choose the pagination/page rhythm and continuity device.
-
-Acceptance checks:
-
-- First viewport has one memorable dominant scene.
-- The page has a visible next-screen hint or rhythm device.
-- Assets have roles beyond one decorative image.
-- Proof and secondary UI do not crowd the hero.
+- Route: Phase `Implement`; Surface `Product`; Modifiers `Image` and `Reference-led`.
+- Initial window: the documented R3 exception; close it before opening the later verification window.
+- Outcome: complete the Functional delta, preserve locked decisions, implement one vertical slice, then verify it with matching behavioral and rendered evidence.

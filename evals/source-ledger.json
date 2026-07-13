@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-11",
+  "projectLicense": {
+    "id": "Apache-2.0",
+    "path": "LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "sources": [
+    {
+      "id": "taste-skill",
+      "repositoryUrl": "https://github.com/Leonxlnx/taste-skill",
+      "revision": "b17742737e796305d829b3ad39eda3add0d79060",
+      "accessedAt": "2026-07-11",
+      "reviewedPaths": ["README.md", "CHANGELOG.md", "LICENSE", "skills/taste-skill/SKILL.md"],
+      "sourceClass": "permissive-observed",
+      "license": {
+        "id": "MIT",
+        "url": "https://github.com/Leonxlnx/taste-skill/blob/b17742737e796305d829b3ad39eda3add0d79060/LICENSE",
+        "sha256": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df"
+      },
+      "reviewPurpose": "Architectural comparison only",
+      "comparisonTopics": ["brief interpretation", "direction calibration", "contextual anti-defaults"],
+      "independentDerivation": "Local mechanisms derive from Product Composer goals, existing local references, and approved constraints without upstream expression or structure.",
+      "prohibitedUse": ["unnoticed expressive copying", "unmapped asset reuse"],
+      "reuseMode": "none",
+      "decision": "observed-only",
+      "materialReused": [],
+      "localDestinations": [],
+      "runtimeDependency": false,
+      "evaluationDependency": false,
+      "noticeArtifact": null,
+      "permissionArtifact": null
+    },
+    {
+      "id": "personal-homepage-skill",
+      "repositoryUrl": "https://github.com/powerycy/personal-homepage-skill",
+      "revision": "e244f4608850e4b38c62d31d89a7181c5beb0e19",
+      "accessedAt": "2026-07-11",
+      "reviewedPaths": ["README.md", "SKILL.md", "HOMEPAGE_GENERATION_WORKFLOW.md", "IMAGE_WORKFLOW.md", "DESIGN_REVIEW.md", "STYLE_PRESETS.md", "package.json", "scripts/check-spec.mjs", "scripts/check-templates.mjs", "scripts/check-visual.mjs", "scripts/verify-html-ppt-stage.mjs", "src/data/templates.ts", "templates/react-tailwind/README.md", "templates/single-html/README.md", "LICENSE"],
+      "sourceClass": "restricted",
+      "license": {
+        "id": "LicenseRef-Personal-Homepage-NonCommercial",
+        "url": "https://github.com/powerycy/personal-homepage-skill/blob/e244f4608850e4b38c62d31d89a7181c5beb0e19/LICENSE",
+        "sha256": "2b1c3aff89b56954e91756db3032507ad181d3628ff32f189062c3d7a1f8edf5"
+      },
+      "reviewPurpose": "License and comparative-risk review only",
+      "comparisonTopics": ["scope boundaries", "license restrictions", "claims-versus-evidence risk"],
+      "independentDerivation": "No adoption is justified by this source; similar general mechanisms must be independently derived from Product Composer requirements without upstream expression, structure, examples, prompts, assets, tests, or distinctive naming.",
+      "prohibitedUse": ["text", "code", "prompts", "templates", "examples", "assets", "tests", "distinctive naming", "runtime dependency", "evaluation dependency"],
+      "reuseMode": "none",
+      "decision": "adoption-blocked",
+      "materialReused": [],
+      "localDestinations": [],
+      "runtimeDependency": false,
+      "evaluationDependency": false,
+      "noticeArtifact": null,
+      "permissionArtifact": null
+    }
+  ],
+  "verificationLimit": "Static metadata tests cannot prove absence of copying. Implementation must use fresh context without loading external projects, followed by human provenance review."
+}
