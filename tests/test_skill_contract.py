@@ -472,6 +472,22 @@ class SkillContractTests(unittest.TestCase):
             self.get_labeled_field(section, "Experience architecture gate"),
         )
 
+    def test_composition_divergence_gate_rejects_theme_only_reskins(self):
+        section = self.section_map["Hard Gates"]
+        gate = self.get_labeled_field(section, "Composition-divergence gate")
+        for term in [
+            "new UI or substantial redesign",
+            "three structurally different candidates",
+            "copy, palette, assets, or card styling",
+            "nearby or accepted outputs",
+            "at least four fingerprint axes",
+            "at least two structural axes",
+            "composition family or experience architecture",
+            "explicit continuity evidence",
+        ]:
+            with self.subTest(term=term):
+                self.assertIn(term, gate)
+
     def test_runtime_evidence_gates_and_reference_first_are_section_bound(self):
         design = self.section_map["Design Contract"]
         frame = self.section_map["Frame"]

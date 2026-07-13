@@ -57,6 +57,8 @@ Design memory
 - surface register and route owner:
 - DirectionContract revision:
 - active Modifier deltas:
+- composition fingerprint:
+- comparison set and divergence evidence:
 - palette and type roles:
 - spacing, radius, and depth model:
 - component and state families:
@@ -64,7 +66,7 @@ Design memory
 - explicit refusals:
 ```
 
-Reuse the snapshot across slices. Do not silently invent a second system for a new screen or breakpoint.
+Include nearby screens and accepted concepts in the comparison set when they are visible in the current task or project. Preserve the same system only with explicit continuity evidence; otherwise a new theme or substantial redesign must not inherit an unrelated composition fingerprint. Reuse the snapshot across slices. Do not silently invent a second system for a new screen or breakpoint.
 
 ## Artifact target and maturity
 

@@ -108,21 +108,21 @@ Use `2` and `4` only as positions between their adjacent anchors. Infer every va
 
 ## Style Families
 
-Select one Style family because its behavior fits the evidence, not because its label sounds attractive.
+Select one Style family because its behavior fits the evidence, not because its label sounds attractive. When two or more families remain credible and the wrong choice would change the structure, ask one compact family question. If the user authorizes inference, choose from named source signals, record the fit evidence, and disclose the choice. Never silently default to Editorial Premium or high-end minimal.
 
-| Family | Evidence of fit | Direction consequence |
-| --- | --- | --- |
-| Utility Product | Repeated work, records, forms, approvals, permissions, or recovery | Stable frame, meaningful work object, contextual control, disciplined density |
-| Data Dense | Comparison, monitoring, analysis, or risk depends on many values at once | Compact hierarchy, explicit data grammar, semantic color, inspectable filters |
-| Technical Instrument | Control, measurement, simulation, or spatial inspection is the product value | One precise control or inspection object with state attached to it |
-| Editorial Premium | Authority, expertise, portfolio proof, or premium clarity leads | Art-directed type, asymmetric proof, controlled negative space |
-| Cultural Immersive | A verified place, craft, collection, or cultural source carries the meaning | Source-native material, spatial continuity, restrained interface assimilation |
-| Chinese Aesthetic | The brief explicitly calls for modern Chinese aesthetic structure | Source-led silence, framing, layered depth, material restraint, modern usability |
-| Playful Consumer | Delight, habit, learning, or approachability matters more than dense control | Friendly form, controlled bright color, low-risk motion cues |
-| Soft Craft | Creator work, writing, boutique product, or tactile authorship leads | Warm material, gentle contrast, hand-finished detail, real product proof |
-| Bold Campaign | A launch, event, offer, or short conversion window needs urgency | High contrast, kinetic hierarchy, direct action path |
+| Family | Evidence of fit | Direction consequence | Structural routes |
+| --- | --- | --- | --- |
+| Utility Product | Repeated work, records, forms, approvals, permissions, or recovery | Stable frame, meaningful work object, contextual control, disciplined density | workbench or ledger; queue, lane, calendar, or resource matrix |
+| Data Dense | Comparison, monitoring, analysis, or risk depends on many values at once | Compact hierarchy, explicit data grammar, semantic color, inspectable filters | data wall or relational atlas; split comparison; ordered matrix |
+| Technical Instrument | Control, measurement, simulation, or spatial inspection is the product value | One precise control or inspection object with state attached to it | instrument viewport; cutaway or digital twin; calibration field |
+| Editorial Premium | Authority, expertise, portfolio proof, or premium clarity leads | Art-directed type, asymmetric proof, controlled negative space | typographic field; editorial reference desk; asymmetric proof spread |
+| Cultural Immersive | A verified place, craft, collection, or cultural source carries the meaning | Source-native material, spatial continuity, restrained interface assimilation | archive or collection path; spatial portal; source-led atlas |
+| Chinese Aesthetic | The brief explicitly calls for modern Chinese aesthetic structure | Source-led silence, framing, layered depth, material restraint, modern usability | framed sequence; landscape atlas; quiet threshold or layered scroll |
+| Playful Consumer | Delight, habit, learning, or approachability matters more than dense control | Friendly form, controlled bright color, low-risk motion cues | object stage; modular play field; collection path |
+| Soft Craft | Creator work, writing, boutique product, or tactile authorship leads | Warm material, gentle contrast, hand-finished detail, real product proof | tactile worktable; catalogue fold; object stage or process path |
+| Bold Campaign | A launch, event, offer, or short conversion window needs urgency | High contrast, kinetic hierarchy, direct action path | kinetic crop; poster stack; temporal sequence or direct action field |
 
-When a supplied reference or an established brand system is clear, follow that evidence first and use the nearest family only to state constraints. Domain rules still come from the surface owner; a family must not smuggle product, brand, or cultural behavior into the wrong route.
+When a supplied reference or an established brand system is clear, follow that evidence first and use the nearest family only to state constraints. Structural routes are contrasting starting points, never family-to-layout presets; select among them from content and behavior, and do not carry one familiar route through several families. Domain rules still come from the surface owner; a family must not smuggle product, brand, or cultural behavior into the wrong route.
 
 ## Taste Contract
 
@@ -204,6 +204,12 @@ A direction for a complete route or site is incomplete if it shows only the firs
 
 ## Direction Orthogonality
 
+Apply this comparison to every net-new or substantial redesign without a locked spatial reference, not only when the user requests several directions. Build the comparison set from the current candidates plus unrelated nearby screens or accepted outputs that are visible in the current task or project. Never invent a global history. Reuse within one established system is valid when explicit continuity evidence names why its structure must remain.
+
+When structure is unresolved, write three structural candidates before surface polish. Each is a compact internal spatial thesis with a different composition family, dominant silhouette, agency placement, proof geometry, density rhythm, and—when relevant—experience architecture or first handoff. Show the alternatives only when the user requests choices; otherwise select one from evidence and record why the familiar options were rejected.
+
+Record a derived `Composition fingerprint` from the comparison variables below. Count divergence in two groups. Structural axes are dominant silhouette, primary layout grammar, navigation/control placement, proof or media geometry, density rhythm, experience architecture, and continuation or first handoff. Style axes are background material and accent palette; typography and icon or decoration language remain useful observations but do not count as spatial differences. Style axes cannot satisfy the gate by themselves.
+
 A valid direction set contains internally coherent options with visibly different spatial theses: each option has its own silhouette, way of placing control, proof object, material behavior, and density rhythm while remaining credible for the same brief.
 
 Compare each candidate with every accepted direction across these variables:
@@ -214,23 +220,24 @@ Compare each candidate with every accepted direction across these variables:
 | dominant silhouette | Is the thumbnail contour materially different? |
 | primary layout grammar | Are objects related through a different spatial system? |
 | navigation/control placement | Does agency enter from a different place? |
-| proof object | Is a different form of evidence carrying the claim? |
+| proof or media geometry | Does evidence occupy a different anchor, scale, crop, or occlusion relationship? |
 | accent palette | Do accent roles and temperature create a different tension? |
 | density rhythm | Does information expand and contract differently? |
 | experience architecture | Do content beats, region geometries, interaction states, and handoffs form a materially different narrative and temporal system? |
-| icon/decoration language | Are detail marks generated by a different system? |
+| continuation or first handoff | Does the entry lead onward through a different spatial or temporal mechanism? |
 
-Direction orthogonality requires at least four variables to differ. For a complete website direction, one of those differences must be experience architecture or page rhythm. If a candidate shares five or more variables with an accepted direction, reject it as same-looking and move to an opposing composition family or experience architecture.
+Direction orthogonality requires at least four variables to differ, including at least two structural axes. For a complete website direction, one of those differences must be experience architecture or page rhythm. If a candidate shares five or more variables with an unrelated accepted direction, or passes only by changing style axes, reject it as same-looking and move to an opposing composition family or experience architecture.
 
 Treat these repeated patterns as convergence warnings:
 
 - warm ivory background + central horizontal rail or timeline + right action panel + rounded cards
+- top horizontal navigation + oversized headline + dominant center or right media + CTA or readout cluster + bottom rail or progress strip
 - large centered object + supporting cards orbiting it
 - left list + center document or work surface + right recommendation panel
 - magnifier, lens, or inspection object reused across unrelated families
 - paper-like UI + fine-border cards + green/red status chips used as the universal tasteful repair
 
-Do not repair convergence by making the same structure merely warmer, quieter, or more saturated. Change the spatial metaphor.
+A line, spine, rail, or cut counts as structural only when it changes region geometry, state, agency, proof, or handoff; a decorative divider cannot justify reusing an otherwise familiar scaffold. A change in theme, subject, copy, palette, or asset family is not structural evidence. Do not repair convergence by making the same structure merely warmer, quieter, or more saturated. Change the spatial metaphor.
 
 ## Typography And Palette Judgment
 
@@ -248,6 +255,7 @@ Run a generic-default test before accepting the contract. Copy only relevant row
 | Near-black surface with neon accent | Ordinary SaaS or professional work where darkness implies false danger or spectacle | A real viewing environment, instrument domain, or established brand palette that requires dark adaptation |
 | Broadsheet rules and dense columns | Non-editorial products whose content lacks long-form hierarchy | Real editorial content, comparison behavior, or a reference whose column structure carries the user job |
 | Centered hero, abstract object, three equal cards | Brand pages that must prove a specific workflow or offer | A supplied composition or real product object that makes the center stage the clearest proof and gives each card a distinct job |
+| Universal hero scaffold: top navigation, oversized headline, dominant center/right media, CTA/readout cluster, bottom rail/progress | unrelated themes or subjects where the same scaffold substitutes surface variation for composition | A supplied reference, established brand/system rule, or explicit continuity evidence showing that repeated geometry belongs to one coherent system |
 | Neutral type with no role contrast | Any surface where hierarchy, data, or action cannot be scanned quickly | An established type system whose weight, spacing, and layout create demonstrable role separation |
 | Numbered section markers | Pages with no real order, progress, or narrative dependency | Content with an explicit sequence and markers that improve orientation or continuation |
 | Decorative badges, pills, or pseudo-system labels | Products whose state model does not use those objects | Real categories, statuses, permissions, or controls represented by the marks |

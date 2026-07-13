@@ -126,6 +126,26 @@ The sequence should be causal when the content is causal, but not every portfoli
 
 The first viewport is an entry sample of the larger experience, not the definition of the hero or site. Design it after archetype, route scope, content beats, and region geometry are known.
 
+Choose the opening spatial thesis from the content object and entry job. Candidate opener types include a typographic field, object stage, live product interaction, spatial portal or map, editorial cover or index, collection path, temporal sequence, split comparison, instrument or data field, and quiet invitation. These are reasoning routes, not presets.
+
+```text
+Hero composition record
+- entry job:
+- first and second read:
+- core content object:
+- region geometry and reading axis:
+- spatial thesis and composition family:
+- dominant silhouette and occupied area:
+- headline anchor and scale:
+- proof or media geometry:
+- agency placement:
+- navigation or orientation:
+- continuation mechanism and first handoff:
+- rejected scaffold and override evidence:
+```
+
+Theme or subject changes do not preserve a hero skeleton by default; surface treatment is not sufficient divergence. Compare the geometry and placement fields with visible unrelated candidates or accepted outputs in the current task or project. If region geometry or composition family plus any two of headline, media, agency, navigation, or continuation placement match, reject the direction unless content, a supplied reference, or explicit same-system continuity evidence requires that relationship.
+
 Require a clear first read, a credible reason to continue, stable navigation or orientation, and immediate access to any essential action. Do not universally require one screenshot, one proof object, one CTA, or at most three content zones:
 
 - SaaS and conversion pages usually need early category clarity, product or mechanism evidence, and an action path.

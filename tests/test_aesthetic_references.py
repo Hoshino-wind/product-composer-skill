@@ -250,6 +250,69 @@ class AestheticReferenceTests(unittest.TestCase):
         self.assertIn("evidence predicate", override)
         self.assertIn("contract fields it changes", override)
 
+    def test_direction_orthogonality_rejects_repeated_hero_scaffolds(self):
+        sections = self.assert_h2_structure(
+            "references/direction-system.md",
+            DIRECTION_HEADINGS,
+        )
+        families = sections["Style Families"]
+        self.assertRegex(
+            families,
+            r"(?m)^\| Family \| Evidence of fit \| Direction consequence \| Structural routes \|$",
+        )
+        for route in [
+            "workbench or ledger",
+            "editorial reference desk",
+            "object stage",
+            "collection path",
+            "spatial portal",
+        ]:
+            with self.subTest(route=route):
+                self.assertIn(route, families)
+
+        orthogonality = sections["Direction Orthogonality"]
+        for term in [
+            "Composition fingerprint",
+            "comparison set",
+            "three structural candidates",
+            "different composition family",
+            "structural axes",
+            "Style axes cannot satisfy",
+            "top horizontal navigation",
+            "oversized headline",
+            "dominant center or right media",
+            "CTA or readout cluster",
+            "bottom rail or progress strip",
+            "theme, subject, copy, palette, or asset family",
+            "line, spine, rail, or cut",
+            "decorative divider cannot justify",
+        ]:
+            with self.subTest(term=term):
+                self.assertIn(term, orthogonality)
+
+        table_rows = [
+            [cell.strip() for cell in line.strip("|").split("|")]
+            for line in orthogonality.splitlines()
+            if line.startswith("|")
+        ]
+        self.assertEqual(["Comparison variable", "Question"], table_rows[0])
+        self.assertEqual([
+            "background material",
+            "dominant silhouette",
+            "primary layout grammar",
+            "navigation/control placement",
+            "proof or media geometry",
+            "accent palette",
+            "density rhythm",
+            "experience architecture",
+            "continuation or first handoff",
+        ], [row[0] for row in table_rows[2:]])
+
+        generic_default = sections["Generic-Default Test"]
+        self.assertIn("Universal hero scaffold", generic_default)
+        self.assertIn("unrelated themes or subjects", generic_default)
+        self.assertIn("explicit continuity evidence", generic_default)
+
     def test_product_surfaces_prioritize_real_work(self):
         self.assert_terms("references/product-surfaces.md", [
             "task correctness -> interaction clarity -> information architecture -> visual expression",
@@ -388,6 +451,64 @@ class AestheticReferenceTests(unittest.TestCase):
         self.assertIn("multi-route website", scope)
         self.assertIn("Hero does not mean one `100vh` section", scope)
         self.assertIn("PC-only", scope)
+
+    def test_brand_first_viewport_records_a_spatial_thesis(self):
+        sections = self.assert_h2_structure(
+            "references/brand-experiences.md",
+            BRAND_HEADINGS,
+        )
+        first_viewport = sections["First-Viewport Contract"]
+        self.assertIn("Hero composition record", first_viewport)
+        for field in [
+            "entry job",
+            "first and second read",
+            "core content object",
+            "region geometry and reading axis",
+            "spatial thesis and composition family",
+            "dominant silhouette and occupied area",
+            "headline anchor and scale",
+            "proof or media geometry",
+            "agency placement",
+            "navigation or orientation",
+            "continuation mechanism and first handoff",
+            "rejected scaffold and override evidence",
+        ]:
+            with self.subTest(field=field):
+                self.assertEqual(
+                    1,
+                    len(re.findall(rf"(?m)^- {re.escape(field)}:", first_viewport)),
+                )
+
+        for opener in [
+            "typographic field",
+            "object stage",
+            "live product interaction",
+            "spatial portal or map",
+            "editorial cover or index",
+            "collection path",
+            "temporal sequence",
+            "split comparison",
+            "instrument or data field",
+            "quiet invitation",
+        ]:
+            with self.subTest(opener=opener):
+                self.assertIn(opener, first_viewport)
+        self.assertIn("Theme or subject changes", first_viewport)
+        self.assertIn("surface treatment is not sufficient divergence", first_viewport)
+
+    def test_implementation_memory_preserves_composition_comparison(self):
+        text = (ROOT / "references/implementation-fidelity.md").read_text(encoding="utf-8")
+        sections = dict(self.parse_h2_sections(text))
+        memory = sections["Design memory"]
+        for term in [
+            "composition fingerprint",
+            "comparison set and divergence evidence",
+            "nearby screens",
+            "explicit continuity evidence",
+            "same system",
+        ]:
+            with self.subTest(term=term):
+                self.assertIn(term, memory)
 
 if __name__ == "__main__":
     unittest.main()

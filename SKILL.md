@@ -175,6 +175,7 @@ Use the Verify owner after a change-producing phase output or directly for the v
 
 - Direction parameters: infer from evidence; no universal default; never override locked decisions
 - Creative-core gate: require source signals, visible consequences, fixed anchors, and one exploration axis; anti-defaults alone are not a direction
+- Composition-divergence gate: for every new UI or substantial redesign, establish a comparison fingerprint; when spatial direction is unresolved and no locked reference exists, compare three structurally different candidates before polish. Reject variants that change only copy, palette, assets, or card styling; compare the selected fingerprint with nearby or accepted outputs visible in the task or project and change at least four fingerprint axes, including at least two structural axes and composition family or experience architecture, unless explicit continuity evidence requires the same system
 - Aesthetic anti-defaults: require context and an override condition; popularity alone never creates a ban
 - Experience architecture gate: do not code a media- or scroll-led website until its archetype, route scope, ordered content beats, region geometry, interaction states, handoffs, proof/conversion path, and target device scope are recorded in the Design Contract
 - Media-led implementation gate: do not allocate media by screen count; record the many-to-many content-to-media map, truth roles, state coverage, target-device variants, loading behavior, and fallbacks before coding a media-dependent region
