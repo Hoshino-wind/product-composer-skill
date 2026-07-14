@@ -57,6 +57,7 @@ These are claim levels, not a list of artifacts shipped by this repository. The 
 - [`evals/discovery-scenarios.md`](evals/discovery-scenarios.md) and [`evals/routing-scenarios.md`](evals/routing-scenarios.md) make activation and reference-window expectations reviewable.
 - [`evals/source-ledger.json`](evals/source-ledger.json) is repository provenance evidence; it is not a runtime reference.
 - [`examples/scenarios/product-composer-routing.md`](examples/scenarios/product-composer-routing.md) shows two compact routing examples without copying the full route table.
+- [`examples/cases/dunhuang-museum-hero/`](examples/cases/dunhuang-museum-hero) preserves one final multi-route implementation case as a dependency-free static distribution. It is an implementation reference, not an official museum site, a reusable template, or proof of unnamed scenarios.
 
 ## Scanner
 

@@ -397,7 +397,7 @@ class ModifierReferenceTests(unittest.TestCase):
         self.assert_terms(scope_output, [
             "route map", "primary interaction state machine", "wireframe",
             "Do not use one attractive image to stand in for a complete website experience",
-            "input -> response -> durable consequence -> handoff -> fallback",
+            "input -> immediate response -> meaningful consequence + horizon -> handoff -> fallback",
             "must not invent the information architecture",
         ])
 
@@ -590,8 +590,19 @@ class ModifierReferenceTests(unittest.TestCase):
         self.assert_terms(region_scroll, [
             "native document flow", "sticky or pinned chapters", "horizontal translation",
             "spatial camera travel", "Region choreography record",
+            "Motion storyboard record", "keyframe role", "per-layer position",
+            "entry, one meaningful transformation, and handoff",
+            "Ambient pointer motion", "not runtime evidence",
             "A distinct effect may be designed for every region",
             "not the raw count of effects", "Do not hijack scrolling", "MotionSites",
+        ])
+
+        self.assert_terms(choreography, [
+            "living page object and source state",
+            "equivalent explicit, keyboard, touch, or reduced-input path",
+            "meaningful consequence, consequence horizon, and downstream handoff",
+            "reversibility, interruption, and escape",
+            "cannot count as the primary expressive interaction",
         ])
 
         static_first = sections["Static-first integration"]

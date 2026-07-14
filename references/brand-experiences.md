@@ -126,15 +126,20 @@ For every primary interactive region, record one causal interaction instead of l
 Interaction causality record
 - relationship model: how the visitor relates to the page object
 - living page object: route, collection, scene, comparison, instrument, record, or another stateful subject
+- source state:
 - input and equivalent input: pointer, keyboard, touch, wheel, or explicit control paths into the same state
 - immediate response: the visible consequence in the current region
-- durable consequence: what selection, progress, evidence, or commitment remains after the moment
+- meaningful consequence: what orientation, revelation, scene progress, selection, evidence, or commitment changes
+- consequence horizon: moment | region | route | session
+- narrative meaning or orientation gained:
 - downstream handoff: which later region, proof, action, or media state changes because of it
 - reversibility and reset:
 - reduced-motion, interrupted, and no-JavaScript behavior:
 ```
 
-A primary interaction fails when it only changes selected styling, swaps a small text block, filters an otherwise unchanged section, or plays decorative motion while the page object and later handoff remain identical. Familiar filters, accordions, tabs, and forms may still serve real utility, but they do not become a signature interaction by being animated. The signature interaction must create a legible cause, consequence, and retained state.
+A primary interaction fails when it only changes selected styling, swaps a small text block, filters an otherwise unchanged section, or plays decorative motion while the page object and later handoff remain identical. Familiar filters, accordions, tabs, and forms may still serve real utility, but they do not become a signature interaction by being animated. The signature interaction must create a legible cause and a meaningful consequence inside its declared horizon, then change the scene, orientation, progress, or downstream handoff. Cultural and narrative experiences do not need to save a preference when revelation or route progression is the real consequence.
+
+Pointer parallax, particles, light drift, texture response, and similar ambient behavior may remain transient. They enrich atmosphere but cannot count as the primary interaction, carry essential content, or replace an equivalent explicit or keyboard path.
 
 For responsive work, keep one semantic state machine but design desktop and narrow-screen composition independently. Map each state, focal order, control path, and handoff to the available viewport; do not collapse a spatial desktop scene into `headline -> copy -> controls -> media` merely by stacking it. Scroll observation, direct controls, keyboard navigation, and touch must converge on the same valid transitions rather than mutating unrelated DOM fragments.
 
@@ -158,7 +163,7 @@ Hero composition record
 - proof or media geometry:
 - agency placement:
 - living page object and initial state:
-- first meaningful state transition and retained consequence:
+- first meaningful state transition, consequence horizon, and handoff:
 - navigation or orientation:
 - continuation mechanism and first handoff:
 - rejected scaffold and override evidence:
@@ -202,6 +207,23 @@ Media choreography record
 - target-device treatment:
 - poster, loading, failure, reduced-motion, and static fallback:
 ```
+
+For a scene-led region, add a scene integration record before implementation:
+
+```text
+Scene integration record
+- scene and region id:
+- source or asset id:
+- semantic plane: background | middle | foreground | atmosphere | type/control
+- mount owner: DOM | SVG | canvas | video | flattened composite
+- occludes, is occluded by, and mask relationship:
+- transform owner: static | pointer | scroll | timeline
+- focal, crop, edge, contrast, and type/control relationship:
+- loading order and readiness boundary:
+- reduced-motion, load-failure, and composite fallback:
+```
+
+If a direction promises independent parallax, occlusion, mask handoff, or layer transformation, the affected planes must be mounted independently. A flattened master environment may remain the visual benchmark, poster, reduced-motion state, or load-failure fallback, but it cannot evidence independently animated layers.
 
 Derivatives remain one source for provenance, but provenance count is not an aesthetic score. Reuse may be the strongest continuity decision when the same object legitimately changes state, as in a product walkthrough or spatial system. Essential wording must remain selectable semantic text or have an equivalent accessible label. Informative video or audio needs the appropriate captions, transcript, or equivalent.
 
@@ -289,7 +311,8 @@ Use full-viewport cinematic luxury only when a credible dominant subject and bra
 - Are intrinsic, subviewport, viewport, pinned, horizontal, spatial, and ordinary-flow regions chosen by content rather than a screen recipe?
 - Does a reference study inspect the complete route or clearly label the evidence limit?
 - Does every interactive region record trigger, state change, handoff, input control, and fallback?
-- Does every primary interaction change a living page object, leave a durable consequence, and alter a downstream handoff rather than only swapping local UI state?
+- Does every primary interaction change a living page object, create a meaningful consequence inside its declared horizon, and alter the scene, orientation, progress, or downstream handoff rather than only swapping local UI state?
+- Do scene-led regions record plane, mount, occlusion/mask, transform, loading, and composite-fallback ownership instead of claiming independent depth from one flattened image?
 - Do desktop and narrow-screen compositions expose the same semantic transitions through viewport-appropriate focal order and controls instead of one collapsed component stack?
 - Does the media map allow zero-to-many media per beat and reuse one asset across several beats without tying source count to quality?
 - Is proof timing calibrated to the archetype and commitment risk rather than one universal rule?

@@ -498,7 +498,7 @@ class AestheticReferenceTests(unittest.TestCase):
             "proof or media geometry",
             "agency placement",
             "living page object and initial state",
-            "first meaningful state transition and retained consequence",
+            "first meaningful state transition, consequence horizon, and handoff",
             "navigation or orientation",
             "continuation mechanism and first handoff",
             "rejected scaffold and override evidence",
@@ -536,14 +536,20 @@ class AestheticReferenceTests(unittest.TestCase):
             "Interaction causality record",
             "relationship model",
             "living page object",
+            "source state",
             "input and equivalent input",
             "immediate response",
-            "durable consequence",
+            "meaningful consequence",
+            "consequence horizon",
+            "narrative meaning or orientation gained",
             "downstream handoff",
             "reversibility and reset",
             "no-JavaScript behavior",
             "only changes selected styling",
-            "signature interaction must create a legible cause, consequence, and retained state",
+            "meaningful consequence inside its declared horizon",
+            "Cultural and narrative experiences do not need to save a preference",
+            "ambient behavior may remain transient",
+            "cannot count as the primary interaction",
             "one semantic state machine",
             "desktop and narrow-screen composition independently",
             "headline -> copy -> controls -> media",
@@ -560,8 +566,19 @@ class AestheticReferenceTests(unittest.TestCase):
 
         acceptance = sections["Acceptance Checks"]
         self.assertIn("change a living page object", acceptance)
-        self.assertIn("durable consequence", acceptance)
+        self.assertIn("meaningful consequence inside its declared horizon", acceptance)
+        self.assertIn("scene-led regions", acceptance)
+        self.assertIn("one flattened image", acceptance)
         self.assertIn("desktop and narrow-screen compositions", acceptance)
+
+        choreography = sections["Media Choreography Gate"]
+        for term in [
+            "Scene integration record", "semantic plane", "mount owner",
+            "occludes, is occluded by, and mask relationship", "transform owner",
+            "loading order and readiness boundary", "composite fallback",
+            "cannot evidence independently animated layers",
+        ]:
+            self.assertIn(term, choreography)
 
     def test_implementation_memory_preserves_composition_comparison(self):
         text = (ROOT / "references/implementation-fidelity.md").read_text(encoding="utf-8")

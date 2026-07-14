@@ -40,13 +40,13 @@ Design Contract is the only runtime record. Every owner reads and updates this s
 
 - Route: selected Phase, Surface, and behavior-changing Modifiers
 - DirectionContract projection: complete visual-direction record below
-- Experience architecture and region model: website archetype, route/page scope, opener scope, ordered content beats, region geometry, interaction states, scroll choreography, page rhythm, continuity, proof/conversion placement, target device scope, and a many-to-many content-to-media map
-- Workflow and required states: behavior, recovery, and, for media-led work, media roles, art type, state progression, interaction-to-media map, target-device variants, and fallbacks
-- Truth and provenance ledger: source, status, role, uncertainty, and rights constraint
+- Experience architecture and region model: beats, geometry, states, continuity, scene graph, proof/action
+- Workflow and required states: behavior/recovery; media roles, state progression, device variants, loading, fallbacks
+- Truth and provenance ledger: source, status, role, uncertainty, rights
 - Artifact target and maturity: requested reusable output and evidenced maturity
-- Functional delta: missing behavior, data, permissions, error recovery, irreversible actions, accessibility, responsive rules, and performance constraints
+- Functional delta: behavior, data, permissions, recovery, irreversible actions, accessibility, responsive/performance constraints
 - Locked and adaptable decisions: preservation boundary
-- Acceptance checks: behavioral, rendered, structural, provenance, and judgment evidence
+- Acceptance checks: behavioral, rendered, structural, provenance, judgment evidence; contract-valid/visual-pass/runtime-pass verdicts
 
 Do not implement an image concept until Functional delta is complete. Generated or inferred material is not factual proof.
 
@@ -162,7 +162,7 @@ For a live reference, trace the complete route from opener to footer or interact
 
 ## Verify
 
-Use the Verify owner after a change-producing phase output or directly for the validation-only Explore entry. Direction-only Explore is not a change-producing output and stops without opening Verify. Acceptance reporting alone does not open Verify; keep future checks and named gaps in the Design Contract. Test workflow, states, keyboard/focus/semantics, long text, declared target devices and inputs, assets, visual hierarchy, and visual parity in a rendered environment when available. When scope is explicitly PC-only, verify the named desktop widths plus pointer, keyboard, wheel/trackpad, interruption, and reduced-motion behavior; do not invent a mobile requirement. Map each artifact maturity or parity claim to matching evidence; otherwise name the verification gap. Do not label a recipe or preview as a runnable starter, tested golden, or production template without matching evidence.
+Use Verify after changes or for validation-only Explore. Direction-only Explore is not a change-producing output and stops without opening Verify. Acceptance reporting alone does not open Verify; keep future checks and named gaps in the Design Contract. Report contract-valid, visual-pass, and runtime-pass independently. Structural/package evidence proves only contract-valid; missing evidence is a gap. Test workflow, states, accessibility, target devices/inputs, assets, hierarchy, and parity in runtime. PC-only covers named widths, pointer, keyboard, wheel/trackpad, interruption, and reduced motion. Match claims to evidence; recipes/previews are not runnable or reusable.
 
 ## Hard Gates
 
@@ -179,8 +179,10 @@ Use the Verify owner after a change-producing phase output or directly for the v
 - Composition-divergence gate: for every new UI or substantial redesign, establish a comparison fingerprint; when spatial direction is unresolved and no locked reference exists, compare three structurally different candidates before polish. Reject variants that change only copy, palette, assets, or card styling; compare the selected fingerprint with nearby or accepted outputs visible in the task or project and change at least four fingerprint axes, including at least two structural axes and composition family or experience architecture, unless explicit continuity evidence requires the same system
 - Aesthetic anti-defaults: require context and an override condition; popularity alone never creates a ban
 - Experience architecture gate: do not code a media- or scroll-led website until its archetype, route scope, ordered content beats, region geometry, interaction states, handoffs, proof/conversion path, and target device scope are recorded in the Design Contract
-- Interaction-causality gate: if direction promises a primary interaction, name its living object and `input -> response -> durable consequence -> handoff -> fallback`. Utility filters/accordions may remain but do not count; use one state machine.
-- Media-led implementation gate: do not allocate media by screen count; record the many-to-many content-to-media map, truth roles, state coverage, target-device variants, loading behavior, and fallbacks before coding a media-dependent region
+- Interaction-causality gate: record living object and `input -> response -> meaningful consequence + horizon -> handoff -> fallback`; horizon is moment, region, route, or session. Operational work may retain state; cultural/narrative work may use orientation, revelation, or scene progress. Ambient response is neither primary nor essential; use one state machine
+- Media-led implementation gate: before coding record media map, truth/state/device coverage, loading/fallback; independent depth/occlusion/mask/motion requires `source/layer -> mount -> overlap/mask -> transform -> loading -> composite fallback`. A flat image proves none
+- Motion-storyboard gate: before coding a multi-state/pinned/spatial/scene-led opener, link entry, transformation, and handoff keyframes to region, media, and state ids
+- Readiness gate: contract-valid cannot substitute for visual-pass or runtime-pass; an interactive hero requires every applicable lane to pass
 
 Do not synthesize official proof or factual cultural provenance. Do not let novelty hide state or control. Do not silently redesign an accepted concept. Do not force 3D, motion, image generation, or cultural motifs without the matching Modifier and eligibility evidence. Do not expose skill authoring or self-maintenance as runtime work.
 

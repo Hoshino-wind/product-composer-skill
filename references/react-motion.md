@@ -65,11 +65,15 @@ For a media-led opener, route, or complete website, derive motion from content b
 ```text
 Interaction-to-media map
 - content beat and region job:
+- living page object and source state:
 - trigger and user intent:
+- equivalent explicit, keyboard, touch, or reduced-input path:
 - source state:
 - affected media or type role:
 - state progression:
 - response and destination state:
+- meaningful consequence, consequence horizon, and downstream handoff:
+- reversibility, interruption, and escape:
 - meaning made clearer:
 - static and reduced-motion equivalent:
 - removal trigger:
@@ -78,6 +82,8 @@ Interaction-to-media map
 Valid relationships include a video timeline revealing real time, layered cutouts creating bounded depth, a mask uncovering a material or proof transition, product UI changing through a real workflow, an object persisting while its context changes, or type exchanging roles with media at a chapter boundary. These are possibilities, not defaults.
 
 Tilt, glow, magnetism, particles, pointer-follow, marquee, and scroll-scrub are rejected only when they have no content/media cause, user-readable purpose, or experiential benefit. They are not globally banned and they are not accepted merely because an award site uses them.
+
+Pointer-follow, parallax, particles, light drift, and other ambient motion may enrich rest or invitation states, but they cannot count as the primary expressive interaction, carry essential content, or replace the route/region consequence and downstream handoff.
 
 Use states appropriate to the mechanism, such as `rest`, `invitation`, `response`, `transition`, `interrupted`, and `reduced-motion`. Hover may enrich invitation but cannot be the only path to essential content. Time-based media needs a poster, loading state, pause behavior when sustained, and a static fallback; autoplay must not carry essential information.
 
@@ -113,6 +119,27 @@ Region choreography record
 - target-device treatment:
 - reduced-motion and static fallback:
 ```
+
+### Motion storyboard
+
+Record keyframes after region choreography and before implementation:
+
+```text
+Motion storyboard record
+- region, beat, and state ids:
+- keyframe role: entry | invitation | response | transition | handoff
+- trigger and progress/time interval:
+- camera or frame change:
+- per-layer position, scale, crop, mask, opacity, and visibility:
+- type, navigation, control, and focus state:
+- intended focal order and meaning:
+- simultaneous-motion and stillness rule:
+- exit frame and next-region continuity:
+- reversal, interruption, and escape:
+- reduced-motion and static keyframe:
+```
+
+A multi-state Hero records at least entry, one meaningful transformation, and handoff boundary states. Its state ids must resolve to the Interaction causality, Scene integration, and Region choreography records. Ambient pointer motion is listed separately and cannot impersonate narrative progression. A still or storyboard frame is state reference, not runtime evidence.
 
 A distinct effect may be designed for every region when each effect is earned by that region's content and the sequence shares an intentional motion grammar. Judge simultaneous competition, redundancy, transition quality, runtime cost, and input control—not the raw count of effects. Repeating one preset everywhere and forcing one global effect are both failures.
 
@@ -179,6 +206,7 @@ Reduced motion is not merely shorter duration. When an effect communicates causa
 - Every effect has a content/media cause, a role, and a stated user or experiential benefit.
 - Motion is mapped from content beat and region geometry rather than screen count or an effect catalog.
 - Every interactive region records trigger, mechanism, state progression, handoff, input control, runtime cost, and fallback.
+- Multi-state, pinned, spatial, and scene-led openers link entry, meaningful transformation, and handoff storyboard keyframes to scene layers and interaction states.
 - Distinct per-region effects remain coherent through named motion-grammar rules; neither one repeated preset nor one forced global effect dominates the route.
 - Sticky, pinned, horizontal, snap, scrubbed, video, and spatial mechanisms have explicit entry, progress, interruption, escape, and exit behavior.
 - Static hierarchy, actions, orientation, content, and state work before animation loads.

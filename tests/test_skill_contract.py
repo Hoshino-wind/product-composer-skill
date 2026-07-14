@@ -319,7 +319,7 @@ class SkillContractTests(unittest.TestCase):
     def test_phase_outcomes_branch_and_stop_instead_of_falling_into_build(self):
         self.assertIn("Phase Outcomes", self.section_map)
         self.assertIn(
-            "directly for the validation-only Explore entry",
+            "for validation-only Explore",
             self.section_map["Verify"],
         )
         section = self.section_map["Phase Outcomes"]
@@ -464,7 +464,7 @@ class SkillContractTests(unittest.TestCase):
             self.get_labeled_field(section, "Creative-core gate"),
         )
         self.assertIn(
-            "do not allocate media by screen count",
+            "media map",
             self.get_labeled_field(section, "Media-led implementation gate"),
         )
         self.assertIn(
@@ -483,13 +483,32 @@ class SkillContractTests(unittest.TestCase):
 
         interaction = self.get_labeled_field(section, "Interaction-causality gate")
         for term in [
-            "if direction promises a primary interaction",
             "living object",
-            "input -> response -> durable consequence -> handoff -> fallback",
-            "Utility filters/accordions may remain but do not count",
+            "input -> response -> meaningful consequence + horizon -> handoff -> fallback",
+            "moment, region, route, or session",
+            "cultural/narrative work may use orientation, revelation, or scene progress",
+            "Ambient response is neither primary nor essential",
             "use one state machine",
         ]:
             self.assertIn(term, interaction)
+
+        media = self.get_labeled_field(section, "Media-led implementation gate")
+        for term in [
+            "media map", "truth/state/device coverage",
+            "source/layer -> mount -> overlap/mask -> transform -> loading -> composite fallback",
+            "flat image proves none",
+        ]:
+            self.assertIn(term, media)
+
+        storyboard = self.get_labeled_field(section, "Motion-storyboard gate")
+        for term in ["multi-state/pinned/spatial/scene-led", "entry", "transformation", "handoff", "state ids"]:
+            self.assertIn(term, storyboard)
+
+        readiness = self.get_labeled_field(section, "Readiness gate")
+        self.assertIn("contract-valid", readiness)
+        self.assertIn("visual-pass", readiness)
+        self.assertIn("runtime-pass", readiness)
+        self.assertIn("every applicable lane", readiness)
 
     def test_composition_divergence_gate_rejects_theme_only_reskins(self):
         section = self.section_map["Hard Gates"]
@@ -527,15 +546,14 @@ class SkillContractTests(unittest.TestCase):
         self.assertIn("One asset may persist across several beats", frame)
         self.assertIn("trace the complete route from opener to footer or interaction endpoint", frame)
         self.assertIn("A first-viewport screenshot can establish composition only", frame)
-        self.assertIn("artifact maturity", verify)
-        self.assertIn("visual parity", verify)
-        self.assertIn("matching evidence", verify)
-        self.assertIn("explicitly PC-only", verify)
-        self.assertIn(
-            "Do not label a recipe or preview as a runnable starter, tested golden, "
-            "or production template without matching evidence",
-            verify,
-        )
+        self.assertIn("Match claims to evidence", verify)
+        self.assertIn("parity in runtime", verify)
+        for term in [
+            "contract-valid", "visual-pass", "runtime-pass", "independently",
+            "Structural/package evidence proves only contract-valid",
+            "missing evidence is a gap", "PC-only", "recipes/previews are not runnable",
+        ]:
+            self.assertIn(term, verify)
         self.assertIn("node scripts/ui-pattern-scan.mjs ./src", self.section_map["Optional Scanner"])
 
     def test_reference_index_is_exact_unique_and_resolvable(self):

@@ -57,6 +57,7 @@ Product Composer 保留产品正确性、本地约定、内容与资产真实性
 - [`evals/discovery-scenarios.md`](evals/discovery-scenarios.md) 与 [`evals/routing-scenarios.md`](evals/routing-scenarios.md) 让激活边界和 reference-window 预期可审查。
 - [`evals/source-ledger.json`](evals/source-ledger.json) 是仓库的 provenance evidence，不是 runtime reference。
 - [`examples/scenarios/product-composer-routing.md`](examples/scenarios/product-composer-routing.md) 只展示两个紧凑示例，不复制完整路由表。
+- [`examples/cases/dunhuang-museum-hero/`](examples/cases/dunhuang-museum-hero) 保存一个最终的多路由实现案例，并以零外部依赖的静态成品分发。它是实现参考，不是博物馆官方网站、可复用模板，也不证明未命名场景已经通过验证。
 
 ## Scanner
 

@@ -367,7 +367,7 @@ Resolve experience architecture before image generation: route map, ordered cont
 
 - A UI mockup reference may explore one viewport and one explicit state. It is a design reference, not implementation or behavioral proof.
 - A visual asset may serve one or several regions through a recorded mount contract. It remains independent media, not the page shell.
-- A multi-state opener needs code or a state storyboard that names `input -> response -> durable consequence -> handoff -> fallback`; a still image can illustrate one state only.
+- A multi-state opener needs code or a state storyboard that names `input -> immediate response -> meaningful consequence + horizon -> handoff -> fallback`; a still image can illustrate one state only.
 - A route or multi-route website needs deterministic structure and representative rendered states. Generated media may support those regions but must not invent the information architecture.
 
 Do not use one attractive image to stand in for a complete website experience. Do not render every beat as an equal full-screen poster, infer sticky or spatial behavior from a still, or let a generated mockup become the page background. Keep signature-system anchors stable in code while allowing regions to change height, composition family, focal scale, proof object, media set, interaction mechanism, and density for their content.
@@ -498,6 +498,10 @@ Selected-direction asset plan
 - selected concept and locked visual mechanism:
 - website scope, content beats, regions, and continuity handoff:
 - independent asset role:
+- scene integration id and mount owner:
+- depth plane and occlusion/mask relationship:
+- transform owner:
+- flattening decision and consequence:
 - relationship to other media and reuse across regions:
 - state served: rest | invitation | response | transition | interrupted | reduced-motion
 - exact crop, transparency, or loop need:
@@ -507,6 +511,8 @@ Selected-direction asset plan
 ```
 
 Generate and inspect each independent role as its own candidate. A single attractive image cropped five ways is still one source, not five assets. Do not reuse a rejected or unrelated local image merely because it already exists. If the selected direction depends on authentic proof that cannot be generated, preserve the concept as atmosphere/support, record the missing-proof gap, and adapt the claim or stop.
+
+When the concept depends on independent occlusion, parallax, or mask handoff, supply the corresponding independent raster asset or deterministic DOM/SVG/canvas layer. A master environment may establish the visual benchmark, but it is not automatically the runtime layer graph. A flattened composite is valid as a poster, visual reference, reduced-motion state, or load-failure fallback; a storyboard frame is not interaction evidence.
 
 ## Asset handoff
 

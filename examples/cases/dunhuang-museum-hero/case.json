@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "dunhuang-museum-hero",
+  "title": "敦煌市博物馆｜非官方网站概念提案",
+  "kind": "final-implementation-case",
+  "formalMaturityClaim": null,
+  "summary": "A five-route cultural brand experience with a full-viewport mural portal, route-specific composition families, live art type, authored controls, and direct accessible interactions.",
+  "entrypoint": {
+    "command": "python3 serve.py",
+    "url": "http://127.0.0.1:4173/",
+    "document": "site/index.html"
+  },
+  "routes": [
+    "/",
+    "/exhibitions",
+    "/collection",
+    "/digital",
+    "/visit"
+  ],
+  "interactionInventory": [
+    "shared route navigation with active state",
+    "keyboard-operable mobile menu with Escape close and focus return",
+    "collection category filters and non-modal detail panel",
+    "digital-museum mode tabs and highlighted route node",
+    "visit-focus selector with changing preparation guidance",
+    "reduced-motion behavior and native scrolling"
+  ],
+  "designFingerprint": {
+    "surface": "Brand",
+    "modifiers": [
+      "Cultural",
+      "Image",
+      "Reference-led"
+    ],
+    "visualThesis": "A mineral-dark archive aperture opens onto a luminous Silk Road world, then releases into readable parchment fields without repeating one hero scaffold across routes.",
+    "homeComposition": "spatial portal",
+    "routeCompositionFamilies": {
+      "/exhibitions": "editorial index",
+      "/collection": "object atlas",
+      "/digital": "dark spatial map",
+      "/visit": "quiet manuscript path"
+    },
+    "typeRoles": {
+      "art": "Ma Shan Zheng for one dominant live art word per route",
+      "displayAndBody": "Noto Serif SC and Songti fallbacks",
+      "ui": "compact neutral sans-serif fallbacks"
+    },
+    "materialRoles": [
+      "soot-black mineral pigment",
+      "sandstone and parchment",
+      "oxidized mineral teal",
+      "cinnabar lacquer",
+      "aged gold hairlines"
+    ],
+    "interactionRule": "Input creates a clear route, selection, disclosure, or orientation consequence; ambient decoration is not required for completion."
+  },
+  "truthBoundary": {
+    "affiliation": "Non-official concept; no institutional affiliation or endorsement is claimed.",
+    "content": "Exhibitions, collections, hours, locations, and services are concept copy rather than verified facts or available services.",
+    "imagery": "Original AI-generated concept imagery; not a reconstruction of a real mural, cave, artifact, building, or official identity.",
+    "referenceMaterialIncluded": false,
+    "ownerAuthorization": "The repository owner explicitly approved this final case for inclusion on 2026-07-14."
+  },
+  "assets": [
+    {
+      "path": "site/assets/hero-world.png",
+      "role": "home mural world and visit crop",
+      "sha256": "9815385ad46f20c36d17b06020e19b7b54a22473be3d12d5ed8d148c10056d82"
+    },
+    {
+      "path": "site/assets/hero-transition.png",
+      "role": "mineral-to-parchment handoff",
+      "sha256": "20fcbb014bb5894b42ec24e0b193243a75a1420b5355f76a3414481d1b094dc7"
+    },
+    {
+      "path": "site/assets/museum-mark.png",
+      "role": "original concept lockup mark",
+      "sha256": "c7dd835f57dc159e116842b78b8e6b6392a14e1f3eba9d8e461ae255805d6363"
+    },
+    {
+      "path": "site/assets/exhibition-manuscript.png",
+      "role": "exhibitions editorial image",
+      "sha256": "d3f8cb4918e53b453b03c92288888315eb933bbc5ef8d5a9c6d59c8379433822"
+    },
+    {
+      "path": "site/assets/collection-objects.png",
+      "role": "collection object atlas",
+      "sha256": "e0b6fa460b4bf53b164d2837a5fabc5dd82b71724ed06e51a363e6d7815afd3b"
+    },
+    {
+      "path": "site/assets/digital-cave-atlas.png",
+      "role": "digital museum spatial map",
+      "sha256": "5f894829caa061e3dbc33988831164a7fa844c64af0238f46defae3106f1ee60"
+    }
+  ],
+  "archivePolicy": {
+    "included": [
+      "final static distribution",
+      "compact machine-readable case index",
+      "third-party license notices"
+    ],
+    "excluded": [
+      "dependency directories",
+      "editable source workbench",
+      "build caches",
+      "iteration contracts",
+      "comparison captures",
+      "QA reports",
+      "temporary scripts",
+      "user reference images"
+    ]
+  },
+  "knownLimitations": [
+    "Front-end concept only; no backend, booking, search, or official data source.",
+    "Final runtime evidence is not bundled, so this case does not claim tested-golden or template maturity.",
+    "The static distribution is intended to be served from the local root with the included server."
+  ]
+}

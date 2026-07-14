@@ -23,6 +23,7 @@ EXPECTED_REFERENCES = {
 
 EXPECTED_TEST_FILES = {
     "test_aesthetic_references.py",
+    "test_case_library.py",
     "test_cross_axis_routing.py",
     "test_dependency_boundary.py",
     "test_image_prompt_compiler.py",

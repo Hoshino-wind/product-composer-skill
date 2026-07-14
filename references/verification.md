@@ -217,6 +217,16 @@ Create one row per applicable acceptance check. Replace the instructional row; d
 | --- | --- | --- | --- | --- |
 | [exact acceptance check] | One allowed evidence class. | Exact command, trace, capture, file, ledger, review, or missing-input locator. | pass, fail, or gap. | Scenario, environment, scope, and material limitation. |
 
+### Readiness ladder
+
+Report these lanes independently; use `pass`, `fail`, or `gap` for every applicable lane and omit only a genuinely non-applicable lane with a reason.
+
+- `C0 contract-valid`: required records exist and structural, compiler, package, and applicable provenance checks pass. It does not approve aesthetics or runtime.
+- `V1 visual-pass`: rendered plus judgment evidence in the consuming viewport passes full view, thumbnail, mounted crop, and blurred-label inspection for hierarchy, silhouette, media/type integration, depth, reference relationships, and the first handoff.
+- `R2 runtime-pass`: the target app demonstrates entry, meaningful state change, handoff, reversal/interruption, equivalent keyboard or explicit controls, reduced motion, loading/failure fallback, and declared target-device behavior.
+
+Structural or package tests can pass C0 only. Source inspection cannot pass V1; one screenshot cannot pass R2. A direction-only Explore result does not need a runtime lane, but an implemented interactive Hero is verified only when C0, V1, and R2 all pass. If V1 fails after C0 passes, report `structure passed, visual failed`; no lane may promote another.
+
 Use one class per row. When a claim needs behavioral and rendered proof, split it into two acceptance checks so each result remains traceable.
 
 ## Verification gaps

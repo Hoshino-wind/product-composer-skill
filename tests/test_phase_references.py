@@ -616,6 +616,17 @@ class PhaseReferenceTests(unittest.TestCase):
             ["[exact acceptance check]"],
             ["Evidence class", "Evidence locator", "Result", "Notes"],
         )
+        self.assert_terms(sections["Evidence report"], [
+            "Readiness ladder",
+            "C0 contract-valid",
+            "V1 visual-pass",
+            "R2 runtime-pass",
+            "Structural or package tests can pass C0 only",
+            "Source inspection cannot pass V1",
+            "one screenshot cannot pass R2",
+            "structure passed, visual failed",
+            "no lane may promote another",
+        ])
         self.assertIn("verification gap", sections["Verification gaps"])
 
     def test_verification_discovers_repo_local_commands_and_reports_not_run(self):
